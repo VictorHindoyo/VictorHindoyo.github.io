@@ -1,10 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import MainMenu from './pages/MainMenu.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import MainMenu from "./pages/MainMenu.jsx";
+import JenisLatihan from "./pages/JenisLatihan.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <MainMenu />
-  </React.StrictMode>,
-)
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainMenu></MainMenu>,
+  },
+  {
+    path: "jenis",
+    element: <JenisLatihan></JenisLatihan>,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
+);
