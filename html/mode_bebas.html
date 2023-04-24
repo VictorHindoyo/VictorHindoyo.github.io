@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<style>
+    .font-baloo {
+        font-family: 'Baloo Tamma 2', cursive;
+    }
+</style>
+
+<body>
+    <div class="bg-orange-100 w-screen h-screen py-2">
+        <div class="flex justify-between items-center px-6">
+            <a href="">
+                <i class="fa fa-home text-2xl" aria-hidden="true"></i>
+            </a>
+            <h1 class="font-baloo font-bold text-[4vw] counter" data-value=0>0</h1>
+            <button class="bg-red-600 text-white py-2 px-6 rounded-lg font-bold font-baloo">Reset</button>
+        </div>
+        <div class="sempoa border-4 border-black rounded-xl flex flex-row items-center mx-4 py-1.5 justify-end">
+            <div class="kolom space-y-2" data-multiplier="1">
+                <div class="batu atas w-16 h-10 bg-lime-400 rounded-lg mx-auto transition duration-300" data-value=5>
+
+                </div>
+                <div class="py-4">
+                    <div class="separator w-24 h-1.5 bg-black">
+
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="batu bawah w-16 h-10 bg-lime-400 rounded-lg mx-auto transition duration-300"
+                        data-value=1>
+
+                    </div>
+                    <div class="batu bawah w-16 h-10 bg-lime-400 rounded-lg mx-auto transition duration-300"
+                        data-value=2>
+
+                    </div>
+                    <div class="batu bawah w-16 h-10 bg-lime-400 rounded-lg mx-auto transition duration-300"
+                        data-value=3>
+
+                    </div>
+                    <div class="batu bawah w-16 h-10 bg-lime-400 rounded-lg mx-auto transition duration-300"
+                        data-value=4>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var counterAtas = 0
+    var counterBawah = 0
+    $(".batu.bawah").click(function () {
+        const multiplier = $(this).parent().parent().data("multiplier")
+        const value = $(this).data("value")
+
+        if ($(this).data("isActive")) {
+            counterBawah = 0
+            counterBawah += value * multiplier - 1
+            $(this).parent().children().each(function () {
+                if ($(this).data("value") >= value && ($(this).data("isActive"))) {
+                    $(this).removeClass("-translate-y-4")
+                    $(this).data("isActive", false)
+                }
+            })
+        }
+        else {
+            counterBawah = 0
+            counterBawah += value * multiplier
+            $(this).parent().children().each(function () {
+                if ($(this).data("value") <= value && !($(this).data("isActive"))) {
+                    $(this).addClass("-translate-y-4")
+                    $(this).data("isActive", true)
+                }
+            })
+
+        }
+        updateCounter()
+    })
+
+    $(".batu.atas").click(function () {
+        const multiplier = $(this).parent().data("multiplier")
+        const value = $(this).data("value")
+
+        if ($(this).data("isActive")) {
+            $(this).removeClass("translate-y-4")
+            counterAtas -= value * multiplier
+            $(this).data("isActive", false)
+        }
+        else {
+            $(this).addClass("translate-y-4")
+            counterAtas += value * multiplier
+            $(this).data("isActive", true)
+        }
+        updateCounter()
+    })
+
+    function updateCounter() {
+        var counter = counterBawah + counterAtas
+        $(".counter").html(counter.toString())
+        $(".counter").data("value", counter)
+    }
+
+    function reset() {
+        counterAtas = 0
+        counterBawah = 0
+    }
+</script>
+
+</html>

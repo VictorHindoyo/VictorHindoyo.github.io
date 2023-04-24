@@ -14,7 +14,7 @@ export default function MainMenu() {
           </div>
         </div>
         <div className="grid grid-cols-2 w-1/2 mx-auto gap-6 mt-[7.5vh]">
-          <WideButton>
+          <WideButton route="/bebas">
             <FaPlane size={'25px'}></FaPlane>
             <p>Mode Bebas</p>
           </WideButton>
