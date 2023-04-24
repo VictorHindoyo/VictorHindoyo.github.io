@@ -71,5 +71,8 @@ $(".btn-reset").click(function reset() {
   $(".counter").data("value", 0);
   $(".batu.atas").removeClass("translate-y-4");
   $(".batu.bawah").removeClass("-translate-y-4");
+  $(".batu.bawah").data("isActive", false);
+  $(".batu.atas").data("isActive", false);
+
   updateCounter();
 });

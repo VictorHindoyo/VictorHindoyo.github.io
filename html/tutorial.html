@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+
+<style>
+    .font-baloo {
+        font-family: 'Baloo Tamma 2', cursive;
+    }
+
+    body {
+        background-image: url('../asset/bg-hexagon.png');
+        background-size: cover;
+    }
+</style>
+
 <body>
-    
+    <div class="w-screen h-screen py-4">
+
+        <div class="page" data-page="1">
+            <div class="flex justify-between items-center px-6">
+                <a href="main_menu.html">
+                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                </a>
+                <div class="ml-10">
+                    <h1 class="font-baloo font-bold text-[4vw] text-center mr-8">Tutorial</h1>
+                </div>
+                <div></div>
+            </div>
+            <div class="flex items-center justify-between px-8">
+                <div></div>
+                <div class="bg-white w-9/12 p-4 ml-12 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] ">
+                    <img src="../asset/buah-tutorial.png.png" class="w-32 mx-auto" alt="">
+                    <p class="text-center font-bold text-xl font-baloo">Selamat datang di tutorial!</p>
+                    <p class="text-center font-bold text-xl font-baloo">Yuk tonton video di slide berikut ini</p>
+                </div>
+                <button class="page-next" data-target="2">
+                    <i class="fa fa-arrow-right text-5xl" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="page hidden w-full" data-page="2">
+            <div class="flex justify-between items-center px-6">
+                <button class="page-next" data-target="1">
+                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                </button>
+                <div class="ml-10">
+                    <h1 class="font-baloo font-bold text-[4vw] text-center mr-8">Tutorial</h1>
+                </div>
+                <div></div>
+            </div>
+            <div class="bg-white w-9/12 p-4 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] mx-auto ">
+                <div class="w-full h-full flex items-center justify-center">
+                    <video width="400" controls>
+                        <source src="../asset/tutorial.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+<script src="../js/page.js"></script>
+
 </html>
