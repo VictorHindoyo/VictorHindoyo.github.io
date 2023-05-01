@@ -357,11 +357,16 @@ $level = $_GET['level'];
         </div>
     </div>
 
+    <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
+    <audio id="audioBenar" src="../asset/correct.wav"></audio>
+
 
 </body>
 
 
 <script>
+    var audioBenar = document.getElementById("audioBenar");
+
     const jenis = "<?php echo $jenis; ?>"
     const level = "<?php echo $level; ?>"
 
@@ -436,6 +441,8 @@ $level = $_GET['level'];
         var checkCounter = $(".counter").data("value")
         if (checkCounter == hasil) {
             $(".show-correct").show();
+            audioBenar.load();
+            audioBenar.play();
         }
     })
     generateSoal()

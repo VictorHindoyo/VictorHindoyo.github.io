@@ -1,6 +1,9 @@
 var counterAtas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var counterBawah = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+var audioSempoa = document.getElementById("audioSempoa");
 $(".batu.bawah").click(function () {
+  audioSempoa.load()
+  audioSempoa.play();
   const multiplier = $(this).parent().parent().data("multiplier");
   const value = $(this).data("value");
   const counterorder = $(this).parent().parent().data("counterorder");
@@ -33,6 +36,9 @@ $(".batu.bawah").click(function () {
 });
 
 $(".batu.atas").click(function () {
+  audioSempoa.load()
+  audioSempoa.play();
+
   const multiplier = $(this).parent().data("multiplier");
   const value = $(this).data("value");
   const counterorder = $(this).parent().data("counterorder");
