@@ -56,301 +56,291 @@ $level = $_GET['level'];
             <button class="btn-reset bg-red-600 text-white py-2 px-6 rounded-lg font-bold font-baloo">Reset</button>
         </div>
         <div class="flex justify-center">
-            <div class="sempoa border-4 border-black rounded-xl flex flex-row items-center mx-4 justify-end">
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="10000000" data-counterorder="8">
+            <div class="sempoa border-8 outline border-[#B86248] flex flex-row items-center mx-4 justify-end">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="10000000" data-counterorder="8">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
-
-                    </div>
+                    <img src="../asset/batu-merah.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="10000000" data-counterorder="7">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="10000000" data-counterorder="7">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-hijau.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
-                    </div>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="1000000" data-counterorder="6">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="1000000" data-counterorder="6">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-biru.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
-                    </div>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="100000" data-counterorder="5">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="100000" data-counterorder="5">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-merah.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
-                    </div>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="10000" data-counterorder="4">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="10000" data-counterorder="4">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-hijau.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
-                    </div>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="1000" data-counterorder="3">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="1000" data-counterorder="3">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-biru.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
-                    </div>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="100" data-counterorder="2">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="100" data-counterorder="2">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-merah.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
-                    </div>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-red-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-merah.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="10" data-counterorder="1">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="10" data-counterorder="1">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-hijau.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
-                    </div>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-yellow-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-hijau.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
-                <div class="kolom space-y-2 relative pb-2" data-multiplier="1" data-counterorder="0">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="1" data-counterorder="0">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <div class="batu atas w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-biru.png"
+                        class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
-                    </div>
                     <div class="py-4">
-                        <div class="separator w-20 h-1 bg-black">
+                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=1>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=2>
 
-                        </div>
-                        <div class="batu bawah w-16 h-10 bg-lime-500 rounded-full mx-auto transition duration-300"
-                            data-value=4>
 
-                        </div>
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-biru.png"
+                            class="batu bawah h-10 scale-[1.4]  mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
                 </div>
@@ -384,14 +374,14 @@ $level = $_GET['level'];
 
     function generateSoal() {
         if (level == "easy") {
+            angka1 = Math.floor(Math.random() * 10) + 1
+            angka2 = Math.floor(Math.random() * 10) + 1
+        } else if (level == "medium") {
             angka1 = Math.floor(Math.random() * 100) + 1
             angka2 = Math.floor(Math.random() * 100) + 1
-        } else if (level == "medium") {
+        } else if (level == "hard") {
             angka1 = Math.floor(Math.random() * 1000) + 1
             angka2 = Math.floor(Math.random() * 1000) + 1
-        } else if (level == "hard") {
-            angka1 = Math.floor(Math.random() * 10000) + 1
-            angka2 = Math.floor(Math.random() * 10000) + 1
         }
 
         if (jenis == "penjumlahan") {
@@ -408,6 +398,18 @@ $level = $_GET['level'];
 
             }
         } else if (jenis == "perkalian") {
+
+            if (level == "easy") {
+                angka1 = Math.floor(Math.random() * 10) + 1
+                angka2 = Math.floor(Math.random() * 10) + 1
+            } else if (level == "medium") {
+                angka1 = Math.floor(Math.random() * 100) + 1
+                angka2 = Math.floor(Math.random() * 10) + 1
+            } else if (level == "hard") {
+                angka1 = Math.floor(Math.random() * 100) + 1
+                angka2 = Math.floor(Math.random() * 100) + 1
+            }
+
             operator = "x"
             hasil = angka1 * angka2
         } else if (jenis == "pembagian") {
@@ -415,11 +417,11 @@ $level = $_GET['level'];
             hasil = angka1 / angka2
             while (angka1 % angka2 != 0) {
                 if (level == "easy") {
-                    angka1 = Math.floor(Math.random() * 100) + 1
+                    angka1 = Math.floor(Math.random() * 10) + 10
                 } else if (level == "medium") {
-                    angka1 = Math.floor(Math.random() * 1000) + 100
+                    angka1 = Math.floor(Math.random() * 100) + 30
                 } else if (level == "hard") {
-                    angka1 = Math.floor(Math.random() * 10000) + 900
+                    angka1 = Math.floor(Math.random() * 1000) + 90
                 }
                 angka2 = Math.floor(Math.random() * 10) + 2
                 hasil = angka1 / angka2

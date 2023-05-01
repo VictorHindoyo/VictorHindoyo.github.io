@@ -12,7 +12,7 @@ $(".batu.bawah").click(function () {
       .children()
       .each(function () {
         if ($(this).data("value") >= value && $(this).data("isActive")) {
-          $(this).removeClass("-translate-y-4");
+          $(this).removeClass("-translate-y-5");
           $(this).data("isActive", false);
         }
       });
@@ -24,7 +24,7 @@ $(".batu.bawah").click(function () {
       .children()
       .each(function () {
         if ($(this).data("value") <= value && !$(this).data("isActive")) {
-          $(this).addClass("-translate-y-4");
+          $(this).addClass("-translate-y-5");
           $(this).data("isActive", true);
         }
       });
@@ -38,11 +38,11 @@ $(".batu.atas").click(function () {
   const counterorder = $(this).parent().data("counterorder");
 
   if ($(this).data("isActive")) {
-    $(this).removeClass("translate-y-4");
+    $(this).removeClass("translate-y-5");
     counterAtas[counterorder] -= value * multiplier;
     $(this).data("isActive", false);
   } else {
-    $(this).addClass("translate-y-4");
+    $(this).addClass("translate-y-5");
     counterAtas[counterorder] += value * multiplier;
     $(this).data("isActive", true);
   }
@@ -58,7 +58,6 @@ function updateCounter() {
     (partialSum, a) => partialSum + a,
     0
   );
-  console.log(counterBawah);
 
   var counter = totalCounterAtas + totalCounterBawah;
   $(".counter").html(counter.toString());
@@ -69,8 +68,8 @@ $(".btn-reset").click(function reset() {
   counterAtas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   counterBawah = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   $(".counter").data("value", 0);
-  $(".batu.atas").removeClass("translate-y-4");
-  $(".batu.bawah").removeClass("-translate-y-4");
+  $(".batu.atas").removeClass("translate-y-5");
+  $(".batu.bawah").removeClass("-translate-y-5");
   $(".batu.bawah").data("isActive", false);
   $(".batu.atas").data("isActive", false);
 
