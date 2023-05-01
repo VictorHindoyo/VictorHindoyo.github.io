@@ -56,7 +56,8 @@ $level = $_GET['level'];
             <button class="btn-reset bg-red-600 text-white py-2 px-6 rounded-lg font-bold font-baloo">Reset</button>
         </div>
         <div class="flex justify-center">
-            <div class="sempoa border-8 outline border-[#B86248] flex flex-row items-center mx-4 justify-end">
+            <div
+                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end">
                 <div class="kolom space-y-3 relative pb-2" data-multiplier="10000000" data-counterorder="8">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
@@ -64,7 +65,7 @@ $level = $_GET['level'];
                     <img src="../asset/batu-merah.png"
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -96,7 +97,7 @@ $level = $_GET['level'];
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -128,7 +129,7 @@ $level = $_GET['level'];
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -160,7 +161,7 @@ $level = $_GET['level'];
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -192,7 +193,7 @@ $level = $_GET['level'];
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -224,7 +225,7 @@ $level = $_GET['level'];
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -256,7 +257,7 @@ $level = $_GET['level'];
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -288,7 +289,7 @@ $level = $_GET['level'];
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -320,7 +321,7 @@ $level = $_GET['level'];
                         class="batu atas h-10 scale-[1.4]  mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
