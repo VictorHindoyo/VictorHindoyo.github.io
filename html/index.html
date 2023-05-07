@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ini Judul</title>
+    <style>
+        body {
+            background-image: url('../asset/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #FEE2CF;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Baloo Tamma 2', cursive;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            align-items: center;
+            height: 100vh;
+            grid-gap: 5px;
+            padding: 0 10px;
+        }
+
+        .menu-item {
+            width: 100%;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item>img {
+            margin-bottom: 10px;
+            display: grid;
+        }
+
+        .menu-item>a {
+            text-decoration: none;
+            color: black;
+            text-transform: capitalize;
+            ;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: black;
+        }
+
+        .menu-item.selected {
+            transform: scale(1.1);
+            /* memperbesar ukuran menu-item */
+        }
+
+
+        @media screen and (min-width: 600px) {
+            .menu-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .menu-item {
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cerdas Sempoa</h1>
+    <h2>Kapan Lagi Belajar
+        lebih Mudah</h2>
+    <div class="menu-container">
+
+        <div class="menu-item">
+            <img src="../asset/sepatu.png" height="50px" alt="">
+            <a href="mode_bebas.html">Mode Bebas</a>
+        </div>
+        <div class="menu-item">
+            <img src="../asset/dumbel.png" height="50px" alt="">
+            <a href="latihan.html">latihan</a>
+        </div>
+        <div class="menu-item">
+            <a href="#">tes</a>
+        </div>
+        <div class="menu-item">
+            <img src="../asset/tutor.png" height="50px" alt="">
+            <a href="#">tutorial</a>
+        </div>
+    </div>
+    <script>
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.add('selected'); // menambahkan class CSS "selected" pada menu-item yang dipilih
+                setTimeout(() => {
+                    item.classList.remove('selected'); // menghapus class CSS "selected" setelah beberapa waktu
+                }, 1000); // durasi efek animasi dalam milidetik
+            });
+        });
+
+    </script>
+</body>
+
+</html>
