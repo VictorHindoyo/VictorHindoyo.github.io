@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skor</title>
+    <style>
+        /* Styles for desktop */
+        .score-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        .score {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 1000px;
+            height: 400px;
+            font-size: 36px;
+            
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-image: url('../asset/skor.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        * {
+            touch-action: manipulation;
+        }
+        h1{
+            color: black;
+            font-size: 45px;
+        }
+
+        /* Styles for mobile */
+        @media screen and (max-width: 768px) {
+            .score {
+                width: 100%;
+                height: 100%;
+                font-size: 24px;
+                border-radius: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="score-container">
+        <div class="score">
+            <h1>Selamat kamu mendapat skor: </h1>
+            <div style="margin-top: 50px; font-size: 200px; font-weight: bold; color: white;">100</div>
+
+            <h1>Dari 5 soal yang telah kamu kerjakan </h1>
+        </div>
+    </div>
+</body>
+
+</html>
