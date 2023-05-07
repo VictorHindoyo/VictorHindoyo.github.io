@@ -25,7 +25,7 @@
     }
 
     body {
-        background-image: url('../asset/bg-stars.png');
+        background-image: url('../asset/bg-awan.png');
         background-size: cover;
     }
 </style>
@@ -44,28 +44,28 @@
             </div>
             <div class="grid grid-cols-2 w-1/2 mx-auto gap-6 mt-[7.5vh]">
                 <button data-target="2"
-                    class="page-next flex flex-col justify-center items-center bg-white shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] py-[4.5vh] rounded-xl font-bold gap-2 font-inter">
+                    class="page-next flex flex-col justify-center items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] py-[4.5vh] rounded-xl font-bold gap-2 font-inter">
                     <div class="bg-orange-400 text-white w-8 h-8 flex items-center justify-center rounded-full">
                         <i class="fa-solid ml-[0.6px] fa-plus text-xl" aria-hidden="true"></i>
                     </div>
                     <p>Penjumlahan</p>
                 </button>
                 <button data-target="3"
-                    class="page-next flex flex-col justify-center items-center bg-white shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] py-[4.5vh] rounded-xl font-bold gap-2 font-inter">
+                    class="page-next flex flex-col justify-center items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] py-[4.5vh] rounded-xl font-bold gap-2 font-inter">
                     <div class="bg-blue-400 text-white w-8 h-8 flex items-center justify-center rounded-full">
                         <i class="fa-solid ml-[0.6px] fa-minus text-xl" aria-hidden="true"></i>
                     </div>
                     <p>Pengurangan</p>
                 </button>
                 <button data-target="4"
-                    class="flex page-next flex-col justify-center items-center bg-white shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] py-[4.5vh] rounded-xl font-bold gap-2 font-inter">
+                    class="flex page-next flex-col justify-center items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] py-[4.5vh] rounded-xl font-bold gap-2 font-inter">
                     <div class="bg-pink-400 text-white w-8 h-8 flex items-center justify-center rounded-full">
                         <i class="fa-solid ml-[0.6px] fa-times text-xl" aria-hidden="true"></i>
                     </div>
                     <p>Perkalian</p>
                 </button>
                 <button data-target="5"
-                    class="flex page-next flex-col justify-center items-center bg-white shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] py-[4.5vh] rounded-xl font-bold gap-2 font-inter">
+                    class="flex page-next flex-col justify-center items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] py-[4.5vh] rounded-xl font-bold gap-2 font-inter">
                     <div class="bg-lime-400 text-white w-8 h-8 flex items-center justify-center rounded-full">
                         <i class="fa-solid ml-[0.6px] fa-divide text-xl" aria-hidden="true"></i>
                     </div>
@@ -85,15 +85,15 @@
                 </a>
             </div>
             <div class="flex justify-center items-center gap-4 mt-8">
-                <a href="latihan.php?level=easy&jenis=penjumlahan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=easy&jenis=penjumlahan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Easy</p>
                 </a>
-                <a href="latihan.php?level=medium&jenis=penjumlahan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=medium&jenis=penjumlahan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Medium</p>
                 </a>
-                <a href="latihan.php?level=hard&jenis=penjumlahan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=hard&jenis=penjumlahan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Hard</p>
                 </a>
@@ -110,15 +110,15 @@
                 </a>
             </div>
             <div class="flex justify-center items-center gap-4 mt-8">
-                <a href="latihan.php?level=easy&jenis=pengurangan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=easy&jenis=pengurangan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Easy</p>
                 </a>
-                <a href="latihan.php?level=medium&jenis=pengurangan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=medium&jenis=pengurangan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Medium</p>
                 </a>
-                <a href="latihan.php?level=hard&jenis=pengurangan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=hard&jenis=pengurangan" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Hard</p>
                 </a>
@@ -135,15 +135,15 @@
                 </a>
             </div>
             <div class="flex justify-center items-center gap-4 mt-8">
-                <a href="latihan.php?level=easy&jenis=perkalian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=easy&jenis=perkalian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Easy</p>
                 </a>
-                <a href="latihan.php?level=medium&jenis=perkalian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=medium&jenis=perkalian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Medium</p>
                 </a>
-                <a href="latihan.php?level=hard&jenis=perkalian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=hard&jenis=perkalian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Hard</p>
                 </a>
@@ -160,15 +160,15 @@
                 </a>
             </div>
             <div class="flex justify-center items-center gap-4 mt-8">
-                <a href="latihan.php?level=easy&jenis=pembagian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=easy&jenis=pembagian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Easy</p>
                 </a>
-                <a href="latihan.php?level=medium&jenis=pembagian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=medium&jenis=pembagian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Medium</p>
                 </a>
-                <a href="latihan.php?level=hard&jenis=pembagian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] rounded-lg py-4">
+                <a href="latihan.php?level=hard&jenis=pembagian" class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
                     <p class="font-bold font-baloo text-2xl">Hard</p>
                 </a>
