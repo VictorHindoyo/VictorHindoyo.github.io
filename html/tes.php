@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+
 <style>
     .font-baloo {
         font-family: 'Baloo Tamma 2', cursive;
@@ -30,513 +32,451 @@
     * {
         touch-action: manipulation;
     }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .modal-header,
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .modal-header h2 {
+        margin-top: 0;
+    }
 </style>
 
-<!-- <?php
-$jenis = $_GET['jenis'];
-$level = $_GET['level'];
-?> -->
-
 <body>
+
+    <h1 class="text-2xl font-bold mb-4">Contoh Penggunaan Session dengan Modal</h1>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onclick="showModal()">Mulai</button>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Pertanyaan</h2>
+                <span class="close" onclick="hideModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="question"></p>
+                <form id="answer-form">
+                    <div id="options"></div>
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Jawab</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p id="score"></p>
+            </div>
+        </div>
+    </div>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
-            <a href="main_menu.html">
-                <i class="fa fa-home text-2xl" aria-hidden="true"></i>
+            <a href="main_menu.html" class="min-w-[150px]">
+                <i class="fa fa-chevron-left text-2xl" aria-hidden="true"></i>
             </a>
-            <h1 class="font-baloo font-bold text-[4vw] counter" data-value=0>0</h1>
-            <button class="btn-reset bg-red-600 text-white py-2 px-6 rounded-lg font-bold font-baloo">Reset</button>
+            <h1 class="font-baloo font-bold text-[4vw] flex grow">
+                <div class="mx-auto flex items-center justify-center">
+                    <div id="soal"></div>
+                    <span class="counter ml-2" data-value=0>0</span>
+                </div>
+
+            </h1>
+            <div class="min-w-[150px] text-end">
+                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto"
+                    onclick="document.getElementById('audioSempoa').play()">
+                    <img src="../asset/reset.png" class="w-8" alt="">
+                </button>
+            </div>
         </div>
-        <div class="flex justify-center mt-2 ml-10">
+        <div class="flex justify-start mt-2 ">
             <div
-                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-2 justify-end">
+                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end scale-[0.9]">
 
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="100000" data-counterorder="9">
+
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="100000" data-counterorder="5">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-normal.png"
+                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
-                    <div class="py-16">
-                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
-
-
-                    </div>
-
-                </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="10000" data-counterorder="8">
-                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
-
-                    </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
-
-                    <div class="py-16">
+                    <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
 
 
                     </div>
 
                 </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="1000" data-counterorder="7">
+
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="10000" data-counterorder="4">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-normal.png"
+                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
-                    <div class="py-16">
-                        <div class="separator relative z-1 w-20 h-4 border-y-2 border-black bg-[#F09677]">
-                            <div
-                                class="absolute inset-y-0 right-8 flex justify-center items-center w-4 h-4 bg-black rounded-full">
-                                <div class="w-2 h-2 bg-[#F09677] rounded-full"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
-
-
-                    </div>
-
-                </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="100" data-counterorder="6">
-                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
-
-                    </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
-
-                    <div class="py-16">
+                    <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
 
 
                     </div>
 
                 </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="10" data-counterorder="5">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="1000" data-counterorder="3">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-normal.png"
+                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
-                    <div class="py-16">
+                    <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                            <div class="w-2 h-2 rounded-full bg-black mx-auto mt-0.5">
 
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
-
-
-                    </div>
-
-                </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="1" data-counterorder="4">
-                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
-
-                    </div>
-                    <img src="../asset/batu-hijau.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
-
-                    <div class="py-16">
-                        <div class="separator relative z-1 w-20 h-4 border-y-2 border-black bg-[#F09677]">
-                            <div
-                                class="absolute inset-y-0 right-8 flex justify-center items-center w-4 h-4 bg-black rounded-full">
-                                <div class="w-2 h-2 bg-[#F09677] rounded-full"></div>
                             </div>
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-hijau.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
-                        <img src="../asset/batu-hijau.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
-                        <img src="../asset/batu-hijau.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
-                        <img src="../asset/batu-hijau.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
 
 
                     </div>
 
                 </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="1" data-counterorder="3">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="100" data-counterorder="2">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-normal.png"
+                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
-                    <div class="py-16">
+                    <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+
+
                     </div>
 
-
                 </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="1" data-counterorder="2">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="10" data-counterorder="1">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-normal.png"
+                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
-                    <div class="py-16">
+                    <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
-                    </div>
-                </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="1" data-counterorder="1">
-                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+
 
                     </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
 
-                    <div class="py-16">
-                        <div class="separator relative z-1 w-20 h-4 border-y-2 border-black bg-[#F09677]">
-                            <div
-                                class="absolute inset-y-0 right-8 flex justify-center items-center w-4 h-4 bg-black rounded-full">
-                                <div class="w-2 h-2 bg-[#F09677] rounded-full"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
-
-
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
-                    </div>
                 </div>
                 <div class="kolom space-y-3 relative pb-2" data-multiplier="1" data-counterorder="0">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-merah.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
+                    <img src="../asset/batu-start.png"
+                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
-                    <div class="py-16">
+                    <div class="py-4">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                            <div class="w-2 h-2 rounded-full bg-black mx-auto mt-0.5">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="../asset/batu-start.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
+
+
+                        <img src="../asset/batu-start.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
+
+
+                        <img src="../asset/batu-start.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-start.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+
+
+                    </div>
+
+                </div>
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="0.1" data-counterorder="-1">
+                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
+
+                    </div>
+                    <img src="../asset/batu-normal.png"
+                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
+
+                    <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
-                        <img src="../asset/batu-merah.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+
+
                     </div>
-
 
                 </div>
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="0.01" data-counterorder="-2">
+                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
-            </div>
-            <div
-                class="min-w-[400px] outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative flex flex-row items-center mx-4 transform scale-75 justify-start">
-                <div class="flex flex-col items-start w-50%">
-                    <div class="align-items-top p-4">
-                        <h1 class="font-baloo font-bold text-[4vw] flex">
-                            <div id="soal"></div> ?
-                        </h1>
                     </div>
+                    <img src="../asset/batu-normal.png"
+                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
+
+                    <div class="py-4">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
+
+
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
+
+
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
+
+
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+
+
+                    </div>
+
                 </div>
             </div>
         </div>
 
     </div>
 
+    <!-- Modal Akhiri Quiz -->
+    <div>
+
+    </div>
+
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
-    <audio id="audioSempoa" src="../asset/correct.wav"></audio>
 </body>
 
+<script src="../js/sempoa.js">
+    var questions = [
+        {
+            question: 'Apa kepanjangan dari HTML?',
+            options: ['Hyper Text Markup Language', 'Hyperlinks and Text Markup Language', 'Home Tool Markup Language'],
+            answer: 'Hyper Text Markup Language'
+        },
+        {
+            question: 'Siapakah penemu World Wide Web (WWW)?',
+            options: ['Steve Jobs', 'Tim Berners-Lee', 'Bill Gates'],
+            answer: 'Tim Berners-Lee'
+        },
+        {
+            question: 'Apa kepanjangan dari CSS?',
+            options: ['Cascading Style Sheet', 'Colorful Style Sheet', 'Computer Style Sheet'],
+            answer: 'Cascading Style Sheet'
+        }
+    ];
 
-<script>
-    var audioBenar = document.getElementById("audioBenar");
+    // Start session
+    var score = 0;
+    var currentQuestion = 0;
 
-    const jenis = "<?php echo $jenis; ?>"
-    const level = "<?php echo $level; ?>"
+    // Get modal element
+    var modal = document.getElementById('modal');
 
-    var angka1 = 0
-    var angka2 = 0
-    var operator = ""
-    var hasil = 0
-    var soal = ""
-    var point = 0
+    // Get modal elements
+    var questionElement = document.getElementById('question');
+    var optionsElement = document.getElementById('options');
+    var answerForm = document.getElementById('answer-form');
+    var scoreElement = document.getElementById('score');
 
+    // Function to show modal
+    function showModal() {
+        // Set current question
+        var current = questions[currentQuestion];
 
-    function generateSoal() {
-        // if (level == "easy") {
-        //     angka1 = Math.floor(Math.random() * 10) + 1
-        //     angka2 = Math.floor(Math.random() * 10) + 1
-        // } else if (level == "medium") {
-        //     angka1 = Math.floor(Math.random() * 100) + 1
-        //     angka2 = Math.floor(Math.random() * 100) + 1
-        // } else if (level == "hard") {
-        //     angka1 = Math.floor(Math.random() * 1000) + 1
-        //     angka2 = Math.floor(Math.random() * 1000) + 1
-        // }
+        // Set question text
+        questionElement.innerHTML = current.question;
 
-        // if (jenis == "penjumlahan") {
-        //     operator = "+"
-        //     hasil = angka1 + angka2
-        // } else if (jenis == "pengurangan") {
-        //     operator = "-"
-        //     hasil = angka1 - angka2
-        //     if (angka1 < angka2) {
-        //         const tempAngka1 = angka1
-        //         angka1 = angka2
-        //         angka2 = tempAngka1
-        //         hasil = angka1 - angka2
+        // Set options
+        var optionsHTML = '';
+        for (var i = 0; i < current.options.length; i++) {
+            optionsHTML += '<label class="block"><input type="radio" name="answer" value="' + current.options[i] + '"> ' + current.options[i] + '</label>';
+        }
+        optionsElement.innerHTML = optionsHTML;
 
-        //     }
-        // } else if (jenis == "perkalian") {
-
-        //     if (level == "easy") {
-        //         angka1 = Math.floor(Math.random() * 10) + 1
-        //         angka2 = Math.floor(Math.random() * 10) + 1
-        //     } else if (level == "medium") {
-        //         angka1 = Math.floor(Math.random() * 100) + 1
-        //         angka2 = Math.floor(Math.random() * 10) + 1
-        //     } else if (level == "hard") {
-        //         angka1 = Math.floor(Math.random() * 100) + 1
-        //         angka2 = Math.floor(Math.random() * 100) + 1
-        //     }
-
-        //     operator = "x"
-        //     hasil = angka1 * angka2
-        // } else if (jenis == "pembagian") {
-        //     operator = ":"
-        //     hasil = angka1 / angka2
-        //     while (angka1 % angka2 != 0) {
-        //         if (level == "easy") {
-        //             angka1 = Math.floor(Math.random() * 10) + 10
-        //         } else if (level == "medium") {
-        //             angka1 = Math.floor(Math.random() * 100) + 30
-        //         } else if (level == "hard") {
-        //             angka1 = Math.floor(Math.random() * 1000) + 90
-        //         }
-        //         angka2 = Math.floor(Math.random() * 10) + 2
-        //         hasil = angka1 / angka2
-        //     }
-        // }
-        soal = `${angka1} ${operator} ${angka2} = `
-
+        // Show modal
+        modal.style.display = 'block';
     }
 
+    // Function to hide modal
+    function hideModal() {
+        modal.style.display = 'none';
+    }
 
-    $(".sempoa").click(function () {
-        var checkCounter = $(".counter").data("value")
-        if (checkCounter == hasil) {
-            $(".show-correct").show();
-            audioBenar.load();
-            audioBenar.play();
-            point += 10
+    // Event listener for form submission
+    answerForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var current = questions[currentQuestion];
+
+        // Get selected answer
+        var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        if (!selectedAnswer) {
+            alert('Silakan pilih salah satu opsi jawaban.');
+            return;
         }
-    })
-    generateSoal()
 
-    $(".show-correct").click(function () {
-        $(this).hide();
-        generateSoal()
-        $("#soal").html(soal);
-        $(".btn-reset").click()
-    })
-    $("#soal").html(soal);
+        // Check if answer is correct
+        if (selectedAnswer.value === current.answer) {
+            score++;
+        }
+
+        // Update score and current question
+        scoreElement.innerHTML = 'Skor: ' + score;
+        currentQuestion++;
+
+        // Check if all questions have been answered
+        if (currentQuestion >= questions.length) {
+            alert('Anda telah menjawab semua pertanyaan. Skor Anda: ' + score);
+            hideModal();
+            // Reset session
+            score = 0;
+            currentQuestion = 0;
+        } else {
+            showModal();
+        }
+    });
+
 </script>
-
-<script src="../js/sempoa.js"></script>
-<script src="../js/page.js"></script>
 
 </html>

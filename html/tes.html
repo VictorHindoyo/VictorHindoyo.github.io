@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+
 <style>
     .font-baloo {
         font-family: 'Baloo Tamma 2', cursive;
@@ -30,23 +32,32 @@
     * {
         touch-action: manipulation;
     }
+
+    #overlay {
+        z-index: 50;
+    }
 </style>
 
-<?php
-$jenis = $_GET['jenis'];
-$level = $_GET['level'];
-?>
-
-
-
-
-
-
 <body>
+    <button id="start-button"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        onclick="showModal()">Mulai</button>
+
+    <div id="modal" class="fixed inset-0 overflow-y-auto z-50 hidden items-center justify-center" style="display:none;">
+        <div class="bg-gray-100 p-4 rounded-lg">
+            <div id="question" class="text-lg font-medium mb-4"></div>
+            <form id="answer-form" class="space-y-2">
+                <div id="options"></div>
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Jawab</button>
+            </form>
+            <div id="score" class="mt-4"></div>
+        </div>
+    </div>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
             <a href="main_menu.html" class="min-w-[150px]">
-                <i class="fa fa-home text-2xl" aria-hidden="true"></i>
+                <i class="fa fa-chevron-left text-2xl" aria-hidden="true"></i>
             </a>
             <h1 class="font-baloo font-bold text-[4vw] flex grow">
                 <div class="mx-auto flex items-center justify-center">
@@ -56,14 +67,15 @@ $level = $_GET['level'];
 
             </h1>
             <div class="min-w-[150px] text-end">
-                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto" onclick="document.getElementById('audioSempoa').play()">
+                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto"
+                    onclick="document.getElementById('audioSempoa').play()">
                     <img src="../asset/reset.png" class="w-8" alt="">
                 </button>
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-start mt-2 ">
             <div
-                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end mt-2">
+                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end scale-[0.9]">
 
 
                 <div class="kolom space-y-3 relative pb-2" data-multiplier="100000" data-counterorder="5">
@@ -329,121 +341,118 @@ $level = $_GET['level'];
                 </div>
             </div>
         </div>
-        <div class="show-correct absolute top-0 bg-lime-500 bg-opacity-[0.8] w-screen h-screen hidden">
-            <div class="w-full h-full flex items-center justify-center flex-col">
-                <p class="font-bold font-baloo text-3xl">Jawabanmu Benar !!</p>
-                <div class="border-4 border-black rounded-full w-40 h-40 flex justify-center items-center">
-                    <i class="fa fa-check text-[100px]" aria-hidden="true"></i>
-                </div>
-                <p></p>
-            </div>
-        </div>
+
+    </div>
+    <script>
+        var startButton = document.getElementById('start-button');
+
+        // Get overlay element
+        var overlay = document.getElementById('overlay');
+
+        // Add event listener to overlay
+        overlay.addEventListener('click', function (event) {
+            // Check if clicked element is overlay
+            if (event.target === overlay) {
+                // Close modal
+                hideModal();
+            }
+        });
+
+        var questions = [
+            {
+                question: "Siapakah presiden pertama Indonesia?",
+                options: ["Soekarno", "Habibie", "Megawati", "Jokowi"],
+                answer: "Soekarno"
+            },
+            {
+                question: "Siapakah penemu bola lampu?",
+                options: ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Galileo Galilei"],
+                answer: "Thomas Edison"
+            },
+            {
+                question: "Berapakah hasil dari 2 + 2 x 2?",
+                options: ["4", "6", "8", "10"],
+                answer: "6"
+            }
+        ];
+
+        var currentQuestion = 0;
+        var score = 0;
+
+        var modal = document.getElementById('modal');
+        var questionElement = document.getElementById('question');
+        var optionsElement = document.getElementById('options');
+        var answerForm = document.getElementById('answer-form');
+        var scoreElement = document.getElementById('score');
+
+        // Function to show modal
+        function showModal() {
+            // Set current question
+            var current = questions[currentQuestion];
+
+            // Set question text
+            questionElement.innerHTML = current.question;
+
+            // Set options
+            var optionsHTML = '';
+            for (var i = 0; i < current.options.length; i++) {
+                optionsHTML += '<label class="block"><input type="radio" name="answer" value="' + current.options[i] + '"> ' + current.options[i] + '</label>';
+            }
+            optionsElement.innerHTML = optionsHTML;
+
+            // Show modal
+            modal.style.display = 'flex';
+        }
+
+        // Function to hide modal
+        function hideModal() {
+            modal.style.display = 'none';
+        }
+
+        // Function to handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Get selected answer
+            var selectedAnswer = answerForm.querySelector('input[name="answer"]:checked').value;
+
+            // Check answer
+            if (selectedAnswer === questions[currentQuestion].answer) {
+                score++;
+                scoreElement.innerHTML = 'Benar! Skor Anda: ' + score;
+            } else {
+                scoreElement.innerHTML = 'Salah! Skor Anda: ' + score;
+            }
+
+            // Increment current question
+            currentQuestion++;
+
+            // Check if quiz is over
+            if (currentQuestion === questions.length) {
+                // Show final score
+                questionElement.innerHTML = 'Kuis Selesai';
+                optionsElement.innerHTML = '';
+                answerForm.innerHTML = '';
+                scoreElement.innerHTML = 'Skor Akhir Anda: ' + score;
+            } else {
+                // Show next question
+                showModal();
+            }
+        }
+
+        // Add event listener to form submission
+        answerForm.addEventListener('submit', handleFormSubmit);
+    </script>
+
+
+    <!-- Modal Akhiri Quiz -->
+    <div>
+
     </div>
 
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
-    <audio id="audioBenar" src="../asset/correct.wav"></audio>
-
-
 </body>
 
-
-<script>
-    var audioBenar = document.getElementById("audioBenar");
-
-    const jenis = "<?php echo $jenis; ?>"
-    const level = "<?php echo $level; ?>"
-
-    var angka1 = 0
-    var angka2 = 0
-    var operator = ""
-    var hasil = 0
-    var soal = ""
-
-
-    function generateSoal() {
-        if (level == "easy") {
-            angka1 = Math.floor(Math.random() * 9) + 1
-            angka2 = Math.floor(Math.random() * 9) + 2
-        } else if (level == "medium") {
-            angka1 = Math.floor(Math.random() * 29) + 1
-            angka2 = Math.floor(Math.random() * 9) + 5
-        } else if (level == "hard") {
-            angka1 = Math.floor(Math.random() * 249) + 1
-            angka2 = Math.floor(Math.random() * 98) + 1
-        }
-
-        if (jenis == "penjumlahan") {
-            operator = "+"
-            hasil = angka1 + angka2
-        } else if (jenis == "pengurangan") {
-            operator = "-"
-            hasil = angka1 - angka2
-            if (angka1 < angka2) {
-                const tempAngka1 = angka1
-                angka1 = angka2
-                angka2 = tempAngka1
-                hasil = angka1 - angka2
-
-            }
-        } else if (jenis == "perkalian") {
-
-            if (level == "easy") {
-                angka1 = Math.floor(Math.random() * 9) + 1
-                angka2 = Math.floor(Math.random() * 9) + 1
-            } else if (level == "medium") {
-                angka1 = Math.floor(Math.random() * 19) + 10
-                angka2 = Math.floor(Math.random() * 9) + 2
-            } else if (level == "hard") {
-                angka1 = Math.floor(Math.random() * 149) + 1
-                angka2 = Math.floor(Math.random() * 19) + 1
-            }
-
-            operator = "x"
-            hasil = angka1 * angka2
-        } else if (jenis == "pembagian") {
-            operator = ":"
-            hasil = angka1 / angka2
-            while (angka1 % angka2 != 0) {
-                if (level == "easy") {
-                    angka1 = Math.floor(Math.random() * 10) + 11
-                    angka2 = Math.floor(Math.random() * 7) + 2
-
-                } else if (level == "medium") {
-                    angka1 = Math.floor(Math.random() * 99) + 10
-                    angka2 = Math.floor(Math.random() * 15) + 2
-
-                } else if (level == "hard") {
-                    angka1 = Math.floor(Math.random() * 899) + 1
-                    angka2 = Math.floor(Math.random() * 98) + 2
-                }
-                hasil = angka1 / angka2
-            }
-        }
-        soal = `${angka1} ${operator} ${angka2} = `
-
-    }
-
-
-    $(".sempoa").click(function() {
-        var checkCounter = $(".counter").data("value")
-        if (checkCounter == hasil) {
-            $(".show-correct").show();
-            audioBenar.load();
-            audioBenar.play();
-        }
-    })
-    generateSoal()
-
-    $(".show-correct").click(function() {
-        $(this).hide();
-        generateSoal()
-        $("#soal").html(soal);
-        $(".btn-reset").click()
-    })
-    $("#soal").html(soal);
-</script>
-
 <script src="../js/sempoa.js"></script>
-<script src="../js/page.js"></script>
 
 </html>
