@@ -59,48 +59,12 @@ $level = $_GET['level'];
             <div
                 class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end">
 
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="1000000" data-counterorder="6">
-                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
-                    </div>
-                    <img src="../asset/batu-biru.png"
-                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                        data-value=5>
-
-                    <div class="py-4">
-                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
-
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <img src="../asset/batu-biru.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=1>
-
-
-                        <img src="../asset/batu-biru.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=2>
-
-
-                        <img src="../asset/batu-biru.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=3>
-
-
-                        <img src="../asset/batu-biru.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
-                            data-value=4>
-
-
-                    </div>
-
-                </div>
                 <div class="kolom space-y-3 relative pb-2" data-multiplier="100000" data-counterorder="5">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-merah.png"
+                    <img src="../asset/batu-normal.png"
                         class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                         data-value=5>
 
@@ -110,22 +74,22 @@ $level = $_GET['level'];
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=1>
 
 
-                        <img src="../asset/batu-merah.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=2>
 
 
-                        <img src="../asset/batu-merah.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=3>
 
 
-                        <img src="../asset/batu-merah.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=4>
 
@@ -133,11 +97,12 @@ $level = $_GET['level'];
                     </div>
 
                 </div>
+
                 <div class="kolom space-y-3 relative pb-2" data-multiplier="10000" data-counterorder="4">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-hijau.png"
+                    <img src="../asset/batu-normal.png"
                         class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                         data-value=5>
 
@@ -147,22 +112,22 @@ $level = $_GET['level'];
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-hijau.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=1>
 
 
-                        <img src="../asset/batu-hijau.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=2>
 
 
-                        <img src="../asset/batu-hijau.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=3>
 
 
-                        <img src="../asset/batu-hijau.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=4>
 
@@ -174,32 +139,34 @@ $level = $_GET['level'];
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-biru.png"
+                    <img src="../asset/batu-normal.png"
                         class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                         data-value=5>
 
                     <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                            <div class="w-2 h-2 rounded-full bg-black mx-auto mt-0.5">
 
+                            </div>
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-biru.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=1>
 
 
-                        <img src="../asset/batu-biru.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=2>
 
 
-                        <img src="../asset/batu-biru.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=3>
 
 
-                        <img src="../asset/batu-biru.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=4>
 
@@ -211,7 +178,7 @@ $level = $_GET['level'];
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-merah.png"
+                    <img src="../asset/batu-normal.png"
                         class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                         data-value=5>
 
@@ -221,22 +188,22 @@ $level = $_GET['level'];
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-merah.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=1>
 
 
-                        <img src="../asset/batu-merah.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=2>
 
 
-                        <img src="../asset/batu-merah.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=3>
 
 
-                        <img src="../asset/batu-merah.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=4>
 
@@ -248,7 +215,7 @@ $level = $_GET['level'];
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-hijau.png"
+                    <img src="../asset/batu-normal.png"
                         class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                         data-value=5>
 
@@ -258,22 +225,22 @@ $level = $_GET['level'];
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-hijau.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=1>
 
 
-                        <img src="../asset/batu-hijau.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=2>
 
 
-                        <img src="../asset/batu-hijau.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=3>
 
 
-                        <img src="../asset/batu-hijau.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=4>
 
@@ -285,7 +252,46 @@ $level = $_GET['level'];
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
-                    <img src="../asset/batu-biru.png"
+                    <img src="../asset/batu-start.png"
+                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                        data-value=5>
+
+                    <div class="py-4">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+                            <div class="w-2 h-2 rounded-full bg-black mx-auto mt-0.5">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="../asset/batu-start.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                            data-value=1>
+
+
+                        <img src="../asset/batu-start.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                            data-value=2>
+
+
+                        <img src="../asset/batu-start.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                            data-value=3>
+
+
+                        <img src="../asset/batu-start.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                            data-value=4>
+
+
+                    </div>
+
+                </div>
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="0.1" data-counterorder="-1">
+                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
+
+                    </div>
+                    <img src="../asset/batu-normal.png"
                         class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                         data-value=5>
 
@@ -295,22 +301,59 @@ $level = $_GET['level'];
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <img src="../asset/batu-biru.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=1>
 
 
-                        <img src="../asset/batu-biru.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=2>
 
 
-                        <img src="../asset/batu-biru.png"
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=3>
 
 
-                        <img src="../asset/batu-biru.png"
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                            data-value=4>
+
+
+                    </div>
+
+                </div>
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="0.01" data-counterorder="-2">
+                    <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
+
+                    </div>
+                    <img src="../asset/batu-normal.png"
+                        class="batu atas h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                        data-value=5>
+
+                    <div class="py-4">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
+
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                            data-value=1>
+
+
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                            data-value=2>
+
+
+                        <img src="../asset/batu-normal.png"
+                            class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
+                            data-value=3>
+
+
+                        <img src="../asset/batu-normal.png"
                             class="batu bawah h-[8.5vh] scale-[1.45] scale-x-[1.8]  mx-auto transition duration-300"
                             data-value=4>
 
