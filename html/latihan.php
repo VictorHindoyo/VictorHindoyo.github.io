@@ -396,14 +396,14 @@ $level = $_GET['level'];
 
     function generateSoal() {
         if (level == "easy") {
-            angka1 = Math.floor(Math.random() * 10) + 1
-            angka2 = Math.floor(Math.random() * 10) + 1
+            angka1 = Math.floor(Math.random() * 9) + 1
+            angka2 = Math.floor(Math.random() * 9) + 2
         } else if (level == "medium") {
-            angka1 = Math.floor(Math.random() * 100) + 1
-            angka2 = Math.floor(Math.random() * 100) + 1
+            angka1 = Math.floor(Math.random() * 29) + 1
+            angka2 = Math.floor(Math.random() * 9) + 5
         } else if (level == "hard") {
-            angka1 = Math.floor(Math.random() * 1000) + 1
-            angka2 = Math.floor(Math.random() * 1000) + 1
+            angka1 = Math.floor(Math.random() * 249) + 1
+            angka2 = Math.floor(Math.random() * 98) + 1
         }
 
         if (jenis == "penjumlahan") {
@@ -422,14 +422,14 @@ $level = $_GET['level'];
         } else if (jenis == "perkalian") {
 
             if (level == "easy") {
-                angka1 = Math.floor(Math.random() * 10) + 1
-                angka2 = Math.floor(Math.random() * 10) + 1
+                angka1 = Math.floor(Math.random() * 9) + 1
+                angka2 = Math.floor(Math.random() * 9) + 1
             } else if (level == "medium") {
-                angka1 = Math.floor(Math.random() * 100) + 1
-                angka2 = Math.floor(Math.random() * 10) + 1
+                angka1 = Math.floor(Math.random() * 19) + 10
+                angka2 = Math.floor(Math.random() * 9) + 2
             } else if (level == "hard") {
-                angka1 = Math.floor(Math.random() * 100) + 1
-                angka2 = Math.floor(Math.random() * 100) + 1
+                angka1 = Math.floor(Math.random() * 149) + 1
+                angka2 = Math.floor(Math.random() * 19) + 1
             }
 
             operator = "x"
@@ -439,13 +439,17 @@ $level = $_GET['level'];
             hasil = angka1 / angka2
             while (angka1 % angka2 != 0) {
                 if (level == "easy") {
-                    angka1 = Math.floor(Math.random() * 10) + 10
+                    angka1 = Math.floor(Math.random() * 10) + 11
+                    angka2 = Math.floor(Math.random() * 7) + 2
+
                 } else if (level == "medium") {
-                    angka1 = Math.floor(Math.random() * 100) + 30
+                    angka1 = Math.floor(Math.random() * 99) + 10
+                    angka2 = Math.floor(Math.random() * 15) + 2
+
                 } else if (level == "hard") {
-                    angka1 = Math.floor(Math.random() * 1000) + 90
+                    angka1 = Math.floor(Math.random() * 899) + 1
+                    angka2 = Math.floor(Math.random() * 98) + 2
                 }
-                angka2 = Math.floor(Math.random() * 10) + 2
                 hasil = angka1 / angka2
             }
         }
