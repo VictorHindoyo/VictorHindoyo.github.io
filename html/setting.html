@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-image: url('../asset/bg-awan.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .volume {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 50px;
+        }
+
+        .label-wrapper {
+            flex: 1;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .slider {
+            margin-right: 20px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+
+        <div class="volume">
+            <div class="label-wrapper">
+                <label for="musicRange">Music:</label>
+            </div>
+
+            <div class="controls">
+                <button id="musicDecrease" onclick="decreaseVolume('musicRange')">-</button>
+                <input type="range" id="musicRange" class="slider" min="0" max="100" value="50" />
+                <button id="musicIncrease" onclick="increaseVolume('musicRange')">+</button>
+            </div>
+        </div>
+
+        <div class="volume">
+            <div class="label-wrapper">
+                <label for="sfxRange">Sound FX:</label>
+            </div>
+
+            <div class="controls">
+                <button id="sfxDecrease" onclick="decreaseVolume('sfxRange')">-</button>
+                <input type="range" id="sfxRange" class="slider" min="0" max="100" value="50" />
+                <button id="sfxIncrease" onclick="increaseVolume('sfxRange')">+</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <form action="/action_page.php">
+            <label for="cars">Bahasa:</label>
+            <select name="bhs" id="bhs">
+                    <option value="indo">Indonesia</option>
+                    <option value="ing">Inggris</option>
+                </optgroup>
+            </select>
+            <br /><br />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        var musicSlider = document.getElementById("musicRange");
+        var sfxSlider = document.getElementById("sfxRange");
+
+        // Function to decrease volume
+        function decreaseVolume(sliderId) {
+            var slider = document.getElementById(sliderId);
+            if (slider.value > 0) {
+                slider.value--;
+            }
+        }
+
+        // Function to increase volume
+        function increaseVolume(sliderId) {
+            var slider = document.getElementById(sliderId);
+            if (slider.value < 100) {
+                slider.value++;
+            }
+        } </script>
+</body>
+
+</html>
