@@ -346,12 +346,9 @@
     <script>
         var startButton = document.getElementById('start-button');
 
-        // Get overlay element
         var overlay = document.getElementById('overlay');
 
-        // Add event listener to overlay
         overlay.addEventListener('click', function (event) {
-            // Check if clicked element is overlay
             if (event.target === overlay) {
                 // Close modal
                 hideModal();
@@ -385,12 +382,10 @@
         var answerForm = document.getElementById('answer-form');
         var scoreElement = document.getElementById('score');
 
-        // Function to show modal
+        //show modal
         function showModal() {
-            // Set current question
             var current = questions[currentQuestion];
 
-            // Set question text
             questionElement.innerHTML = current.question;
 
             // Set options
@@ -409,7 +404,7 @@
             modal.style.display = 'none';
         }
 
-        // Function to handle form submission
+    
         function handleFormSubmit(event) {
             event.preventDefault();
 
@@ -424,10 +419,10 @@
                 scoreElement.innerHTML = 'Salah! Skor Anda: ' + score;
             }
 
-            // Increment current question
+           
             currentQuestion++;
 
-            // Check if quiz is over
+            
             if (currentQuestion === questions.length) {
                 // Show final score
                 questionElement.innerHTML = 'Kuis Selesai';
@@ -440,7 +435,7 @@
             }
         }
 
-        // Add event listener to form submission
+       
         answerForm.addEventListener('submit', handleFormSubmit);
     </script>
 
