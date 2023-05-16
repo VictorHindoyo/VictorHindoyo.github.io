@@ -56,14 +56,14 @@
                     <p class="text-center font-bold text-xl ">Selamat datang di tutorial!</p>
                     <p class="text-center font-bold text-xl ">Yuk tonton video di slide berikut ini</p>
                 </div>
-                <button class="page-next" data-target="2">
+                <button class="page-next" data-target="2" >
                     <i class="fa fa-arrow-right text-5xl" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
         <div class="page hidden w-full" data-page="2">
             <div class="flex justify-between items-center px-6">
-                <button class="page-next" data-target="1">
+                <button class="page-next" data-target="1" onclick="document.getElementById('videoTutorial').pause()">
                     <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
                 </button>
                 <div class="ml-10">
@@ -73,7 +73,7 @@
             </div>
             <div class="bg-white w-9/12 p-4 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] mx-auto ">
                 <div class="w-full h-full flex items-center justify-center">
-                    <video width="400" controls>
+                    <video width="500" controls id="videoTutorial">
                         <source src="../asset/tutorial.mp4" type="video/mp4">
                     </video>
                 </div>
