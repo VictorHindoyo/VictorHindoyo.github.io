@@ -382,6 +382,9 @@
 </body>
 
 <script src="../js/sempoa.js">
+</script>
+
+<script>
     var questions = [
         {
             question: 'Apa kepanjangan dari HTML?',
@@ -454,7 +457,6 @@
             showModal();
         }
     });
-
 </script>
 
 </html>

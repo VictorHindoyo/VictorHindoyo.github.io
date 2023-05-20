@@ -18,6 +18,10 @@
             align-items: center;
         }
 
+        label {
+            font-size: 35px;
+        }
+
         .container {
             width: 500px;
             text-align: center;
@@ -37,6 +41,8 @@
 
         .label-wrapper {
             flex: 1;
+            display: flex;
+            align-items: center;
         }
 
         .controls {
@@ -60,6 +66,13 @@
 
         button:hover {
             background-color: #555;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -96,16 +109,15 @@
         <br>
         <form action="/action_page.php">
             <label for="cars">Bahasa:</label>
-            <select name="bhs" id="bhs">
-                    <option value="indo">Indonesia</option>
-                    <option value="ing">Inggris</option>
+            <select name="bhs" id="bhs" style="align-items: center;">
+                <option value="indo">Indonesia</option>
+                <option value="ing">Inggris</option>
                 </optgroup>
             </select>
-            <br /><br />
+            
             <input type="submit" value="Submit" />
         </form>
     </div>
-    <script src="script.js"></script>
     <script>
         var musicSlider = document.getElementById("musicRange");
         var sfxSlider = document.getElementById("sfxRange");
@@ -115,6 +127,7 @@
             var slider = document.getElementById(sliderId);
             if (slider.value > 0) {
                 slider.value--;
+                updateVolume(sliderId, slider.value);
             }
         }
 
@@ -123,8 +136,24 @@
             var slider = document.getElementById(sliderId);
             if (slider.value < 100) {
                 slider.value++;
+                updateVolume(sliderId, slider.value);
             }
-        } </script>
+        }
+
+        // Function to update volume based on slider value
+        function updateVolume(sliderId, volume) {
+            // Check which slider was updated
+            if (sliderId === "musicRange") {
+                // Update music volume
+                var musicPlayer = document.getElementById("musicPlayer");
+                musicPlayer.volume = volume / 100;
+            } else if (sliderId === "sfxRange") {
+                // Update sound FX volume
+                var sfxPlayer = document.getElementById("sfxPlayer");
+                sfxPlayer.volume = volume / 100;
+            }
+        }
+    </script>
 </body>
 
 </html>
