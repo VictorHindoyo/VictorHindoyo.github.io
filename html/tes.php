@@ -66,30 +66,6 @@
 </style>
 
 <body>
-
-    <h1 class="text-2xl font-bold mb-4">Contoh Penggunaan Session dengan Modal</h1>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onclick="showModal()">Mulai</button>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Pertanyaan</h2>
-                <span class="close" onclick="hideModal()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <p id="question"></p>
-                <form id="answer-form">
-                    <div id="options"></div>
-                    <button type="submit"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Jawab</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <p id="score"></p>
-            </div>
-        </div>
-    </div>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
             <a href="main_menu.html" class="min-w-[150px]">
@@ -103,10 +79,27 @@
 
             </h1>
             <div class="min-w-[150px] text-end">
-                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto"
-                    onclick="document.getElementById('audioSempoa').play()">
-                    <img src="../asset/reset.png" class="w-8" alt="">
-                </button>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onclick="document.getElementById('audioSempoa').play()" onclick="showModal()">Mulai</button>
+            </div>
+            <div class="modal hidden fixed inset-0 flex items-center justify-center">
+                <div class="modal-content bg-white w-1/2 p-6 rounded shadow-lg">
+                    <div class="modal-header flex justify-between items-center border-b-2 border-gray-200 mb-4">
+                        <h2 class="text-xl font-bold">Pertanyaan</h2>
+                        <button class="close text-gray-500" onclick="hideModal()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="question" class="text-lg mb-4"></p>
+                        <form id="answer-form">
+                            <div id="options" class="mb-4"></div>
+                            <button type="submit"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Jawab</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer mt-4">
+                        <p id="score"></p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="flex justify-start mt-2 ">
@@ -407,69 +400,54 @@
         }
     ];
 
-    // Start session
-    var score = 0;
     var currentQuestion = 0;
+    var score = 0;
 
-    // Get modal element
-    var modal = document.getElementById('modal');
-
-    // Get modal elements
+    var modal = document.querySelector('.modal');
     var questionElement = document.getElementById('question');
     var optionsElement = document.getElementById('options');
     var answerForm = document.getElementById('answer-form');
     var scoreElement = document.getElementById('score');
 
-    // Function to show modal
     function showModal() {
-        // Set current question
         var current = questions[currentQuestion];
 
-        // Set question text
-        questionElement.innerHTML = current.question;
+        questionElement.textContent = current.question;
 
-        // Set options
         var optionsHTML = '';
         for (var i = 0; i < current.options.length; i++) {
             optionsHTML += '<label class="block"><input type="radio" name="answer" value="' + current.options[i] + '"> ' + current.options[i] + '</label>';
         }
         optionsElement.innerHTML = optionsHTML;
 
-        // Show modal
-        modal.style.display = 'block';
+        modal.classList.remove('hidden');
     }
 
-    // Function to hide modal
     function hideModal() {
-        modal.style.display = 'none';
+        modal.classList.add('hidden');
     }
 
-    // Event listener for form submission
     answerForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        var current = questions[currentQuestion];
 
-        // Get selected answer
         var selectedAnswer = document.querySelector('input[name="answer"]:checked');
         if (!selectedAnswer) {
             alert('Silakan pilih salah satu opsi jawaban.');
             return;
         }
 
-        // Check if answer is correct
+        var current = questions[currentQuestion];
         if (selectedAnswer.value === current.answer) {
             score++;
         }
 
-        // Update score and current question
-        scoreElement.innerHTML = 'Skor: ' + score;
+        scoreElement.textContent = 'Skor: ' + score;
+
         currentQuestion++;
 
-        // Check if all questions have been answered
         if (currentQuestion >= questions.length) {
             alert('Anda telah menjawab semua pertanyaan. Skor Anda: ' + score);
             hideModal();
-            // Reset session
             score = 0;
             currentQuestion = 0;
         } else {

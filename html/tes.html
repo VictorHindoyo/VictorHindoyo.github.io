@@ -33,27 +33,39 @@
         touch-action: manipulation;
     }
 
-    #overlay {
-        z-index: 50;
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .modal-header,
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .modal-header h2 {
+        margin-top: 0;
     }
 </style>
 
 <body>
-    <button id="start-button"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        onclick="showModal()">Mulai</button>
-
-    <div id="modal" class="fixed inset-0 overflow-y-auto z-50 hidden items-center justify-center" style="display:none;">
-        <div class="bg-gray-100 p-4 rounded-lg">
-            <div id="question" class="text-lg font-medium mb-4"></div>
-            <form id="answer-form" class="space-y-2">
-                <div id="options"></div>
-                <button type="submit"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Jawab</button>
-            </form>
-            <div id="score" class="mt-4"></div>
-        </div>
-    </div>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
             <a href="main_menu.html" class="min-w-[150px]">
@@ -67,10 +79,27 @@
 
             </h1>
             <div class="min-w-[150px] text-end">
-                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto"
-                    onclick="document.getElementById('audioSempoa').play()">
-                    <img src="../asset/reset.png" class="w-8" alt="">
-                </button>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onclick="document.getElementById('audioSempoa').play()" onclick="showModal()">Mulai</button>
+            </div>
+            <div class="modal hidden fixed inset-0 flex items-center justify-center">
+                <div class="modal-content bg-white w-1/2 p-6 rounded shadow-lg">
+                    <div class="modal-header flex justify-between items-center border-b-2 border-gray-200 mb-4">
+                        <h2 class="text-xl font-bold">Pertanyaan</h2>
+                        <button class="close text-gray-500" onclick="hideModal()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="question" class="text-lg mb-4"></p>
+                        <form id="answer-form">
+                            <div id="options" class="mb-4"></div>
+                            <button type="submit"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Jawab</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer mt-4">
+                        <p id="score"></p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="flex justify-start mt-2 ">
@@ -343,102 +372,6 @@
         </div>
 
     </div>
-    <script>
-        var startButton = document.getElementById('start-button');
-
-        var overlay = document.getElementById('overlay');
-
-        overlay.addEventListener('click', function (event) {
-            if (event.target === overlay) {
-                // Close modal
-                hideModal();
-            }
-        });
-
-        var questions = [
-            {
-                question: "Siapakah presiden pertama Indonesia?",
-                options: ["Soekarno", "Habibie", "Megawati", "Jokowi"],
-                answer: "Soekarno"
-            },
-            {
-                question: "Siapakah penemu bola lampu?",
-                options: ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Galileo Galilei"],
-                answer: "Thomas Edison"
-            },
-            {
-                question: "Berapakah hasil dari 2 + 2 x 2?",
-                options: ["4", "6", "8", "10"],
-                answer: "6"
-            }
-        ];
-
-        var currentQuestion = 0;
-        var score = 0;
-
-        var modal = document.getElementById('modal');
-        var questionElement = document.getElementById('question');
-        var optionsElement = document.getElementById('options');
-        var answerForm = document.getElementById('answer-form');
-        var scoreElement = document.getElementById('score');
-
-        //show modal
-        function showModal() {
-            var current = questions[currentQuestion];
-
-            questionElement.innerHTML = current.question;
-
-            // Set options
-            var optionsHTML = '';
-            for (var i = 0; i < current.options.length; i++) {
-                optionsHTML += '<label class="block"><input type="radio" name="answer" value="' + current.options[i] + '"> ' + current.options[i] + '</label>';
-            }
-            optionsElement.innerHTML = optionsHTML;
-
-            // Show modal
-            modal.style.display = 'flex';
-        }
-
-        // Function to hide modal
-        function hideModal() {
-            modal.style.display = 'none';
-        }
-
-    
-        function handleFormSubmit(event) {
-            event.preventDefault();
-
-            // Get selected answer
-            var selectedAnswer = answerForm.querySelector('input[name="answer"]:checked').value;
-
-            // Check answer
-            if (selectedAnswer === questions[currentQuestion].answer) {
-                score++;
-                scoreElement.innerHTML = 'Benar! Skor Anda: ' + score;
-            } else {
-                scoreElement.innerHTML = 'Salah! Skor Anda: ' + score;
-            }
-
-           
-            currentQuestion++;
-
-            
-            if (currentQuestion === questions.length) {
-                // Show final score
-                questionElement.innerHTML = 'Kuis Selesai';
-                optionsElement.innerHTML = '';
-                answerForm.innerHTML = '';
-                scoreElement.innerHTML = 'Skor Akhir Anda: ' + score;
-            } else {
-                // Show next question
-                showModal();
-            }
-        }
-
-       
-        answerForm.addEventListener('submit', handleFormSubmit);
-    </script>
-
 
     <!-- Modal Akhiri Quiz -->
     <div>
@@ -448,6 +381,80 @@
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
 </body>
 
-<script src="../js/sempoa.js"></script>
+<script src="../js/sempoa.js">
+    var questions = [
+        {
+            question: 'Apa kepanjangan dari HTML?',
+            options: ['Hyper Text Markup Language', 'Hyperlinks and Text Markup Language', 'Home Tool Markup Language'],
+            answer: 'Hyper Text Markup Language'
+        },
+        {
+            question: 'Siapakah penemu World Wide Web (WWW)?',
+            options: ['Steve Jobs', 'Tim Berners-Lee', 'Bill Gates'],
+            answer: 'Tim Berners-Lee'
+        },
+        {
+            question: 'Apa kepanjangan dari CSS?',
+            options: ['Cascading Style Sheet', 'Colorful Style Sheet', 'Computer Style Sheet'],
+            answer: 'Cascading Style Sheet'
+        }
+    ];
+
+    var currentQuestion = 0;
+    var score = 0;
+
+    var modal = document.querySelector('.modal');
+    var questionElement = document.getElementById('question');
+    var optionsElement = document.getElementById('options');
+    var answerForm = document.getElementById('answer-form');
+    var scoreElement = document.getElementById('score');
+
+    function showModal() {
+        var current = questions[currentQuestion];
+
+        questionElement.textContent = current.question;
+
+        var optionsHTML = '';
+        for (var i = 0; i < current.options.length; i++) {
+            optionsHTML += '<label class="block"><input type="radio" name="answer" value="' + current.options[i] + '"> ' + current.options[i] + '</label>';
+        }
+        optionsElement.innerHTML = optionsHTML;
+
+        modal.classList.remove('hidden');
+    }
+
+    function hideModal() {
+        modal.classList.add('hidden');
+    }
+
+    answerForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        if (!selectedAnswer) {
+            alert('Silakan pilih salah satu opsi jawaban.');
+            return;
+        }
+
+        var current = questions[currentQuestion];
+        if (selectedAnswer.value === current.answer) {
+            score++;
+        }
+
+        scoreElement.textContent = 'Skor: ' + score;
+
+        currentQuestion++;
+
+        if (currentQuestion >= questions.length) {
+            alert('Anda telah menjawab semua pertanyaan. Skor Anda: ' + score);
+            hideModal();
+            score = 0;
+            currentQuestion = 0;
+        } else {
+            showModal();
+        }
+    });
+
+</script>
 
 </html>
