@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.4.js"
-        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,30 +35,13 @@
     }
 </style>
 
+
 <script>
     // Data Soal Masuk sini
-    soal = ["1 + 1 = 2", "3 * 3 = 9", "5 : 5 = 1"]
-
-    // Hasil Disini
-    hasil = []
-    soal.forEach((val) => {
-        var temp = val
-        temp = temp.replace(" ","")
-        hasil.push(parseInt(temp.split("=")[1]))
-    })
-
-    console.log(hasil)
-
-    const containerSoal1 = document.getElementById("containerSoal1")
-    const containerSoal2 = document.getElementById("containerSoal2")
-    var currentSoal = 1
-
-    function nextQuestion(){
-        
-    }
-
-
-
+    angka1 = [1, 10, 6]
+    operator = ["+", "-", "*"]
+    angka2 = [3, 5, 9]
+    hasil = [4, 5, 15]
 </script>
 
 <body>
@@ -404,8 +387,8 @@
             </div>
             <!-- Footer -->
             <div class="flex items-center justify-center pb-6 gap-4">
-                <a href="tes_hasil.html"
-                    class="border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold">Ya</a>
+                <button class="border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold"
+                    onclick="submit()">Ya</button>
                 <button class="modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
                     data-modal="modalKonfirmasiSubmit">Tidak</button>
             </div>
@@ -437,17 +420,48 @@
                     Ami menyimpan enam permen di tas kecilnya dan
                     mengambil satu permen dari kantong sakunya untuk disimpan di tas kecilnya.
                 </div>
-                <div>
+                <div id="containerSoal2">
                     Berapakah jumlah permen ami di tas sekarang?
-                </div id="containerSoal2">
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="show show-correct absolute top-0 bg-lime-500 bg-opacity-[0.8] w-screen h-screen hidden z-[100]">
+        <div class="w-full h-full flex items-center justify-center flex-col">
+            <p class="font-bold font-baloo text-3xl">Jawabanmu Benar !!</p>
+            <div class="border-4 border-black rounded-full w-40 h-40 flex justify-center items-center">
+                <i class="fa fa-check text-[100px]" aria-hidden="true"></i>
+            </div>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="show show-wrong absolute top-0 bg-red-500 bg-opacity-[0.8] w-screen h-screen hidden z-[100]">
+        <div class="w-full h-full flex items-center justify-center flex-col">
+            <p class="font-bold font-baloo text-3xl">Jawabanmu Salah !!</p>
+            <div class="border-4 border-black rounded-full w-40 h-40 flex justify-center items-center">
+                <i class="fa fa-times text-[100px]" aria-hidden="true"></i>
+            </div>
+            <p></p>
+        </div>
+    </div>
+
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
+    <audio id="audioBenar" src="../asset/correct.wav"></audio>
+    <audio id="audioSalah" src="../asset/wrong.wav"></audio>
+
+    <form action="tes_hasil.php" method="POST">
+        <input type="hidden" id="skor" name="skor">
+        <button type="submit" class="hidden" id="buttonSubmitTes"></button>
+    </form>
 </body>
+
+
 
 <script src="../js/sempoa.js"></script>
 <script src="../js/modal.js"></script>
+<script src="../js/tes.js"></script>
+
 
 </html>

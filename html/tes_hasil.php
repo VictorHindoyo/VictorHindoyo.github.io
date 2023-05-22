@@ -14,12 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.6.4.js"
-        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
 
     <title>Document</title>
 </head>
 
+<?php
+$skor = $_POST['skor'];
+?>
 <style>
     body {
         background-image: url('../asset/bg-awan.png');
@@ -42,7 +45,7 @@
         </div>
         <div class="flex justify-between items-center pt-10">
             <img src="../asset/buah-hasil-skor.png" class="w-[15vw] self-end" alt="">
-            <span class="text-[15vw] self-start font-bold font-baloo text-white">100</span>
+            <span class="text-[15vw] self-start font-bold font-baloo text-white"><?php echo $skor; ?></span>
             <img src="../asset/buah-hasil-skor.png" class="w-[15vw] self-end -scale-x-[100%]" alt="">
         </div>
         <div>
@@ -50,8 +53,7 @@
         </div>
 
         <a href="main_menu.html"
-            class="bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] absolute bottom-6 right-6"
-            >
+            class="bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] absolute bottom-6 right-6">
             <i class="fa fa-home" aria-hidden="true"></i>
         </a>
     </div>
