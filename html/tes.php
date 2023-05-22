@@ -76,11 +76,13 @@
                     <div id="soal"></div>
                     <span class="counter ml-2" data-value=0>0</span>
                 </div>
-
             </h1>
             <div class="min-w-[150px] text-end">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    onclick="document.getElementById('audioSempoa').play()" onclick="showModal()">Mulai</button>
+                <button
+                    class="modal-btn bg-[#FFF6BE] w-[45px] h-[45px] flex items-center justify-center rounded-full border-4 border-[#FFE541] relative z-[3]"
+                    onclick="document.getElementById('audioSempoa').play(); showModal();"> <img src="../asset/info.png"
+                        class="w-3" alt=""></button>
+
             </div>
             <div class="modal hidden fixed inset-0 flex items-center justify-center">
                 <div class="modal-content bg-white w-1/2 p-6 rounded shadow-lg">
@@ -102,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-start mt-2 ">
+        <div class="flex justify-center mt-2 ">
             <div
                 class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end scale-[0.9]">
 
@@ -381,25 +383,16 @@
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
 </body>
 
-<script src="../js/sempoa.js">
-</script>
-
+<script src="../js/sempoa.js"></script>
 <script>
     var questions = [
         {
-            question: 'Apa kepanjangan dari HTML?',
-            options: ['Hyper Text Markup Language', 'Hyperlinks and Text Markup Language', 'Home Tool Markup Language'],
-            answer: 'Hyper Text Markup Language'
+            question: '1+1=?',
+            answer: '2'
         },
         {
-            question: 'Siapakah penemu World Wide Web (WWW)?',
-            options: ['Steve Jobs', 'Tim Berners-Lee', 'Bill Gates'],
-            answer: 'Tim Berners-Lee'
-        },
-        {
-            question: 'Apa kepanjangan dari CSS?',
-            options: ['Cascading Style Sheet', 'Colorful Style Sheet', 'Computer Style Sheet'],
-            answer: 'Cascading Style Sheet'
+            question: '1+2=?',
+            answer: '3'
         }
     ];
 
@@ -417,11 +410,11 @@
 
         questionElement.textContent = current.question;
 
-        var optionsHTML = '';
-        for (var i = 0; i < current.options.length; i++) {
-            optionsHTML += '<label class="block"><input type="radio" name="answer" value="' + current.options[i] + '"> ' + current.options[i] + '</label>';
-        }
-        optionsElement.innerHTML = optionsHTML;
+        //var optionsHTML = '';
+        // for (var i = 0; i < current.options.length; i++) {
+        //     optionsHTML += '<label class="block"><input type="radio" name="answer" value="' + current.options[i] + '"> ' + current.options[i] + '</label>';
+        // }
+        //optionsElement.innerHTML = optionsHTML;
 
         modal.classList.remove('hidden');
     }
@@ -433,14 +426,15 @@
     answerForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        var selectedAnswer = document.querySelector('input[name="answer"]:checked');
-        if (!selectedAnswer) {
-            alert('Silakan pilih salah satu opsi jawaban.');
-            return;
-        }
+        var selectedAnswer = $(".counter").html();
+
+        // if (!selectedAnswer) {
+        //     alert('Silakan pilih salah satu opsi jawaban.');
+        //     return;
+        // }
 
         var current = questions[currentQuestion];
-        if (selectedAnswer.value === current.answer) {
+        if (selectedAnswer == current.answer) {
             score++;
         }
 
@@ -449,6 +443,7 @@
         currentQuestion++;
 
         if (currentQuestion >= questions.length) {
+            window.location.href = "score.html";
             alert('Anda telah menjawab semua pertanyaan. Skor Anda: ' + score);
             hideModal();
             score = 0;

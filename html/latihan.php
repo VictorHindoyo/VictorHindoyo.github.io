@@ -37,11 +37,6 @@ $jenis = $_GET['jenis'];
 $level = $_GET['level'];
 ?>
 
-
-
-
-
-
 <body>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
