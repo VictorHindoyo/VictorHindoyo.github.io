@@ -2,14 +2,15 @@ const containerCounterSoal = $("#numSoal")
 const containerSoal1 = $("#containerSoal1")
 const containerSoal2 = $("#containerSoal2")
 const counter = $(".counter")
+console.log(soalId);
 
 var currentSoal = 1
 var currentScore = 0
 
 function setSoal() {
-    containerSoal1.html(`${angka1[currentSoal - 1]} ${operator[currentSoal - 1]} ${angka2[currentSoal - 1]} = ?`)
-    containerSoal2.html("")
-    containerCounterSoal.html(currentSoal)
+    // containerSoal1.html(`${questions[soalId[currentSoal - 1]].angka1} ${questions[soalId[currentSoal - 1]].operator} ${questions[soalId[currentSoal - 1]].angka2} = ?`)
+    // containerSoal2.html("")
+    // containerCounterSoal.html(currentSoal)
 }
 
 setSoal()
@@ -27,7 +28,7 @@ function resetSempoa() {
 }
 
 function submit() {
-    if (counter.data("value") == hasil[currentSoal - 1]) {
+    if (counter.data("value") == questions[soalId[currentSoal - 1]].jawaban) {
         $(".show-correct").show()
         document.getElementById("audioBenar").play()
         currentScore += 10

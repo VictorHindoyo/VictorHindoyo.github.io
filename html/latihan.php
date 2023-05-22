@@ -349,7 +349,7 @@ $level = $_GET['level'];
 
 <script>
     var audioBenar = document.getElementById("audioBenar");
-
+    
     const jenis = "<?php echo $jenis; ?>"
     const level = "<?php echo $level; ?>"
 
@@ -358,6 +358,7 @@ $level = $_GET['level'];
     var operator = ""
     var hasil = 0
     var soal = ""
+    var counter_benar = 0
 
 
     function generateSoal() {
@@ -427,6 +428,18 @@ $level = $_GET['level'];
     $(".sempoa").click(function() {
         var checkCounter = $(".counter").data("value")
         if (checkCounter == hasil) {
+            counter_benar++;
+            if (localStorage.getItem('latihan') === null || localStorage.getItem('latihan') === undefined) {
+                localStorage.setItem('latihan', counter_benar);
+            console.log('localStorage value is not set');
+            } else {
+                var temp = localStorage.getItem('latihan');
+                if (counter_benar > temp){
+                    localStorage.setItem('latihan', counter_benar);
+                }
+            console.log('localStorage value is set');
+            }
+
             $(".show-correct").show();
             audioBenar.load();
             audioBenar.play();

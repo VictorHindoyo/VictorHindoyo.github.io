@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,14 +40,38 @@
 
 
 <script>
-    // Data Soal Masuk sini
-    angka1 = [1, 10, 6]
-    operator = ["+", "-", "*"]
-    angka2 = [3, 5, 9]
-    hasil = [4, 5, 15]
+    // var soalId = [];
+    // // Data Soal Masuk sini
+    // // angka1 = [1, 10, 6]
+    // // operator = ["+", "-", "*"]
+    // // angka2 = [3, 5, 9]
+    // // hasil = [4, 5, 15]
+
+    // // Fetch the JSON file
+    // fetch('soal.json')
+    // .then(response => response.json())
+    // .then(data => {
+    //     var questions = data.mudah;
+    //     // console.log(questions);
+    //     generateSoalId();
+    // })
+    // .catch(error => {
+    //     console.log('Error:', error);
+    // });
+
+    // function generateSoalId() {
+    //     for (let i = 0; i < 10; i++) {
+    //         var randomNum = Math.floor(Math.random() * 40) + 1;
+    //         if (!soalId.includes(randomNum)){
+    //             soalId.push(randomNum);
+    //         }
+    //     }
+    //     // console.log(questions);
+    // }
 </script>
 
 <body>
+
     <div class="w-screen h-screen py-2 ">
         <div class="flex justify-between items-center px-6  mx-auto">
             <div class="min-w-[150px] flex items-center justify-end">
@@ -460,10 +485,10 @@
 </body>
 
 
-
-<script src="../js/sempoa.js"></script>
-<script src="../js/modal.js"></script>
-<script src="../js/tes.js"></script>
+<script src="js/getjson.js"></script>
+<script src="js/sempoa.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/tes.js"></script>
 
 
 </html>
