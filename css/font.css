@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Grinched;
+    src: url("/asset/GrinchedRegular.otf") format("opentype");
+}
+
+.font-grinched{
+    font-family: Grinched;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-baloo {
+    font-family: 'Baloo Tamma 2', cursive;
+}
