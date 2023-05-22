@@ -35,6 +35,32 @@
     }
 </style>
 
+<script>
+    // Data Soal Masuk sini
+    soal = ["1 + 1 = 2", "3 * 3 = 9", "5 : 5 = 1"]
+
+    // Hasil Disini
+    hasil = []
+    soal.forEach((val) => {
+        var temp = val
+        temp = temp.replace(" ","")
+        hasil.push(parseInt(temp.split("=")[1]))
+    })
+
+    console.log(hasil)
+
+    const containerSoal1 = document.getElementById("containerSoal1")
+    const containerSoal2 = document.getElementById("containerSoal2")
+    var currentSoal = 1
+
+    function nextQuestion(){
+        
+    }
+
+
+
+</script>
+
 <body>
     <div class="w-screen h-screen py-2 ">
         <div class="flex justify-between items-center px-6  mx-auto">
@@ -388,17 +414,17 @@
     </div>
 
     <!-- Modal Lihat Soal -->
-    <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 hidden flex items-center justify-center"
+    <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 flex items-center justify-center"
         id="modalLihatSoal">
         <div class="bg-white w-8/12 mx-auto rounded-lg relative">
             <!-- Header -->
-            <div class="flex items-center justify-between mt-8 py-2 px-4">
+            <div class="flex items-center justify-between  py-2 px-4">
                 <div class="min-w-12">
 
                 </div>
 
                 <div class="border-b-[1px] py-4 px-8 border-slate-300">
-                    <h3 class="font-baloo font-bold font-black text-3xl  ">SOAL NO 1</h3>
+                    <h3 class="font-baloo font-bold font-black text-3xl  ">SOAL NO <span id="numSoal">1</span></h3>
                 </div>
 
                 <button class="min-w-12 modal-close" data-modal="modalLihatSoal">
@@ -407,13 +433,13 @@
             </div>
             <!-- Body -->
             <div class="pb-8 pt-4 px-8 text-start font-bold font-baloo text-xl space-y-4 max-h-[60vh] overflow-auto">
-                <div>
+                <div id="containerSoal1">
                     Ami menyimpan enam permen di tas kecilnya dan
                     mengambil satu permen dari kantong sakunya untuk disimpan di tas kecilnya.
                 </div>
                 <div>
                     Berapakah jumlah permen ami di tas sekarang?
-                </div>
+                </div id="containerSoal2">
             </div>
         </div>
     </div>

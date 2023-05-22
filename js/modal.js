@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-  $(".modal").hide();
 });
 
 $(".modal-btn").click(function () {
