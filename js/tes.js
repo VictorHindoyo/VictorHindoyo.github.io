@@ -46,7 +46,7 @@ $(".show").click(function () {
     resetSempoa()
     currentSoal++
     setSoal()
-    if (currentSoal == 4) {
+    if (currentSoal == 11) {
         $("#skor").val(currentScore)
         document.getElementById("buttonSubmitTes").click()
     }
