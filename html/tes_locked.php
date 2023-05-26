@@ -26,34 +26,25 @@
     .font-secular {
         font-family: 'Secular One', sans-serif;
     }
-
-    .font-baloo {
-        font-family: 'Baloo Tamma 2', cursive;
-    }
 </style>
 
 <body>
     <div class="w-screen h-screen py-4 relative">
         <div class="flex justify-between items-center px-6">
-            <a href="main_menu.html" class="relative z-[3]">
-                <i class="fa fa-home text-2xl" aria-hidden="true"></i>
+            <a href="pilih_tes.html" class="relative z-[3]">
+                <i class="fa fa-arrow-left text-2xl" aria-hidden="true"></i>
             </a>
-            <h1 class="font-baloo font-bold text-[4vw] text-center">Tantangan Tes</h1>
-            <div></div>
         </div>
         <div class="w-screen h-screen absolute top-0 left-0 flex items-center justify-center z-[2]">
-            <div class="border-[4px] w-7/12 h-7/12 border-black rounded-lg flex items-center justify-center ">
-                <img src="../asset/buah-tantangan.png" class="w-4/12 scale-[1.2] translate-x-[-5vw]" alt="">
-                <div class="font-secular text-xl">
-                    Dapatkan nilai lebih dari 80 untuk lulus dari tes ini.
-                </div>
+            <div class="space-y-4">
+                <img src="../asset/warning.png" class="w-[15vw] h-[15vw] mx-auto " alt="">
+                <p class="text-center text-2xl font-secular font-bold">Maaf, fitur ini masih terkunci. <br> Silakan
+                    menyelesaikan 7 soal "Latihan <?php echo $_GET['level']; ?>" terlebih dahulu. <br>
+                    Pastikan sudah mengerjakan semua Mode !
+                </p>
+
             </div>
         </div>
-        <a href="tes.php" class="absolute bottom-6 right-12 flex items-center z-[3]">
-            <span class="font-secular font-bold text-3xl mr-4">Mulai</span>
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </a>
     </div>
 </body>
 

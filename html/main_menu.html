@@ -13,8 +13,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/css/font.css">
+    <script src="../js/cookie.js"></script>
+
+    <script>
+    </script>
+
+    <link rel="stylesheet" href="../css/font.css">
     <title>Document</title>
 </head>
 
@@ -29,12 +36,21 @@
     }
 </style>
 
+
+
 <body>
     <div class="w-screen h-screen py-4 relative">
         <div class="flex justify-between items-start px-6 h-full">
-            <a href="settings.html" class="grow">
-                <i class="fa fa-gear text-2xl" aria-hidden="true"></i>
-            </a>
+            <div class="grow">
+                <button id="buttonMusic" data-status="">
+                    <div class="flex relative">
+                        <i class="fa fa-music text-xl" aria-hidden="true"></i>
+                        <div class="cross absolute bottom-[40%] w-[22px] bg-red-500 z-[2] h-[3px] -rotate-45">
+                        </div>
+                    </div>
+                </button>
+            </div>
+
             <div class="self-center min-w-[300px] w-[35vw] font-secular">
                 <div class="bg-[#FFF6BE] h-full p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
                     <div class="bg-[#FFE0A3] flex flex-col p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] gap-[6vh]">
@@ -43,11 +59,7 @@
                             Bebas</a>
                         <a href="jenis_latihan.php"
                             class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Latihan</a>
-                        <a href="tes_locked.html"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">
-                            <img src="../asset/lock.png"  class="mx-auto w-6" alt="">
-                        </a>
-                        <a href="tes_open.html"
+                        <a href="pilih_tes.html"
                             class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Tes</a>
                         <a href="tutorial.html"
                             class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Tutorial</a>
@@ -61,6 +73,46 @@
 
     </div>
 </body>
+<script>
 
+
+    if (getCookie("music") == null) {
+        setCookie("music", "on", 999)
+    }
+
+    const buttonMusic = $("#buttonMusic")
+    buttonMusic.data("status", getCookie("music"))
+    if (buttonMusic.data("status") == "on") {
+        $(".cross").hide()
+    }
+    else {
+        $(".cross").show()
+    }
+
+    buttonMusic.click(function () {
+        if (buttonMusic.data("status") == "on") {
+            setCookie("music", "off", 999)
+        }
+        else {
+            setCookie("music", "on", 999)
+        }
+        buttonMusic.data("status", getCookie("music"))
+        if (buttonMusic.data("status") == "on") {
+            $(".cross").hide()
+        }
+        else {
+            $(".cross").show()
+        }
+        updateMusic(getCookie("music"))
+    })
+
+    function updateMusic(state){
+        console.log("test")
+        window.cpjs.sendMusicState(state)
+    }
+
+
+
+</script>
 
 </html>

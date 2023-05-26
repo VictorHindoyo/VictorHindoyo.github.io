@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,19 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 
 <style>
     .font-baloo {
-        font-family: 'Baloo 2', cursive;
+        font-family: 'Baloo Tamma 2', cursive;
     }
 
     body {
@@ -33,46 +32,81 @@
     * {
         touch-action: manipulation;
     }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .modal-header,
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .modal-header h2 {
+        margin-top: 0;
+    }
 </style>
 
-
-<script>
-    // Data Soal Masuk sini
-    angka1 = [1, 10, 6]
-    operator = ["+", "-", "*"]
-    angka2 = [3, 5, 9]
-    hasil = [4, 5, 15]
-</script>
-
 <body>
-    <div class="w-screen h-screen py-2 ">
-        <div class="flex justify-between items-center px-6  mx-auto">
-            <div class="min-w-[150px] flex items-center justify-end">
-                <div class="min-w-[150px]">
-                    <button class="text-2xl modal-btn" data-modal="modalAkhiriQuiz">
-                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-
+    <div class="w-screen h-screen py-2">
+        <div class="flex justify-between items-center px-6">
+            <a href="main_menu.html" class="min-w-[150px]">
+                <i class="fa fa-chevron-left text-2xl" aria-hidden="true"></i>
+            </a>
             <h1 class="font-baloo font-bold text-[4vw] flex grow">
                 <div class="mx-auto flex items-center justify-center">
                     <div id="soal"></div>
                     <span class="counter ml-2" data-value=0>0</span>
                 </div>
-
             </h1>
-            <div class="min-w-[150px] flex items-center justify-end">
+            <div class="min-w-[150px] text-end">
                 <button
                     class="modal-btn bg-[#FFF6BE] w-[45px] h-[45px] flex items-center justify-center rounded-full border-4 border-[#FFE541] relative z-[3]"
-                    data-modal="modalLihatSoal">
-                    <img src="../asset/info.png" class="w-3" alt="">
-                </button>
+                    onclick="document.getElementById('audioSempoa').play(); showModal();"> <img src="../asset/info.png"
+                        class="w-3" alt=""></button>
+
+            </div>
+            <div class="modal hidden fixed inset-0 flex items-center justify-center">
+                <div class="modal-content bg-white w-1/2 p-6 rounded shadow-lg">
+                    <div class="modal-header flex justify-between items-center border-b-2 border-gray-200 mb-4">
+                        <h2 class="text-xl font-bold">Pertanyaan</h2>
+                        <button class="close text-gray-500" onclick="hideModal()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="question" class="text-lg mb-4"></p>
+                        <form id="answer-form">
+                            <div id="options" class="mb-4"></div>
+                            <button type="submit"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Jawab</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer mt-4">
+                        <p id="score"></p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="flex justify-evenly items-end mt-2 mx-2">
+        <div class="flex justify-center mt-2 ">
             <div
-                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center scale-[0.95]">
+                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end scale-[0.9]">
 
 
                 <div class="kolom space-y-3 relative pb-2" data-multiplier="100000" data-counterorder="5">
@@ -83,7 +117,7 @@
                         class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -116,7 +150,7 @@
                         class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -148,7 +182,7 @@
                         class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
                             <div class="w-2 h-2 rounded-full bg-black mx-auto mt-0.5">
 
                             </div>
@@ -182,7 +216,7 @@
                         class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -214,7 +248,7 @@
                         class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -246,7 +280,7 @@
                         class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
                             <div class="w-2 h-2 rounded-full bg-black mx-auto mt-0.5">
 
                             </div>
@@ -280,7 +314,7 @@
                         class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -312,7 +346,7 @@
                         class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
-                        <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
+                        <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
 
                         </div>
                     </div>
@@ -337,131 +371,87 @@
 
                 </div>
             </div>
-
-            <button class="modal-btn border-4 rounded-full w-[8vw] h-[8vw] border-black"
-                data-modal="modalKonfirmasiSubmit">
-                <i class="fa fa-arrow-right text-2xl font-bold" aria-hidden="true"></i>
-            </button>
         </div>
 
     </div>
 
-    <!-- Modal Akhiri Quiz -->
-    <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 hidden flex items-center justify-center"
-        id="modalAkhiriQuiz">
-        <div class="bg-white w-8/12 mx-auto rounded-lg relative">
-            <!-- Header -->
-            <div class="flex items-center justify-center mt-12 pb-2 pt-4 px-4">
-                <img src="../asset/question-mark.png" class="w-[14vh]" alt="">
-            </div>
-            <!-- Body -->
-            <div class="pb-4 pt-4 px-8 text-center font-bold font-baloo text-xl space-y-4">
-                <div>
-                    Apakah kamu ingin mengakhiri kuis ?
-                </div>
-            </div>
-            <!-- Footer -->
-            <div class="flex items-center justify-center pb-6 gap-4">
-                <a href="main_menu.html"
-                    class="border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold">Ya</a>
-                <button class="modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
-                    data-modal="modalAkhiriQuiz">Tidak</button>
-            </div>
+     //Modal Akhiri Quiz 
+    <div>
 
-        </div>
-    </div>
-
-    <!-- Modal Konfirmasi Submit -->
-    <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 hidden flex items-center justify-center"
-        id="modalKonfirmasiSubmit">
-        <div class="bg-white w-8/12 mx-auto rounded-lg relative">
-            <!-- Header -->
-            <div class="flex items-center justify-center mt-12 pb-2 pt-4 px-4">
-                <img src="../asset/question-mark.png" class="w-[14vh]" alt="">
-            </div>
-            <!-- Body -->
-            <div class="pb-4 pt-4 px-8 text-center font-bold font-baloo text-xl space-y-4">
-                <div>
-                    Apakah kamu yakin ?
-                </div>
-            </div>
-            <!-- Footer -->
-            <div class="flex items-center justify-center pb-6 gap-4">
-                <button class="border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold"
-                    onclick="submit()">Ya</button>
-                <button class="modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
-                    data-modal="modalKonfirmasiSubmit">Tidak</button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Modal Lihat Soal -->
-    <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 flex items-center justify-center"
-        id="modalLihatSoal">
-        <div class="bg-white w-8/12 mx-auto rounded-lg relative">
-            <!-- Header -->
-            <div class="flex items-center justify-between  py-2 px-4">
-                <div class="min-w-12">
-
-                </div>
-
-                <div class="border-b-[1px] py-4 px-8 border-slate-300">
-                    <h3 class="font-baloo font-bold font-black text-3xl  ">SOAL NO <span id="numSoal">1</span></h3>
-                </div>
-
-                <button class="min-w-12 modal-close" data-modal="modalLihatSoal">
-                    <i class="fa fa-close text-2xl" aria-hidden="true"></i>
-                </button>
-            </div>
-            <!-- Body -->
-            <div class="pb-8 pt-4 px-8 text-start font-bold font-baloo text-xl space-y-4 max-h-[60vh] overflow-auto">
-                <div id="containerSoal1">
-                    Ami menyimpan enam permen di tas kecilnya dan
-                    mengambil satu permen dari kantong sakunya untuk disimpan di tas kecilnya.
-                </div>
-                <div id="containerSoal2">
-                    Berapakah jumlah permen ami di tas sekarang?
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="show show-correct absolute top-0 bg-lime-500 bg-opacity-[0.8] w-screen h-screen hidden z-[100]">
-        <div class="w-full h-full flex items-center justify-center flex-col">
-            <p class="font-bold font-baloo text-3xl">Jawabanmu Benar !!</p>
-            <div class="border-4 border-black rounded-full w-40 h-40 flex justify-center items-center">
-                <i class="fa fa-check text-[100px]" aria-hidden="true"></i>
-            </div>
-            <p></p>
-        </div>
-    </div>
-
-    <div class="show show-wrong absolute top-0 bg-red-500 bg-opacity-[0.8] w-screen h-screen hidden z-[100]">
-        <div class="w-full h-full flex items-center justify-center flex-col">
-            <p class="font-bold font-baloo text-3xl">Jawabanmu Salah !!</p>
-            <div class="border-4 border-black rounded-full w-40 h-40 flex justify-center items-center">
-                <i class="fa fa-times text-[100px]" aria-hidden="true"></i>
-            </div>
-            <p></p>
-        </div>
     </div>
 
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
-    <audio id="audioBenar" src="../asset/correct.wav"></audio>
-    <audio id="audioSalah" src="../asset/wrong.wav"></audio>
-
-    <form action="tes_hasil.php" method="POST">
-        <input type="hidden" id="skor" name="skor">
-        <button type="submit" class="hidden" id="buttonSubmitTes"></button>
-    </form>
 </body>
 
-
-
 <script src="../js/sempoa.js"></script>
-<script src="../js/modal.js"></script>
-<script src="../js/tes.js"></script>
+<script>
+    var questions = [
+        {
+            question: '1+1=?',
+            answer: '2'
+        },
+        {
+            question: '1+2=?',
+            answer: '3'
+        }
+    ];
 
+    var currentQuestion = 0;
+    var score = 0;
 
-</html>
+    var modal = document.querySelector('.modal');
+    var questionElement = document.getElementById('question');
+    var optionsElement = document.getElementById('options');
+    var answerForm = document.getElementById('answer-form');
+    var scoreElement = document.getElementById('score');
+
+    function showModal() {
+        var current = questions[currentQuestion];
+
+        questionElement.textContent = current.question;
+
+        //var optionsHTML = '';
+        // for (var i = 0; i < current.options.length; i++) {
+        //     optionsHTML += '<label class="block"><input type="radio" name="answer" value="' + current.options[i] + '"> ' + current.options[i] + '</label>';
+        // }
+        //optionsElement.innerHTML = optionsHTML;
+
+        modal.classList.remove('hidden');
+    }
+
+    function hideModal() {
+        modal.classList.add('hidden');
+    }
+
+    answerForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var selectedAnswer = $(".counter").html();
+
+        // if (!selectedAnswer) {
+        //     alert('Silakan pilih salah satu opsi jawaban.');
+        //     return;
+        // }
+
+        var current = questions[currentQuestion];
+        if (selectedAnswer == current.answer) {
+            score++;
+        }
+
+        scoreElement.textContent = 'Skor: ' + score;
+
+        currentQuestion++;
+
+        if (currentQuestion >= questions.length) {
+            window.location.href = "score.html";
+            alert('Anda telah menjawab semua pertanyaan. Skor Anda: ' + score);
+            hideModal();
+            score = 0;
+            currentQuestion = 0;
+        } else {
+            showModal();
+        }
+    });
+</script>
+
+</html> -->
