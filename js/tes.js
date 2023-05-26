@@ -38,6 +38,8 @@ function submit() {
 
     }
     $("#modalKonfirmasiSubmit").hide()
+
+    resetSempoa();
 }
 
 
