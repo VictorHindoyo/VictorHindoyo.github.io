@@ -93,17 +93,17 @@
                 <a href="latihan.php?level=easy&jenis=penjumlahan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Easy</p>
+                    <p class="font-bold font-baloo text-3xl">Mudah</p>
                 </a>
                 <a href="latihan.php?level=medium&jenis=penjumlahan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Medium</p>
+                    <p class="font-bold font-baloo text-3xl">Sedang</p>
                 </a>
                 <a href="latihan.php?level=hard&jenis=penjumlahan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Hard</p>
+                    <p class="font-bold font-baloo text-3xl">Sulit</p>
                 </a>
             </div>
         </div>
@@ -119,17 +119,17 @@
                 <a href="latihan.php?level=easy&jenis=pengurangan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Easy</p>
+                    <p class="font-bold font-baloo text-3xl">Mudah</p>
                 </a>
                 <a href="latihan.php?level=medium&jenis=pengurangan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Medium</p>
+                    <p class="font-bold font-baloo text-3xl">Sedang</p>
                 </a>
                 <a href="latihan.php?level=hard&jenis=pengurangan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Hard</p>
+                    <p class="font-bold font-baloo text-3xl">Sulit</p>
                 </a>
             </div>
         </div>
@@ -145,17 +145,17 @@
                 <a href="latihan.php?level=easy&jenis=perkalian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Easy</p>
+                    <p class="font-bold font-baloo text-3xl">Mudah</p>
                 </a>
                 <a href="latihan.php?level=medium&jenis=perkalian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Medium</p>
+                    <p class="font-bold font-baloo text-3xl">Sedang</p>
                 </a>
                 <a href="latihan.php?level=hard&jenis=perkalian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Hard</p>
+                    <p class="font-bold font-baloo text-3xl">Sulit</p>
                 </a>
             </div>
         </div>
@@ -171,17 +171,17 @@
                 <a href="latihan.php?level=easy&jenis=pembagian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Easy</p>
+                    <p class="font-bold font-baloo text-3xl">Mudah</p>
                 </a>
                 <a href="latihan.php?level=medium&jenis=pembagian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Medium</p>
+                    <p class="font-bold font-baloo text-3xl">Sedang</p>
                 </a>
                 <a href="latihan.php?level=hard&jenis=pembagian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Hard</p>
+                    <p class="font-bold font-baloo text-3xl">Sulit</p>
                 </a>
             </div>
         </div>

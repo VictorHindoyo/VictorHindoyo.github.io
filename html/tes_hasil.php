@@ -60,7 +60,7 @@
 
         <a href="main_menu.html"
             class="bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] absolute bottom-6 right-6">
-            <i class="fa fa-home" aria-hidden="true"></i>
+            <img src="../asset/home.png" class="w-8" alt="">
         </a>
     </div>
 

@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -29,6 +31,10 @@
         background-image: url('../asset/bg-free.png');
         background-size: cover;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .font-neue{
+        font-family: 'Comic Neue', cursive;
     }
 
     * {
@@ -448,7 +454,7 @@
     <!-- Modal Lihat Soal -->
     <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 flex items-center justify-center"
         id="modalLihatSoal" data-active=1>
-        <div class="transition duration-300 bg-contain bg-no-repeat w-9/12 bg-center py-12 flex flex-col"
+        <div class="transition duration-300 bg-contain bg-no-repeat w-9/12 bg-center py-12 flex flex-col mb-12"
             style="background-image:url('../asset/popup.png') " id="modalLihatSoalAnimation">
             <!-- Header -->
             <div id="" class="flex items-center justify-center -mt-8">
@@ -458,11 +464,11 @@
             </div>
             <!-- Body -->
             <div class="pb-8 px-8 text-center font-bold font-baloo text-xl space-y-4 max-h-[60vh] overflow-auto ">
-                <div id="containerSoal1" class="text-4xl mt-6">
+                <div id="containerSoal1" class="text-4xl mt-6 font-neue">
                 </div>
-                <div id="containerSoalCerita1" class="text-md text-start mx-5">
+                <div id="containerSoalCerita1" class="text-md text-start mx-5 font-neue">
                 </div>
-                <div id="containerSoalCerita2" class="text-md text-start mx-5">
+                <div id="containerSoalCerita2" class="text-md text-start mx-5 font-neue">
                 </div>
             </div>
         </div>

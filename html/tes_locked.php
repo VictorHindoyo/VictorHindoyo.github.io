@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Document</title>
 </head>
@@ -23,6 +24,10 @@
         background-size: cover;
         -webkit-tap-highlight-color: transparent;
 
+    }
+
+    .font-neue{
+        font-family: 'Comic Neue', cursive;
     }
 
     .font-secular {
@@ -40,7 +45,7 @@
         <div class="w-screen h-screen absolute top-0 left-0 flex items-center justify-center z-[2]">
             <div class="space-y-4">
                 <img src="../asset/warning.png" class="w-[15vw] h-[15vw] mx-auto " alt="">
-                <p class="text-center text-2xl font-secular font-bold">Maaf, fitur ini masih terkunci. <br> Silakan
+                <p class="text-center text-2xl font-neue font-bold">Maaf, fitur ini masih terkunci. <br> Silakan
                     menyelesaikan 7 soal "Latihan <?php echo $_GET['level']; ?>" terlebih dahulu. <br>
                     Pastikan sudah mengerjakan semua Mode !
                 </p>

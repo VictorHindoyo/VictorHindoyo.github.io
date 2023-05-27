@@ -46,9 +46,8 @@
             <div class="grow">
                 <button id="buttonMusic" data-status="" class="active:-translate-y-4 transition duration-300">
                     <div class="flex relative">
-                        <i class="fa fa-music text-xl" aria-hidden="true"></i>
-                        <div class="cross absolute bottom-[40%] w-[22px] bg-red-500 z-[2] h-[3px] -rotate-45">
-                        </div>
+                        <img src="../asset/music-on.png" class="music-icon" width="32px" alt="">
+
                     </div>
                 </button>
             </div>
@@ -85,10 +84,10 @@
     const buttonMusic = $("#buttonMusic")
     buttonMusic.data("status", getCookie("music"))
     if (buttonMusic.data("status") == "on") {
-        $(".cross").hide()
+        $(".music-icon").attr("src", "../asset/music-on.png")
     }
     else {
-        $(".cross").show()
+        $(".music-icon").attr("src", "../asset/music-off.png")
     }
 
     buttonMusic.click(function () {
@@ -100,15 +99,15 @@
         }
         buttonMusic.data("status", getCookie("music"))
         if (buttonMusic.data("status") == "on") {
-            $(".cross").hide()
+            $(".music-icon").attr("src", "../asset/music-on.png")
         }
         else {
-            $(".cross").show()
+            $(".music-icon").attr("src", "../asset/music-off.png")
         }
         updateMusic(getCookie("music"))
     })
 
-    function updateMusic(state){
+    function updateMusic(state) {
         console.log("test")
         window.cpjs.sendMusicState(state)
     }
