@@ -64,7 +64,7 @@ $level = $_GET['level'];
 
             </h1>
             <div class="min-w-[150px] text-end">
-                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto"
+                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto active:rotate-180 transition duration-300"
                     onclick="document.getElementById('audioSempoa').play()">
                     <img src="../asset/reset.png" class="w-8" alt="">
                 </button>

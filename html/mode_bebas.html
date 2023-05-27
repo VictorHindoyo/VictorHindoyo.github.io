@@ -38,11 +38,11 @@
 <body>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
-            <div class="grow">
-                <a href="main_menu.html" class="min-w-[150px]">
+            <a href="main_menu.html" class="min-w-[150px]">
+                <button class="active:-translate-y-4 transition duration-300">
                     <i class="fa fa-home text-2xl" aria-hidden="true"></i>
-                </a>
-            </div>
+                </button>
+            </a>
 
             <h1 class="font-baloo font-bold text-[4vw] flex grow">
                 <div class="mx-auto flex items-center justify-center">
@@ -52,7 +52,8 @@
 
             </h1>
             <div class="min-w-[150px] text-end">
-                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto"
+                <button
+                    class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto active:rotate-180 transition duration-300"
                     onclick="document.getElementById('audioSempoa').play()">
                     <img src="../asset/reset.png" class="w-8" alt="">
                 </button>

@@ -43,7 +43,7 @@
     <div class="w-screen h-screen py-4">
         <div class="page" data-page="1">
             <div class="flex justify-between items-center px-6">
-                <button onclick="history.back()">
+                <button onclick="history.back()" class="active:-translate-y-4 transition duration-300">
                     <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
                 </button>
                 <h1 class="font-secular text-[4.5vw] text-center">Pilih Jenis Latihan</h1>
