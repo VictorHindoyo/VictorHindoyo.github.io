@@ -31,15 +31,16 @@ function submit() {
         $(".show-correct").show()
         document.getElementById("audioBenar").play()
         currentScore += 10
+        
     }
     else {
         $(".show-wrong").show()
         document.getElementById("audioSalah").play()
-
+    
     }
     $("#modalKonfirmasiSubmit").hide()
-
-    resetSempoa();
+    resetSempoa()
+    
 }
 
 
