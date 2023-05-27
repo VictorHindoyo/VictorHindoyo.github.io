@@ -65,6 +65,19 @@
     }
 </style>
 
+<<<<<<< Updated upstream
+=======
+
+<script>
+    // Data Soal Masuk sini
+    // angka1 = [1, 10, 6]
+    // operator = ["+", "-", "*"]
+    // angka2 = [3, 5, 9]
+    // hasil = [4, 5, 15]
+    const level = "<?php echo $_GET["level"] ?>"
+</script>
+
+>>>>>>> Stashed changes
 <body>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">

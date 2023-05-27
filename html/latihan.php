@@ -45,18 +45,25 @@ $level = $_GET['level'];
 <body>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
-            <a href="main_menu.html" class="min-w-[150px]">
-                <i class="fa fa-home text-2xl" aria-hidden="true"></i>
-            </a>
+            <div class="grow">
+                <a href="main_menu.html" class="min-w-[150px]">
+                    <i class="fa fa-home text-2xl" aria-hidden="true"></i>
+                </a>
+            </div>
+
             <h1 class="font-baloo font-bold text-[4vw] flex grow">
                 <div class="mx-auto flex items-center justify-center">
-                    <div id="soal"></div>
+                    <div>
+                        <span id="angka1" class=""></span>
+                        <span id="soal"></span>
+                    </div>
                     <span class="counter ml-2" data-value=0>0</span>
                 </div>
 
             </h1>
             <div class="min-w-[150px] text-end">
-                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto" onclick="document.getElementById('audioSempoa').play()">
+                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto"
+                    onclick="document.getElementById('audioSempoa').play()">
                     <img src="../asset/reset.png" class="w-8" alt="">
                 </button>
             </div>
@@ -343,13 +350,29 @@ $level = $_GET['level'];
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
     <audio id="audioBenar" src="../asset/correct.wav"></audio>
 
+    <div id="qtip"
+        class="fixed top-2 left-2 w-1/2 h-[100px] transition duration-200 rounded-lg bg-sky-300 gap-4 bg-opacity-[0.95] hidden border-2 border-black">
+        <div class="flex items-center h-full w-full justify-evenly">
+            <img src="../asset/wortel-tantangan.png" alt="" class="h-[80px]">
+            <p class="text-[3vw] font-baloo font-bold">Kerjakan Soal Secara Urut</p>
+            <button class="self-start mt-4" id="qtip-button-close">
+                <i class="fa fa-times " aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
 
 </body>
 
 
 <script>
     var audioBenar = document.getElementById("audioBenar");
+<<<<<<< Updated upstream
     
+=======
+
+    var checkStep = false
+
+>>>>>>> Stashed changes
     const jenis = "<?php echo $jenis; ?>"
     const level = "<?php echo $level; ?>"
 
@@ -358,7 +381,11 @@ $level = $_GET['level'];
     var operator = ""
     var hasil = 0
     var soal = ""
+<<<<<<< Updated upstream
     var counter_benar = 0
+=======
+    var counterKerja = 0
+>>>>>>> Stashed changes
 
 
     function generateSoal() {
@@ -420,14 +447,24 @@ $level = $_GET['level'];
                 hasil = angka1 / angka2
             }
         }
-        soal = `${angka1} ${operator} ${angka2} = `
+        soal = ` ${operator} ${angka2} = `
 
     }
 
 
     $(".sempoa").click(function() {
         var checkCounter = $(".counter").data("value")
+        $("#qtip").hide()
+        if (jenis == "penjumlahan" || jenis == "pengurangan") {
+            if (angka1 == checkCounter) {
+                checkStep = true
+                $("#angka1").addClass("underline underline-offset-4 text-lime-500")
+            }
+        } else {
+            checkStep = true
+        }
         if (checkCounter == hasil) {
+<<<<<<< Updated upstream
             counter_benar++;
             if (localStorage.getItem('latihan') === null || localStorage.getItem('latihan') === undefined) {
                 localStorage.setItem('latihan', counter_benar);
@@ -443,20 +480,47 @@ $level = $_GET['level'];
             $(".show-correct").show();
             audioBenar.load();
             audioBenar.play();
+=======
+            if (checkStep) {
+                $(".show-correct").show();
+                audioBenar.load();
+                audioBenar.play();
+            } else {
+                $("#qtip").show();
+                setTimeout(() => {
+                    $("#qtip").hide()
+                }, 4000);
+            }
+>>>>>>> Stashed changes
         }
     })
     generateSoal()
+
+    $("#qtip-button-close").click(function() {
+        $("#qtip").hide()
+    })
 
     $(".show-correct").click(function() {
         $(this).hide();
         generateSoal()
         $("#soal").html(soal);
         $(".btn-reset").click()
+        checkStep = false
+        $("#angka1").removeClass()
+        $("#angka1").html(`${angka1}`)
+
+        counterKerja += 1
+        if (counterKerja == 7) {
+            setCookie(`${level}-${jenis}`, true)
+            console.log("done")
+        }
     })
+    $("#angka1").html(`${angka1}`)
     $("#soal").html(soal);
 </script>
 
 <script src="../js/sempoa.js"></script>
 <script src="../js/page.js"></script>
+<script src="../js/cookies.js"></script>
 
 </html>

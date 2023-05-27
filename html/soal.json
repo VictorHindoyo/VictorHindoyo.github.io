@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
     "mudah":[
+=======
+    "Easy":[
+>>>>>>> Stashed changes
         {
             "id": 1,
             "angka1":4,
@@ -281,7 +285,11 @@
             "jawaban":3
         }
     ],
+<<<<<<< Updated upstream
     "sedang":[
+=======
+    "Medium":[
+>>>>>>> Stashed changes
         {
             "id": 1,
             "angka1":3,
@@ -563,7 +571,11 @@
             "jawaban":5
         }
     ],
+<<<<<<< Updated upstream
     "susah":[
+=======
+    "Hard":[
+>>>>>>> Stashed changes
         {
             "id": 1,
             "angka1":75,
