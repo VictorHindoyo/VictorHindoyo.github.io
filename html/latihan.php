@@ -366,13 +366,9 @@ $level = $_GET['level'];
 
 <script>
     var audioBenar = document.getElementById("audioBenar");
-<<<<<<< Updated upstream
-    
-=======
 
     var checkStep = false
 
->>>>>>> Stashed changes
     const jenis = "<?php echo $jenis; ?>"
     const level = "<?php echo $level; ?>"
 
@@ -381,11 +377,7 @@ $level = $_GET['level'];
     var operator = ""
     var hasil = 0
     var soal = ""
-<<<<<<< Updated upstream
-    var counter_benar = 0
-=======
     var counterKerja = 0
->>>>>>> Stashed changes
 
 
     function generateSoal() {
@@ -464,23 +456,6 @@ $level = $_GET['level'];
             checkStep = true
         }
         if (checkCounter == hasil) {
-<<<<<<< Updated upstream
-            counter_benar++;
-            if (localStorage.getItem('latihan') === null || localStorage.getItem('latihan') === undefined) {
-                localStorage.setItem('latihan', counter_benar);
-            console.log('localStorage value is not set');
-            } else {
-                var temp = localStorage.getItem('latihan');
-                if (counter_benar > temp){
-                    localStorage.setItem('latihan', counter_benar);
-                }
-            console.log('localStorage value is set');
-            }
-
-            $(".show-correct").show();
-            audioBenar.load();
-            audioBenar.play();
-=======
             if (checkStep) {
                 $(".show-correct").show();
                 audioBenar.load();
@@ -491,7 +466,6 @@ $level = $_GET['level'];
                     $("#qtip").hide()
                 }, 4000);
             }
->>>>>>> Stashed changes
         }
     })
     generateSoal()

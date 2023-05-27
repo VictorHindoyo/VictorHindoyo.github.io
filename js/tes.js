@@ -9,9 +9,12 @@ console.log(soalId);
 var currentSoal = 1
 var currentScore = 0
 
-var questions = []; // Define a global variable to store the questions array
+var questions = []; 
 var soalId = [];
+var questions2 = []; 
+var soalId2 = [];
 // Fetch the JSON file
+
 fetch('../html/soal.json')
     .then(response => response.json())
     .then(data => {
@@ -31,8 +34,28 @@ fetch('../html/soal.json')
         console.log('Error:', error);
     });
 
+    fetch('../html/soalCerita.json')
+    .then(response => response.json())
+    .then(data => {
+        if (level == "easy"){
+            questions2 = data.Easy;
+        }else if (level == "medium"){
+            questions2 = data.Medium;
+        }else if (level == "hard"){
+            questions2 == data.Hard;
+        }
+        // questions = data.mudah; // Assign the JSON data to the questions variable
+        generateSoalId2();
+        // setSoal();
+        console.log(questions2);
+    })
+    .catch(error => {
+        console.log('Error:', error);
+    });
+
+
     function generateSoalId() {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 8; i++) {
             var randomNum = Math.floor(Math.random() * 40) + 1;
             if (!soalId.includes(randomNum)){
                 soalId.push(randomNum);
@@ -40,16 +63,27 @@ fetch('../html/soal.json')
         }
         // console.log(questions);
     }
+
+    function generateSoalId2() {
+        for (let i = 0; i < 2; i++) {
+            var randomNum = Math.floor(Math.random() * 5) + 1;
+            if (!soalId2.includes(randomNum)){
+                soalId2.push(randomNum);
+            }
+        }
+        // console.log(questions);
+    }
 function setSoal() {
-<<<<<<< Updated upstream:html/js/tes.js
-    // containerSoal1.html(`${questions[soalId[currentSoal - 1]].angka1} ${questions[soalId[currentSoal - 1]].operator} ${questions[soalId[currentSoal - 1]].angka2} = ?`)
-    // containerSoal2.html("")
-    // containerCounterSoal.html(currentSoal)
-=======
-    containerSoal1.html(`${questions[soalId[currentSoal - 1]].angka1} ${questions[soalId[currentSoal - 1]].operator} ${questions[soalId[currentSoal - 1]].angka2} = ?`)
-    containerSoal2.html("")
+    if (currentSoal < 9){
+        console.log(currentSoal);
+        containerSoal1.html(`${questions[soalId[currentSoal - 1]].angka1} ${questions[soalId[currentSoal - 1]].operator} ${questions[soalId[currentSoal - 1]].angka2} = ?`)
+        containerSoal2.html(``);
+    }else{
+        containerSoal1.html(`${questions2[soalId2[currentSoal - 8]].soal}`)
+    }
+    
+    
     containerCounterSoal.html(currentSoal)
->>>>>>> Stashed changes:js/tes.js
 }
 // setSoal();
 
@@ -82,13 +116,8 @@ function submit() {
 
 $(".show").click(function () {
     $(".show").hide()
-    resetSempoa()
-    setSoal()
-<<<<<<< Updated upstream:html/js/tes.js
-    if (currentSoal == 4) {
-=======
+    
     if (currentSoal == 10) {
->>>>>>> Stashed changes:js/tes.js
         $("#skor").val(currentScore)
         document.getElementById("buttonSubmitTes").click()
     }
@@ -96,4 +125,6 @@ $(".show").click(function () {
         $("#modalLihatSoal").show()
     }
     currentSoal++
+    resetSempoa()
+    setSoal()
 })

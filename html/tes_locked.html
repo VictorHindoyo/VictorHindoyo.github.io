@@ -31,17 +31,17 @@
 <body>
     <div class="w-screen h-screen py-4 relative">
         <div class="flex justify-between items-center px-6">
-            <a href="main_menu.html" class="relative z-[3]">
+            <a href="pilih_tes.html" class="relative z-[3]">
                 <i class="fa fa-arrow-left text-2xl" aria-hidden="true"></i>
             </a>
         </div>
         <div class="w-screen h-screen absolute top-0 left-0 flex items-center justify-center z-[2]">
             <div class="space-y-4">
-                <a href="tes_open.html" class="">
-                    <img src="../asset/warning.png" class="w-[15vw] h-[15vw] mx-auto " alt="">
-                </a>
+                <img src="../asset/warning.png" class="w-[15vw] h-[15vw] mx-auto " alt="">
                 <p class="text-center text-2xl font-secular font-bold">Maaf, fitur ini masih terkunci. <br> Silakan
-                    menyelesaikan 7 soal "Latihan" terlebih dahulu.</p>
+                    menyelesaikan 7 soal "Latihan <?php echo $_GET['level']; ?>" terlebih dahulu. <br>
+                    Pastikan sudah mengerjakan semua Mode !
+                </p>
 
             </div>
         </div>
