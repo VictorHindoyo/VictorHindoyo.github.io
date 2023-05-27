@@ -1,6 +1,7 @@
 const containerCounterSoal = $("#numSoal")
 const containerSoal1 = $("#containerSoal1")
-const containerSoal2 = $("#containerSoal2")
+const containerSoalCerita1 = $("#containerSoalCerita1")
+const containerSoalCerita2 = $("#containerSoalCerita2")
 const counter = $(".counter")
 
 var currentSoal = 1
@@ -8,7 +9,8 @@ var currentScore = 0
 
 function setSoal() {
     containerSoal1.html(`${angka1[currentSoal - 1]} ${operator[currentSoal - 1]} ${angka2[currentSoal - 1]} = ?`)
-    containerSoal2.html("")
+    containerSoalCerita1.html("")
+    containerSoalCerita2.html("")
     containerCounterSoal.html(currentSoal)
 }
 
@@ -51,6 +53,6 @@ $(".show").click(function () {
         document.getElementById("buttonSubmitTes").click()
     }
     else{
-        $("#modalLihatSoal").show()
+        document.getElementById("moveButton").click()
     }
 })

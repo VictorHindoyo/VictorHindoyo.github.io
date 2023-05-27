@@ -28,6 +28,7 @@
     body {
         background-image: url('../asset/bg-awan.png');
         background-size: cover;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .font-secular {
@@ -97,6 +98,10 @@
         $(".hard-open").show()
         $(".hard-locked").hide()
     }
+
+    console.log(getCookie("easyHighest"))
+    console.log(getCookie("mediumHighest"))
+    console.log(getCookie("hardHighest"))
 </script>
 
 

@@ -21,6 +21,8 @@
     body {
         background-image: url('../asset/bg-awan.png');
         background-size: cover;
+        -webkit-tap-highlight-color: transparent;
+
     }
 
     .font-secular {
