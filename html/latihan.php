@@ -495,6 +495,6 @@ $level = $_GET['level'];
 
 <script src="../js/sempoa.js"></script>
 <script src="../js/page.js"></script>
-<script src="../js/cookies.js"></script>
+<script src="../js/cookie.js"></script>
 
 </html>

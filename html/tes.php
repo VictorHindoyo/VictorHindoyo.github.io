@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -28,22 +30,72 @@
     body {
         background-image: url('../asset/bg-free.png');
         background-size: cover;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .font-neue{
+        font-family: 'Comic Neue', cursive;
     }
 
     * {
         touch-action: manipulation;
     }
+
+    @keyframes moveButtonAnimation {
+        0% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        100% {
+            transform: translate(5vw, -20%) scale(1.5);
+        }
+    }
+
+    @keyframes closeButtonAnimation {
+
+        0% {
+            transform: translate(5vw, -20%) scale(1.5);
+        }
+
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+
+    }
+
+
+    @keyframes openModalAnimation {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes closeModalAnimation {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+    }
+
+    .hide {
+        display: none;
+    }
 </style>
 
 
 <script>
-    // Data Soal Masuk sini
-    // angka1 = [1, 10, 6]
-    // operator = ["+", "-", "*"]
-    // angka2 = [3, 5, 9]
-    // hasil = [4, 5, 15]
-
-    const level = "<?php echo $_GET["level"] ?>"
+    const level = '<?php echo $_GET["level"]?>'
 </script>
 
 <body>
@@ -62,19 +114,17 @@
                     <div id="soal"></div>
                     <span class="counter ml-2" data-value=0>0</span>
                 </div>
-
             </h1>
-            <div class="min-w-[150px] flex items-center justify-end">
-                <button
-                    class="modal-btn bg-[#FFF6BE] w-[45px] h-[45px] flex items-center justify-center rounded-full border-4 border-[#FFE541] relative z-[3]"
-                    data-modal="modalLihatSoal">
-                    <img src="../asset/info.png" class="w-3" alt="">
-                </button>
+            <div class="min-w-[150px]">
+
             </div>
         </div>
-        <div class="flex justify-evenly items-end mt-2 mx-2">
+        <div class="flex justify-between items-end mt-2 mx-2">
+            <button id="moveButton" class="z-[70] transition duration-300" data-modal="modalLihatSoal">
+                <img src="../asset/wortel-tantangan.png" class="z-[10]" alt="">
+            </button>
             <div
-                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center scale-[0.95]">
+                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 scale-[0.9] flex flex-row items-center w-10/12">
 
 
                 <div class="kolom space-y-3 relative pb-2" data-multiplier="100000" data-counterorder="5">
@@ -339,11 +389,10 @@
 
                 </div>
             </div>
-
-            <button class="modal-btn border-4 rounded-full w-[8vw] h-[8vw] border-black"
-                data-modal="modalKonfirmasiSubmit">
+            <button class="modal-btn border-4 rounded-full border-black py-2 px-4" data-modal="modalKonfirmasiSubmit">
                 <i class="fa fa-arrow-right text-2xl font-bold" aria-hidden="true"></i>
             </button>
+
         </div>
 
     </div>
@@ -400,34 +449,27 @@
 
     <!-- Modal Lihat Soal -->
     <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 flex items-center justify-center"
-        id="modalLihatSoal">
-        <div class="bg-white w-8/12 mx-auto rounded-lg relative">
+        id="modalLihatSoal" data-active=1>
+        <div class="transition duration-300 bg-contain bg-no-repeat w-9/12 bg-center py-12 flex flex-col mb-12"
+            style="background-image:url('../asset/popup.png') " id="modalLihatSoalAnimation">
             <!-- Header -->
-            <div class="flex items-center justify-between  py-2 px-4">
-                <div class="min-w-12">
-
+            <div id="" class="flex items-center justify-center -mt-8">
+                <div class="mx-auto">
+                    <h3 class="font-baloo font-bold font-black text-3xl border-b-[1px] border-white py-4 px-6">SOAL NO <span id="numSoal">1</span></h3>
                 </div>
-
-                <div class="border-b-[1px] py-4 px-8 border-slate-300">
-                    <h3 class="font-baloo font-bold font-black text-3xl  ">SOAL NO <span id="numSoal">1</span></h3>
-                </div>
-
-                <button class="min-w-12 modal-close" data-modal="modalLihatSoal">
-                    <i class="fa fa-close text-2xl" aria-hidden="true"></i>
-                </button>
             </div>
             <!-- Body -->
-            <div class="pb-8 pt-4 px-8 text-start font-bold font-baloo text-xl space-y-4 max-h-[60vh] overflow-auto">
-                <div id="containerSoal1">
-                    Ami menyimpan enam permen di tas kecilnya dan
-                    mengambil satu permen dari kantong sakunya untuk disimpan di tas kecilnya.
+            <div class="pb-8 px-8 text-center font-bold font-baloo text-xl space-y-4 max-h-[60vh] overflow-auto ">
+                <div id="containerSoal1" class="text-4xl mt-6 font-neue">
                 </div>
-                <div id="containerSoal2">
-                    Berapakah jumlah permen ami di tas sekarang?
+                <div id="containerSoalCerita1" class="text-md text-start mx-5 font-neue">
+                </div>
+                <div id="containerSoalCerita2" class="text-md text-start mx-5 font-neue">
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="show show-correct absolute top-0 bg-lime-500 bg-opacity-[0.8] w-screen h-screen hidden z-[100]">
         <div class="w-full h-full flex items-center justify-center flex-col">
@@ -455,10 +497,48 @@
 
     <form action="tes_hasil.php" method="POST">
         <input type="hidden" id="skor" name="skor">
+        <input type="hidden" id="" name="level" value="<?php echo $_GET['level'] ?>">
         <button type="submit" class="hidden" id="buttonSubmitTes"></button>
     </form>
 </body>
 
+<script>
+    var moveButton = document.getElementById('moveButton');
+    var closeModalButton = document.getElementById('closeModalButton');
+    var modal = document.getElementById('modalLihatSoalAnimation');
+
+
+    moveButton.style.animation = 'moveButtonAnimation 1s forwards';
+    modal.style.animation = 'openModalAnimation 1s forwards';
+    modal.style.display = 'block';
+    $("#moveButton").data("active", 1)
+
+    moveButton.addEventListener('click', function() {
+        if ($("#moveButton").data("active") == 0) {
+            moveButton.style.animation = 'moveButtonAnimation 1s forwards';
+            modal.style.animation = 'openModalAnimation 1s forwards';
+            modal.style.display = 'block';
+            $("#moveButton").data("active", 1)
+            $("#modalLihatSoal").show()
+
+
+        } else {
+            moveButton.style.animation = 'closeButtonAnimation 1s forwards';
+            modal.style.animation = 'closeModalAnimation 1s forwards';
+            $("#moveButton").data("active", 0)
+            $("#modalLihatSoal").hide()
+
+        }
+    });
+
+    $("#modalLihatSoal").click(function() {
+        document.getElementById("moveButton").click()
+    })
+
+    // closeModalButton.addEventListener('click', function() {
+
+    // });
+</script>
 
 
 <script src="../js/sempoa.js"></script>

@@ -9,6 +9,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/cookie.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
@@ -21,12 +22,17 @@
 </head>
 
 <?php
-$skor = $_POST['skor'];
+    $skor = $_POST['skor'];
+    $level = $_POST['level'];
 ?>
+
+
 <style>
     body {
         background-image: url('../asset/bg-awan.png');
         background-size: cover;
+        -webkit-tap-highlight-color: transparent;
+
     }
 
     .font-secular {
@@ -54,11 +60,30 @@ $skor = $_POST['skor'];
 
         <a href="main_menu.html"
             class="bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] absolute bottom-6 right-6">
-            <i class="fa fa-home" aria-hidden="true"></i>
+            <img src="../asset/home.png" class="w-8" alt="">
         </a>
     </div>
 
 
 </body>
+
+
+<script>
+    const skor = parseInt('<?php echo $skor; ?>');
+    const level = '<?php echo $level; ?>';
+    const cookieName = `${level}Highest`
+
+    var getHighest = getCookie(cookieName)
+    
+    if(getHighest == null){
+        setCookie(cookieName,skor,999)
+    } 
+    else{
+        getHighest = parseInt(getHighest)
+    }
+    if (getHighest <= skor){
+        setCookie(cookieName,skor,999)
+    }
+</script>
 
 </html>

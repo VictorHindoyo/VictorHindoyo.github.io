@@ -1,0 +1,98 @@
+{
+    "Easy":[
+        {
+            "id" : 1,
+            "soal" : "Andi memiliki 1 plastik berisikan kelereng dimana 1 plastik kelereng tersebut terdiri dari 3 buah kelereng.",
+            "soal2" : "Terapkan di dalam sempoa!",
+            "jawaban" : 3
+        },
+        {
+            "id" : 2,
+            "soal" : "Siska membeli 5 buah buku. ",
+            "soal2" : "Terapkan jumlah buku yang dimiliki oleh siska di dalam sempoa!",
+            "jawaban" : 5
+        },
+        {
+            "id" : 3,
+            "soal" : "Candra diberi permen oleh pamannya sebanyak 7 buah. ",
+            "soal2" : "Berapa banyak permen yang dimiliki oleh Candra saat ini, terapkan dalam sempoa!",
+            "jawaban" : 7
+        },
+        {
+            "id" : 4,
+            "soal" : "Ari memiliki 7 buah pensil, lalu ia menjadi juara kelas ia diberi 2 pensil sebagai hadiah oleh guru kelasnya, ",
+            "Soal2" : "berapakah total pensil yang sudah dimiliki oleh Ari saat ini? Terapkan dalam sebuah sempoa!",
+            "jawaban" : 9
+        },
+        {
+            "id" : 5,
+            "soal" : "Sinta memiliki 3 buah pita, lalu ia secara tidak sengaja menjatuhkan pita tersebut di jalan sebanyak 2 pita, pita tersebut hilang saat Sinta mencarinya kembali, ",
+            "soal2" : "berapakah pita Sinta yang saat ini dimiliki? Terapkan dalam sempoa!",
+            "jawaban" : 1
+        }
+    ],
+    "Medium":[
+        {
+            "id" : 1,
+            "soal" : "Diva mempunyai buah durian sebanyak 5 buah, dia telah memakan buah durian tersebut sebanyak 3 buah, ",
+            "soal2" : "berapa total buah yang dimiliki oleh Diva saat ini, terapkan dalam sempoa!",
+            "jawaban" : 2
+        },
+        {
+            "id" : 2,
+            "soal" : "Kezia memiliki penjepit rambut sebanyak 10 penjepit lalu ia meminjamkan kepada Tini sebanyak 5 penjepit, ",
+            "soal2" : "berapa penjepit yang dimiliki kezia saat ini terapkan dalam bentuk sempoa!",
+            "jawaban" : 5
+        },
+        {
+            "id" : 3,
+            "soal" : "Nico mempunyai 2 ekor kucing lalu seekor kucing melahirkan 5 anak kucing, ",
+            "soal2" : "berapa total kucing dimiliki oleh Nico saat ini, terapkan dalam sempoa !",
+            "jawaban" : 7
+        },
+        {
+            "id" : 4,
+            "soal" : "Dita memiliki 10 buah apel lalu ia membeli lagi 10 buah apel untuk membuat sebuah salad dengan temannya. ",
+            "soal2" : "Berapa jumlah apel yang dimiliki oleh Dita saat ini? Terapkan dalam sebuah sempoa!",
+            "jawaban" : 20
+        },
+        {
+            "id" : 5,
+            "soal" : "Nurul mempunyai 20 manik-manik lalu ia memberikan kepada saudaranya sebanyak 10 buah manik-manik. ",
+            "soal2" : "Berapakah jumlah manik-manik yang dimiliki oleh Nurul saat ini? Terapkan dalam sebuah sempoa!",
+            "jawaban" : 10
+        }
+    ],
+    "Hard":[
+        {
+            "id" : 1,
+            "soal" : "Susan memiliki 2 batang dengan panjang masing masing 10 cm, ",
+            "soal2" : "berapa total panjang dari dua batang tersebut jika disambungkan? Terapkan dalam sempoa!",
+            "jawaban" : 20
+        },
+        {
+            "id" : 2,
+            "soal" : "Adi memiliki 10 buah permen dan diberikan kepada Dinda sebanyak 5 permen, ",
+            "soal2" : "berapa total permen yang dimiliki oleh Adi ? terapkan di dalam sempoa!",
+            "jawaban" : 5
+        },
+        {
+            "id" : 3,
+            "soal" : "Agung membeli satu kotak kelereng, didalam satu kotak kelereng tersebut terdiri dari 10 kelereng, lalu ia membeli lagi 1 kotak kelereng, ",
+            "soal2" : "berapa banyak total kelereng yang dimiliki oleh Agung, terapkan dalam sempoa!",
+            "jawaban" : 20
+        },
+        {
+            "id" : 4,
+            "soal" : "Dinda membeli 10 buah telur saat dijalan telur tersebut pecah sebanyak 5 buah, lalu Dinda memutuskan untuk membeli 10 butir telur lagi. ",
+            "soal2" : "Berapakah total telur yang dimiliki oleh dinda saat ini? Terapkan dalam sebuah sempoa!",
+            "jawaban" : 15
+        },
+        {
+            "id" : 5,
+            "soal" : "Rudi memiliki 100 kelereng lalu ia diberi kelereng lagi oleh temannya sebanyak 20 kelereng saat dirumah adik Rudi meminta sebanyak 10 kelereng. ",
+            "soal2" : "Berapakah kelereng yang dimiliki Rudi saat ini? Terapkan dalam sebuah sempoa!",
+            "jawaban" : 110
+        }
+    ]
+}
