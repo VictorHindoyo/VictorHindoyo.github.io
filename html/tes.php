@@ -95,11 +95,7 @@
 
 
 <script>
-    // Data Soal Masuk sini
-    angka1 = [1, 10, 6]
-    operator = ["+", "-", "*"]
-    angka2 = [3, 5, 9]
-    hasil = [4, 5, 15]
+    const level = '<?php echo $_GET["level"]?>'
 </script>
 
 <body>
