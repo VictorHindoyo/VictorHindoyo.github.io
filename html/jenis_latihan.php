@@ -43,8 +43,8 @@
     <div class="w-screen h-screen py-4">
         <div class="page" data-page="1">
             <div class="flex justify-between items-center px-6">
-                <button onclick="history.back()" class="active:-translate-y-4 transition duration-300">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                <button onclick="history.back()" class="active:-translate-y-4 transition duration-300 ">
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4.5vw] text-center">Pilih Jenis Latihan</h1>
                 <div></div>
@@ -84,7 +84,7 @@
         <div class="page hidden" data-page="2">
             <div class="flex justify-between items-center px-6">
                 <button class="page-next" data-target="1">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4vw] text-center">Pilih Level Penjumlahan</h1>
                 <div></div>
@@ -110,7 +110,7 @@
         <div class="page hidden" data-page="3">
             <div class="flex justify-between items-center px-6">
                 <button class="page-next" data-target="1">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4vw] text-center">Pilih Level Pengurangan</h1>
                 <div></div>
@@ -136,7 +136,7 @@
         <div class="page hidden" data-page="4">
             <div class="flex justify-between items-center px-6">
                 <button class="page-next" data-target="1">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4vw] text-center">Pilih Level Perkalian</h1>
                 <div></div>
@@ -162,7 +162,7 @@
         <div class="page hidden" data-page="5">
             <div class="flex justify-between items-center px-6">
                 <button class="page-next" data-target="1">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4vw] text-center">Pilih Level Pembagian</h1>
                 <div></div>

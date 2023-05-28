@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <style>
     .font-baloo {
@@ -31,6 +33,10 @@
 
     * {
         touch-action: manipulation;
+    }
+
+    .font-neue {
+        font-family: 'Comic Neue', cursive;
     }
 </style>
 
@@ -353,12 +359,13 @@ $level = $_GET['level'];
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
     <audio id="audioBenar" src="../asset/correct.wav"></audio>
 
-    <div class="w-screen h-screen flex items-center justify-center absolute top-0 left-0 hidden" id="qtip">
-        <div
-            class="w-1/2 h-[100px] transition duration-200 rounded-lg bg-sky-300 gap-4 bg-opacity-[0.95] border-2 border-black mx-auto mt-24">
-            <div class="flex items-center h-full w-full gap-4 ml-4">
-                <img src="../asset/wortel-tantangan.png" alt="" class="h-[80px]">
-                <p class="text-[3vw] font-baloo font-bold mt-2">Kerjakan Soal Secara Urut</p>
+    <div class="w-screen h-screen fixed top-0 left-0 hidden " id="qtip">
+        <div class="flex items-center justify-center h-full">
+            <div
+                class="bg-[#FFCA63] rounded-lg min-w-6/12 relative py-[7vh] flex items-center justify-center gap-10 pr-6 text-2xl font-bold  font-neue">
+                <img src="../asset/wortel-tantangan.png" class="h-[10vh] scale-[4] -translate-y-[25%]"
+                    alt="">
+                Oops,kerjakan soal secara urut ya!
             </div>
         </div>
     </div>
@@ -477,7 +484,7 @@ $level = $_GET['level'];
         $("#qtip").hide()
     })
 
-    $("#qtip").click(function(){
+    $("#qtip").click(function() {
         $("#qtip").hide()
     })
 

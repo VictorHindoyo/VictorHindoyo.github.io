@@ -39,7 +39,7 @@
     <div class="w-screen h-screen py-4 relative">
         <div class="flex justify-between items-center px-6">
             <a href="pilih_tes.html" class="relative z-[3]">
-                <i class="fa fa-arrow-left text-2xl" aria-hidden="true"></i>
+                <img src="../asset/back.png" class="w-12" alt="">
             </a>
         </div>
         <div class="w-screen h-screen absolute top-0 left-0 flex items-center justify-center z-[2]">
