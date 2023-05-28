@@ -33,15 +33,18 @@
     body {
         background-image: url('../asset/bg-awan.png');
         background-size: cover;
+        -webkit-tap-highlight-color: transparent;
+
     }
+    
 </style>
 
 <body class="">
     <div class="w-screen h-screen py-4">
         <div class="page" data-page="1">
             <div class="flex justify-between items-center px-6">
-                <button onclick="history.back()">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                <button onclick="history.back()" class="active:-translate-y-4 transition duration-300 ">
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4.5vw] text-center">Pilih Jenis Latihan</h1>
                 <div></div>
@@ -81,7 +84,7 @@
         <div class="page hidden" data-page="2">
             <div class="flex justify-between items-center px-6">
                 <button class="page-next" data-target="1">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4vw] text-center">Pilih Level Penjumlahan</h1>
                 <div></div>
@@ -90,24 +93,24 @@
                 <a href="latihan.php?level=easy&jenis=penjumlahan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Easy</p>
+                    <p class="font-bold font-baloo text-3xl">Mudah</p>
                 </a>
                 <a href="latihan.php?level=medium&jenis=penjumlahan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Medium</p>
+                    <p class="font-bold font-baloo text-3xl">Sedang</p>
                 </a>
                 <a href="latihan.php?level=hard&jenis=penjumlahan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Hard</p>
+                    <p class="font-bold font-baloo text-3xl">Sulit</p>
                 </a>
             </div>
         </div>
         <div class="page hidden" data-page="3">
             <div class="flex justify-between items-center px-6">
                 <button class="page-next" data-target="1">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4vw] text-center">Pilih Level Pengurangan</h1>
                 <div></div>
@@ -116,24 +119,24 @@
                 <a href="latihan.php?level=easy&jenis=pengurangan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Easy</p>
+                    <p class="font-bold font-baloo text-3xl">Mudah</p>
                 </a>
                 <a href="latihan.php?level=medium&jenis=pengurangan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Medium</p>
+                    <p class="font-bold font-baloo text-3xl">Sedang</p>
                 </a>
                 <a href="latihan.php?level=hard&jenis=pengurangan"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Hard</p>
+                    <p class="font-bold font-baloo text-3xl">Sulit</p>
                 </a>
             </div>
         </div>
         <div class="page hidden" data-page="4">
             <div class="flex justify-between items-center px-6">
                 <button class="page-next" data-target="1">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4vw] text-center">Pilih Level Perkalian</h1>
                 <div></div>
@@ -142,24 +145,24 @@
                 <a href="latihan.php?level=easy&jenis=perkalian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Easy</p>
+                    <p class="font-bold font-baloo text-3xl">Mudah</p>
                 </a>
                 <a href="latihan.php?level=medium&jenis=perkalian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Medium</p>
+                    <p class="font-bold font-baloo text-3xl">Sedang</p>
                 </a>
                 <a href="latihan.php?level=hard&jenis=perkalian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Hard</p>
+                    <p class="font-bold font-baloo text-3xl">Sulit</p>
                 </a>
             </div>
         </div>
         <div class="page hidden" data-page="5">
             <div class="flex justify-between items-center px-6">
                 <button class="page-next" data-target="1">
-                    <i class="fa fa-angle-left text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/back.png" class="w-12" alt="">
                 </button>
                 <h1 class="font-secular text-[4vw] text-center">Pilih Level Pembagian</h1>
                 <div></div>
@@ -168,17 +171,17 @@
                 <a href="latihan.php?level=easy&jenis=pembagian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/easy.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Easy</p>
+                    <p class="font-bold font-baloo text-3xl">Mudah</p>
                 </a>
                 <a href="latihan.php?level=medium&jenis=pembagian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/medium.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Medium</p>
+                    <p class="font-bold font-baloo text-3xl">Sedang</p>
                 </a>
                 <a href="latihan.php?level=hard&jenis=pembagian"
                     class="bg-white flex flex-col text-center min-w-[180px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg py-4">
                     <img src="../asset/hard.png" class="h-24 object-contain" alt="">
-                    <p class="font-bold font-baloo text-3xl">Hard</p>
+                    <p class="font-bold font-baloo text-3xl">Sulit</p>
                 </a>
             </div>
         </div>

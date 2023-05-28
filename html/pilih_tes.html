@@ -13,12 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-    <script src="../js/cookies.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-
-    <script>
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/font.css">
     <title>Document</title>
@@ -28,61 +25,131 @@
     body {
         background-image: url('../asset/bg-awan.png');
         background-size: cover;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .font-secular {
         font-family: 'Secular One', sans-serif;
     }
+
+    .font-neue {
+        font-family: 'Comic Neue', cursive;
+    }
 </style>
 
 <body>
     <div class="w-screen h-screen py-4 relative">
-        <div class="flex justify-between items-start px-6 h-full">
-            <div class="grow">
-                <a href="main_menu.html" class="">
-                    <i class="fa fa-home text-2xl" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="self-center min-w-[300px] w-[35vw] font-secular">
-                <div class="bg-[#FFF6BE] h-full p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                    <div class="bg-[#FFE0A3] flex flex-col p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] gap-[6vh]">
-                        <a href="tes_open.php?level=easy"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl easy-open hidden">Easy</a>
-                        <a href="tes_locked.php?level=Easy"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl easy-locked">
-                            <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
-                        <a href="tes_open.php?level=medium"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl medium-open hidden">Medium</a>
-                        <a href="tes_locked.php?level=Medium"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl medium-locked">
-                            <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
-                        <a href="tes_open.php?level=hard"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl hard-open hidden">Hard</a>
+        <div class="page h-full" data-page="1">
+            <div class="flex justify-between items-start px-6 h-full">
+                <div class="grow">
+                    <a href="main_menu.html">
+                        <button class="active:-translate-y-4 transition duration-300">
+                            <img src="../asset/home.png" class="w-8" alt="">
+                        </button>
+                    </a>
+                </div>
+                <div class="self-center min-w-[300px] w-[35vw] font-secular">
+                    <div class="bg-[#FFF6BE] h-full p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                        <div
+                            class="bg-[#FFE0A3] flex flex-col p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] gap-[6vh]">
+                            <a href="tes_open.php?level=easy"
+                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl easy-open hidden">Mudah</a>
+                            <a href="tes_locked.php?level=Easy"
+                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl easy-locked">
+                                <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
+                            <a href="tes_open.php?level=medium"
+                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl medium-open hidden">Sedang</a>
+                            <a href="tes_locked.php?level=Medium"
+                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl medium-locked">
+                                <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
+                            <a href="tes_open.php?level=hard"
+                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl hard-open hidden">Sulit</a>
 
 
-                        <a href="tes_locked.php?level=Hard"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl hard-locked">
-                            <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
+                            <a href="tes_locked.php?level=Hard"
+                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl hard-locked">
+                                <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
 
+                        </div>
                     </div>
                 </div>
+                <div class="grow flex justify-end">
+                    <button class="active:-translate-y-4 transition duration-300 page-next" data-target="2">
+                        <img src="../asset/trophy.png" class="w-8" alt="">
+                    </button>
+                </div>
             </div>
-            <div class="grow">
+            <div class="absolute bottom-2 left-2 flex justify-between w-full p-4 pr-8 z-[-3]">
+                <div class="flex items-start">
+                    <img src="../asset/wortel-tantangan.png" alt="" class="w-24">
+                    <i class="fa fa-question text-4xl" aria-hidden="true"></i>
+                </div>
+                <div class="flex items-start ">
+                    <i class="fa fa-exclamation text-4xl mr-4 mb-6" aria-hidden="true"></i>
+                    <img src="../asset/buah-tutorial.png.png" alt="" class="w-24 -scale-x-[100%]">
+                </div>
+            </div>
+        </div>
+
+        <div class="page hidden font-neue" data-page="2">
+            <div class="flex justify-between items-start px-6 h-full">
+                <div class="grow">
+                    <button class="active:-translate-y-4 transition duration-300 page-next" data-target="1">
+                        <img src="../asset/back.png" class="w-12" alt="">
+                    </button>
+                </div>
+
+                <img src="../asset/podium.png" class="w-24" alt="">
+
+                <div class="grow flex justify-end">
+
+                </div>
+            </div>
+            <div class="w-8/12 flex flex-col mx-auto  font-bold gap-2 mt-4">
+                <div class="bg-white rounded-xl flex justify-evenly items-center">
+                    <span class="text-[#FF3D5A] text-4xl">1</span>
+                    <div class="flex gap-4 items-center text-3xl ">
+                        <div class="rounded-full h-[18vh] w-[18vh] scale-[0.75]">
+                            <img src="../asset/wortel.png" class="h-full w-full object-cover" alt="">
+                        </div>
+                        <div class="min-w-[100px]">
+                            Mudah
+                        </div>
+                    </div>
+                    <span id="skorEasy" class="text-[#FF7A00] text-4xl min-w-[80px] text-end">-</span>
+                </div>
+                <div class="bg-white rounded-xl flex justify-evenly items-center">
+                    <span class="text-[#FF6A00] text-4xl">2</span>
+                    <div class="flex gap-4 items-center text-3xl ">
+                        <div class="rounded-full h-[18vh] w-[18vh] scale-[0.75]">
+                            <img src="../asset/burger.png" class="h-full w-full object-cover" alt="">
+                        </div>
+                        <div class="min-w-[100px]">
+                            Sedang
+                        </div>
+                    </div>
+                    <span id="skorMedium" class="text-[#FF7A00] text-4xl min-w-[80px] text-end">-</span>
+                </div>
+                <div class="bg-white rounded-xl flex justify-evenly items-center">
+                    <span class="text-[#DACF43] text-4xl">3</span>
+                    <div class="flex gap-4 items-center text-3xl ">
+                        <div class="rounded-full h-[18vh] w-[18vh] scale-[0.75]">
+                            <img src="../asset/buah-tutorial.png.png" class="h-full w-full object-cover scale-x-[-100%]" alt="">
+                        </div>
+                        <div class="min-w-[100px]">
+                            Susah
+                        </div>
+                    </div>
+                    <span id="skorHard" class="text-[#FF7A00] text-4xl min-w-[80px] text-end">-</span>
+                </div>
 
             </div>
         </div>
-        <div class="absolute bottom-2 left-2 flex justify-between w-full p-4 pr-8 z-[-3]">
-            <div class="flex items-start">
-                <img src="../asset/wortel-tantangan.png" alt="" class="w-24">
-                <i class="fa fa-question text-4xl" aria-hidden="true"></i>
-            </div>
-            <div class="flex items-start ">
-                <i class="fa fa-exclamation text-4xl mr-4 mb-6" aria-hidden="true"></i>
-                <img src="../asset/buah-tutorial.png.png" alt="" class="w-24 -scale-x-[100%]">
-            </div>
-        </div>
+
     </div>
 </body>
+<script src="../js/page.js"></script>
+<script src="../js/cookie.js"></script>
 
 <script>
     if (getCookie("easy-penjumlahan") != null && getCookie("easy-pengurangan") != null && getCookie("easy-perkalian") != null && getCookie("easy-pembagian") != null) {
@@ -96,6 +163,22 @@
     if (getCookie("hard-penjumlahan") != null && getCookie("hard-pengurangan") != null && getCookie("hard-perkalian") != null && getCookie("hard-pembagian") != null) {
         $(".hard-open").show()
         $(".hard-locked").hide()
+    }
+
+    const highScoreEasy = getCookie("easyHighest")
+    const highScoreMedium = getCookie("mediumHighest")
+    const highScoreHard = getCookie("hardHighest")
+
+    console.log(highScoreEasy)
+
+    if(highScoreEasy != null){
+        $("#skorEasy").html(highScoreEasy)
+    }
+    if(highScoreMedium != null){
+        $("#skorMedium").html(highScoreMedium)
+    }
+    if(highScoreHard != null){
+        $("#skorHard").html(highScoreHard)
     }
 </script>
 
