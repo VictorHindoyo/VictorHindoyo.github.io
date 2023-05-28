@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <style>
     .font-baloo {
@@ -25,10 +27,16 @@
     body {
         background-image: url('../asset/bg-free.png');
         background-size: cover;
+        -webkit-tap-highlight-color: transparent;
+
     }
 
     * {
         touch-action: manipulation;
+    }
+
+    .font-neue {
+        font-family: 'Comic Neue', cursive;
     }
 </style>
 
@@ -45,9 +53,9 @@ $level = $_GET['level'];
 <body>
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
-            <div class="grow">
-                <a href="main_menu.html" class="min-w-[150px]">
-                    <i class="fa fa-home text-2xl" aria-hidden="true"></i>
+            <div class="min-w-[150px]">
+                <a href="main_menu.html">
+                    <img src="../asset/home.png" class="w-8" alt="">
                 </a>
             </div>
 
@@ -62,7 +70,8 @@ $level = $_GET['level'];
 
             </h1>
             <div class="min-w-[150px] text-end">
-                <button class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto"
+                <button
+                    class="btn-reset text-white rounded-lg font-bold font-baloo mr-auto active:rotate-180 transition duration-300"
                     onclick="document.getElementById('audioSempoa').play()">
                     <img src="../asset/reset.png" class="w-8" alt="">
                 </button>
@@ -70,7 +79,7 @@ $level = $_GET['level'];
         </div>
         <div class="flex justify-center">
             <div
-                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end mt-2">
+                class="sempoa border-8 outline border-[#B86248] shadow-[0px_0px_0px_2px_rgba(0,0,0,1)_inset] relative z-2 flex flex-row items-center mx-4 justify-end">
 
 
                 <div class="kolom space-y-3 relative pb-2" data-multiplier="100000" data-counterorder="5">
@@ -270,12 +279,12 @@ $level = $_GET['level'];
                     </div>
 
                 </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="0.1" data-counterorder="-1">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="" data-counterorder="">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
                     <img src="../asset/batu-normal.png"
-                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
+                        class="atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
@@ -284,30 +293,30 @@ $level = $_GET['level'];
                     </div>
                     <div class="space-y-2">
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
 
 
                     </div>
 
                 </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="0.01" data-counterorder="-2">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="" data-counterorder="">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
                     <img src="../asset/batu-normal.png"
-                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
+                        class="atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
                         <div class="separator relative z-1 w-20 h-4 border-y-[2px] border-black bg-[#F09677]">
@@ -316,19 +325,19 @@ $level = $_GET['level'];
                     </div>
                     <div class="space-y-2">
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
 
 
                     </div>
@@ -350,16 +359,17 @@ $level = $_GET['level'];
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
     <audio id="audioBenar" src="../asset/correct.wav"></audio>
 
-    <div id="qtip"
-        class="fixed top-2 left-2 w-1/2 h-[100px] transition duration-200 rounded-lg bg-sky-300 gap-4 bg-opacity-[0.95] hidden border-2 border-black">
-        <div class="flex items-center h-full w-full justify-evenly">
-            <img src="../asset/wortel-tantangan.png" alt="" class="h-[80px]">
-            <p class="text-[3vw] font-baloo font-bold">Kerjakan Soal Secara Urut</p>
-            <button class="self-start mt-4" id="qtip-button-close">
-                <i class="fa fa-times " aria-hidden="true"></i>
-            </button>
+    <div class="w-screen h-screen fixed top-0 left-0 hidden " id="qtip">
+        <div class="flex items-center justify-center h-full">
+            <div
+                class="bg-[#FFCA63] rounded-lg min-w-6/12 relative py-[7vh] flex items-center justify-center gap-10 pr-6 text-2xl font-bold  font-neue">
+                <img src="../asset/wortel-tantangan.png" class="h-[10vh] scale-[4] -translate-y-[25%]"
+                    alt="">
+                Oops,kerjakan soal secara urut ya!
+            </div>
         </div>
     </div>
+
 
 </body>
 
@@ -474,6 +484,10 @@ $level = $_GET['level'];
         $("#qtip").hide()
     })
 
+    $("#qtip").click(function() {
+        $("#qtip").hide()
+    })
+
     $(".show-correct").click(function() {
         $(this).hide();
         generateSoal()
@@ -495,6 +509,6 @@ $level = $_GET['level'];
 
 <script src="../js/sempoa.js"></script>
 <script src="../js/page.js"></script>
-<script src="../js/cookies.js"></script>
+<script src="../js/cookie.js"></script>
 
 </html>

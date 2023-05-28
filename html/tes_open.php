@@ -24,6 +24,8 @@
     body {
         background-image: url('../asset/bg-awan.png');
         background-size: cover;
+        -webkit-tap-highlight-color: transparent;
+
     }
 
     .font-secular {
@@ -40,7 +42,7 @@
         <div class="flex justify-between items-center px-6">
             <div class="min-w-[60px]">
                 <a href="main_menu.html" class="relative z-[3]">
-                    <i class="fa fa-home text-2xl" aria-hidden="true"></i>
+                    <img src="../asset/home.png" class="w-8" alt="">
                 </a>
             </div>
 
