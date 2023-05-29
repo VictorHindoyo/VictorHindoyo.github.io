@@ -1,0 +1,848 @@
+{
+    "Easy":[
+        {
+            "id": 1,
+            "angka1":4,
+            "angka2":4,
+            "operator":"+",
+            "jawaban":8
+        },
+        {
+            "id": 2,
+            "angka1":2,
+            "angka2":3,
+            "operator":"+",
+            "jawaban":5
+        },
+        {
+            "id": 3,
+            "angka1":3,
+            "angka2":4,
+            "operator":"+",
+            "jawaban":7
+        },
+        {
+            "id": 4,
+            "angka1":4,
+            "angka2":5,
+            "operator":"+",
+            "jawaban":9
+        },
+        {
+            "id": 5,
+            "angka1":3,
+            "angka2":5,
+            "operator":"+",
+            "jawaban":8
+        },
+        {
+            "id": 6,
+            "angka1":4,
+            "angka2":2,
+            "operator":"+",
+            "jawaban":6
+        },
+        {
+            "id": 7,
+            "angka1":2,
+            "angka2":7,
+            "operator":"+",
+            "jawaban":9
+        },
+        {
+            "id": 8,
+            "angka1":3,
+            "angka2":3,
+            "operator":"+",
+            "jawaban":6
+        },
+        {
+            "id": 9,
+            "angka1":2,
+            "angka2":2,
+            "operator":"+",
+            "jawaban":4
+        },
+        {
+            "id": 10,
+            "angka1":6,
+            "angka2":2,
+            "operator":"+",
+            "jawaban":8
+        },
+        {
+            "id": 11,
+            "angka1":3,
+            "angka2":2,
+            "operator":"-",
+            "jawaban":1
+        },
+        {
+            "id": 12,
+            "angka1":2,
+            "angka2":1,
+            "operator":"-",
+            "jawaban":1
+        },
+        {
+            "id": 13,
+            "angka1":5,
+            "angka2":3,
+            "operator":"-",
+            "jawaban":2
+        },
+        {
+            "id": 14,
+            "angka1":9,
+            "angka2":4,
+            "operator":"-",
+            "jawaban":5
+        },
+        {
+            "id": 15,
+            "angka1":7,
+            "angka2":4,
+            "operator":"-",
+            "jawaban":3
+        },
+        {
+            "id": 16,
+            "angka1":8,
+            "angka2":4,
+            "operator":"-",
+            "jawaban":4
+        },
+        {
+            "id": 17,
+            "angka1":8,
+            "angka2":3,
+            "operator":"-",
+            "jawaban":5
+        },
+        {
+            "id": 18,
+            "angka1":6,
+            "angka2":3,
+            "operator":"-",
+            "jawaban":3
+        },
+        {
+            "id": 19,
+            "angka1":7,
+            "angka2":5,
+            "operator":"-",
+            "jawaban":2
+        },
+        {
+            "id": 20,
+            "angka1":9,
+            "angka2":5,
+            "operator":"-",
+            "jawaban":4
+        },
+        {
+            "id": 21,
+            "angka1":2,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":4
+        },
+        {
+            "id": 22,
+            "angka1":2,
+            "angka2":3,
+            "operator":"*",
+            "jawaban":6
+        },
+        {
+            "id": 23,
+            "angka1":4,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":8
+        },
+        {
+            "id": 24,
+            "angka1":3,
+            "angka2":3,
+            "operator":"*",
+            "jawaban":9
+        },
+        {
+            "id": 25,
+            "angka1":2,
+            "angka2":1,
+            "operator":"*",
+            "jawaban":2
+        },
+        {
+            "id": 26,
+            "angka1":5,
+            "angka2":1,
+            "operator":"*",
+            "jawaban":5
+        },
+        {
+            "id": 27,
+            "angka1":3,
+            "angka2":3,
+            "operator":"*",
+            "jawaban":9
+        },
+        {
+            "id": 28,
+            "angka1":6,
+            "angka2":1,
+            "operator":"*",
+            "jawaban":6
+        },
+        {
+            "id": 29,
+            "angka1":7,
+            "angka2":1,
+            "operator":"*",
+            "jawaban":7
+        },
+        {
+            "id": 30,
+            "angka1":8,
+            "angka2":1,
+            "operator":"*",
+            "jawaban":8
+        },
+        {
+            "id": 31,
+            "angka1":4,
+            "angka2":2,
+            "operator":"/",
+            "jawaban":2
+        },
+        {
+            "id": 32,
+            "angka1":6,
+            "angka2":3,
+            "operator":"/",
+            "jawaban":2
+        },
+        {
+            "id": 33,
+            "angka1":8,
+            "angka2":4,
+            "operator":"/",
+            "jawaban":2
+        },
+        {
+            "id": 34,
+            "angka1":3,
+            "angka2":3,
+            "operator":"/",
+            "jawaban":1
+        },
+        {
+            "id": 35,
+            "angka1":2,
+            "angka2":2,
+            "operator":"/",
+            "jawaban":1
+        },
+        {
+            "id": 36,
+            "angka1":5,
+            "angka2":1,
+            "operator":"/",
+            "jawaban":5
+        },
+        {
+            "id": 37,
+            "angka1":3,
+            "angka2":3,
+            "operator":"/",
+            "jawaban":1
+        },
+        {
+            "id": 38,
+            "angka1":6,
+            "angka2":2,
+            "operator":"/",
+            "jawaban":3
+        },
+        {
+            "id": 39,
+            "angka1":8,
+            "angka2":2,
+            "operator":"/",
+            "jawaban":4
+        },
+        {
+            "id": 40,
+            "angka1":9,
+            "angka2":3,
+            "operator":"/",
+            "jawaban":3
+        }
+    ],
+    "Medium":[
+        {
+            "id": 1,
+            "angka1":3,
+            "angka2":7,
+            "operator":"+",
+            "jawaban":10
+        },
+        {
+            "id": 2,
+            "angka1":2,
+            "angka2":10,
+            "operator":"+",
+            "jawaban":12
+        },
+        {
+            "id": 3,
+            "angka1":5,
+            "angka2":15,
+            "operator":"+",
+            "jawaban":20
+        },
+        {
+            "id": 4,
+            "angka1":5,
+            "angka2":5,
+            "operator":"+",
+            "jawaban":10
+        },
+        {
+            "id": 5,
+            "angka1":4,
+            "angka2":7,
+            "operator":"+",
+            "jawaban":11
+        },
+        {
+            "id": 6,
+            "angka1":5,
+            "angka2":8,
+            "operator":"+",
+            "jawaban":13
+        },
+        {
+            "id": 7,
+            "angka1":8,
+            "angka2":3,
+            "operator":"+",
+            "jawaban":11
+        },
+        {
+            "id": 8,
+            "angka1":12,
+            "angka2":5,
+            "operator":"+",
+            "jawaban":17
+        },
+        {
+            "id": 9,
+            "angka1":13,
+            "angka2":7,
+            "operator":"+",
+            "jawaban":20
+        },
+        {
+            "id": 10,
+            "angka1":18,
+            "angka2":2,
+            "operator":"+",
+            "jawaban":20
+        },
+        {
+            "id": 11,
+            "angka1":20,
+            "angka2":5,
+            "operator":"-",
+            "jawaban":15
+        },
+        {
+            "id": 12,
+            "angka1":20,
+            "angka2":10,
+            "operator":"-",
+            "jawaban":10
+        },
+        {
+            "id": 13,
+            "angka1":18,
+            "angka2":2,
+            "operator":"-",
+            "jawaban":16
+        },
+        {
+            "id": 14,
+            "angka1":18,
+            "angka2":8,
+            "operator":"-",
+            "jawaban":10
+        },
+        {
+            "id": 15,
+            "angka1":25,
+            "angka2":10,
+            "operator":"-",
+            "jawaban":15
+        },
+        {
+            "id": 16,
+            "angka1":15,
+            "angka2":5,
+            "operator":"-",
+            "jawaban":10
+        },
+        {
+            "id": 17,
+            "angka1":18,
+            "angka2":3,
+            "operator":"-",
+            "jawaban":15
+        },
+        {
+            "id": 18,
+            "angka1":25,
+            "angka2":4,
+            "operator":"-",
+            "jawaban":21
+        },
+        {
+            "id": 19,
+            "angka1":30,
+            "angka2":7,
+            "operator":"-",
+            "jawaban":23
+        },
+        {
+            "id": 20,
+            "angka1":25,
+            "angka2":7,
+            "operator":"-",
+            "jawaban":18
+        },
+        {
+            "id": 21,
+            "angka1":20,
+            "angka2":5,
+            "operator":"*",
+            "jawaban":100
+        },
+        {
+            "id": 22,
+            "angka1":20,
+            "angka2":10,
+            "operator":"*",
+            "jawaban":200
+        },
+        {
+            "id": 23,
+            "angka1":3,
+            "angka2":4,
+            "operator":"*",
+            "jawaban":12
+        },
+        {
+            "id": 24,
+            "angka1":2,
+            "angka2":5,
+            "operator":"*",
+            "jawaban":10
+        },
+        {
+            "id": 25,
+            "angka1":5,
+            "angka2":10,
+            "operator":"*",
+            "jawaban":50
+        },
+        {
+            "id": 26,
+            "angka1":15,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":30
+        },
+        {
+            "id": 27,
+            "angka1":18,
+            "angka2":3,
+            "operator":"*",
+            "jawaban":54
+        },
+        {
+            "id": 28,
+            "angka1":25,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":50
+        },
+        {
+            "id": 29,
+            "angka1":30,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":60
+        },
+        {
+            "id": 30,
+            "angka1":15,
+            "angka2":3,
+            "operator":"*",
+            "jawaban":45
+        },
+        {
+            "id": 31,
+            "angka1":25,
+            "angka2":5,
+            "operator":"/",
+            "jawaban":5
+        },
+        {
+            "id": 32,
+            "angka1":12,
+            "angka2":2,
+            "operator":"/",
+            "jawaban":6
+        },
+        {
+            "id": 33,
+            "angka1":40,
+            "angka2":20,
+            "operator":"/",
+            "jawaban":2
+        },
+        {
+            "id": 34,
+            "angka1":20,
+            "angka2":5,
+            "operator":"/",
+            "jawaban":4
+        },
+        {
+            "id": 35,
+            "angka1":10,
+            "angka2":5,
+            "operator":"/",
+            "jawaban":2
+        },
+        {
+            "id": 36,
+            "angka1":15,
+            "angka2":3,
+            "operator":"/",
+            "jawaban":5
+        },
+        {
+            "id": 37,
+            "angka1":18,
+            "angka2":3,
+            "operator":"/",
+            "jawaban":6
+        },
+        {
+            "id": 38,
+            "angka1":24,
+            "angka2":2,
+            "operator":"/",
+            "jawaban":12
+        },
+        {
+            "id": 39,
+            "angka1":30,
+            "angka2":6,
+            "operator":"/",
+            "jawaban":5
+        },
+        {
+            "id": 40,
+            "angka1":45,
+            "angka2":9,
+            "operator":"/",
+            "jawaban":5
+        }
+    ],
+    "Hard":[
+        {
+            "id": 1,
+            "angka1":75,
+            "angka2":25,
+            "operator":"+",
+            "jawaban":100
+        },
+        {
+            "id": 2,
+            "angka1":80,
+            "angka2":30,
+            "operator":"+",
+            "jawaban":110
+        },
+        {
+            "id": 3,
+            "angka1":100,
+            "angka2":25,
+            "operator":"+",
+            "jawaban":125
+        },
+        {
+            "id": 4,
+            "angka1":125,
+            "angka2":10,
+            "operator":"+",
+            "jawaban":135
+        },
+        {
+            "id": 5,
+            "angka1":130,
+            "angka2":15,
+            "operator":"+",
+            "jawaban":145
+        },
+        {
+            "id": 6,
+            "angka1":80,
+            "angka2":20,
+            "operator":"+",
+            "jawaban":100
+        },
+        {
+            "id": 7,
+            "angka1":30,
+            "angka2":70,
+            "operator":"+",
+            "jawaban":100
+        },
+        {
+            "id": 8,
+            "angka1":25,
+            "angka2":90,
+            "operator":"+",
+            "jawaban":115
+        },
+        {
+            "id": 9,
+            "angka1":100,
+            "angka2":25,
+            "operator":"+",
+            "jawaban":125
+        },
+        {
+            "id": 10,
+            "angka1":125,
+            "angka2":25,
+            "operator":"+",
+            "jawaban":150
+        },
+        {
+            "id": 11,
+            "angka1":125,
+            "angka2":3,
+            "operator":"-",
+            "jawaban":122
+        },
+        {
+            "id": 12,
+            "angka1":200,
+            "angka2":25,
+            "operator":"-",
+            "jawaban":175
+        },
+        {
+            "id": 13,
+            "angka1":190,
+            "angka2":25,
+            "operator":"-",
+            "jawaban":165
+        },
+        {
+            "id": 14,
+            "angka1":125,
+            "angka2":10,
+            "operator":"-",
+            "jawaban":115
+        },
+        {
+            "id": 15,
+            "angka1":130,
+            "angka2":15,
+            "operator":"-",
+            "jawaban":115
+        },
+        {
+            "id": 16,
+            "angka1":180,
+            "angka2":20,
+            "operator":"-",
+            "jawaban":160
+        },
+        {
+            "id": 17,
+            "angka1":130,
+            "angka2":70,
+            "operator":"-",
+            "jawaban":60
+        },
+        {
+            "id": 18,
+            "angka1":125,
+            "angka2":20,
+            "operator":"-",
+            "jawaban":115
+        },
+        {
+            "id": 19,
+            "angka1":130,
+            "angka2":25,
+            "operator":"-",
+            "jawaban":105
+        },
+        {
+            "id": 20,
+            "angka1":115,
+            "angka2":10,
+            "operator":"-",
+            "jawaban":105
+        },
+        {
+            "id": 21,
+            "angka1":125,
+            "angka2":3,
+            "operator":"*",
+            "jawaban":375
+        },
+        {
+            "id": 22,
+            "angka1":20,
+            "angka2":25,
+            "operator":"*",
+            "jawaban":500
+        },
+        {
+            "id": 23,
+            "angka1":10,
+            "angka2":25,
+            "operator":"*",
+            "jawaban":250
+        },
+        {
+            "id": 24,
+            "angka1":120,
+            "angka2":5,
+            "operator":"*",
+            "jawaban":600
+        },
+        {
+            "id": 25,
+            "angka1":75,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":150
+        },
+        {
+            "id": 26,
+            "angka1":120,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":240
+        },
+        {
+            "id": 27,
+            "angka1":125,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":50
+        },
+        {
+            "id": 28,
+            "angka1":10,
+            "angka2":20,
+            "operator":"*",
+            "jawaban":200
+        },
+        {
+            "id": 29,
+            "angka1":100,
+            "angka2":12,
+            "operator":"*",
+            "jawaban":1200
+        },
+        {
+            "id": 30,
+            "angka1":150,
+            "angka2":2,
+            "operator":"*",
+            "jawaban":300
+        },
+        {
+            "id": 31,
+            "angka1":125,
+            "angka2":5,
+            "operator":"/",
+            "jawaban":25
+        },
+        {
+            "id": 32,
+            "angka1":150,
+            "angka2":3,
+            "operator":"/",
+            "jawaban":50
+        },
+        {
+            "id": 33,
+            "angka1":100,
+            "angka2":25,
+            "operator":"/",
+            "jawaban":4
+        },
+        {
+            "id": 34,
+            "angka1":120,
+            "angka2":6,
+            "operator":"/",
+            "jawaban":20
+        },
+        {
+            "id": 35,
+            "angka1":250,
+            "angka2":25,
+            "operator":"/",
+            "jawaban":10
+        },
+        {
+            "id": 36,
+            "angka1":120,
+            "angka2":2,
+            "operator":"/",
+            "jawaban":60
+        },
+        {
+            "id": 37,
+            "angka1":160,
+            "angka2":4,
+            "operator":"/",
+            "jawaban":40
+        },
+        {
+            "id": 38,
+            "angka1":140,
+            "angka2":7,
+            "operator":"/",
+            "jawaban":20
+        },
+        {
+            "id": 39,
+            "angka1":100,
+            "angka2":10,
+            "operator":"/",
+            "jawaban":10
+        },
+        {
+            "id": 40,
+            "angka1":120,
+            "angka2":2,
+            "operator":"/",
+            "jawaban":60
+        }
+    ]
+}
