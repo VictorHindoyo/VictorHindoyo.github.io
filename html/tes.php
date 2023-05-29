@@ -324,12 +324,12 @@
                     </div>
 
                 </div>
-                <div class="kolom space-y-3 relative pb-2" data-multiplier="0.1" data-counterorder="-1">
+                <div class="kolom space-y-3 relative pb-2" data-multiplier="" data-counterorder="">
                     <div class="absolute h-full w-1 bg-black z-[-1]" style="left: 50%;transform: translate(-50%, 0)">
 
                     </div>
                     <img src="../asset/batu-normal.png"
-                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
+                        class="atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
                         <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
@@ -338,19 +338,19 @@
                     </div>
                     <div class="space-y-2">
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
 
 
                     </div>
@@ -361,7 +361,7 @@
 
                     </div>
                     <img src="../asset/batu-normal.png"
-                        class="batu atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
+                        class="atas h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=5>
 
                     <div class="py-4">
                         <div class="separator relative z-1 w-[10vw] h-4 border-y-[2px] border-black bg-[#F09677]">
@@ -370,19 +370,19 @@
                     </div>
                     <div class="space-y-2">
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=1>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=2>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=3>
 
 
                         <img src="../asset/batu-normal.png"
-                            class="batu bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
+                            class="bawah h-[8.5vh] scale-[1.45]   mx-auto transition duration-300" data-value=4>
 
 
                     </div>

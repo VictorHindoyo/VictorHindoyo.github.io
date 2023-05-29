@@ -49,7 +49,7 @@ fetch("../bank_soal/soalCerita.json")
     } else if (level == "medium") {
       questions2 = data.Medium;
     } else if (level == "hard") {
-      questions2 == data.Hard;
+      questions2 = data.Hard;
     }
     // questions = data.mudah; // Assign the JSON data to the questions variable
     generateSoalId2();
@@ -62,26 +62,43 @@ fetch("../bank_soal/soalCerita.json")
 
 function generateSoalId() {
   for (let i = 0; i < 8; i++) {
-    var randomNum = Math.floor(Math.random() * 40) + 1;
-    if (!soalId.includes(randomNum)) {
-      soalId.push(randomNum);
+    var status = true;
+    // if (!soalId.includes(randomNum)) {
+    //   soalId.push(randomNum);
+    // }
+    while (status == true) {
+      var randomNum = Math.floor(Math.random() * 40);
+      if (!soalId.includes(randomNum)) {
+        status = false;
+      }
     }
+    soalId.push(randomNum);
   }
-  // console.log(questions);
+  console.log(soalId);
 }
 
 function generateSoalId2() {
   for (let i = 0; i < 2; i++) {
-    var randomNum = Math.floor(Math.random() * 5) + 1;
-    if (!soalId2.includes(randomNum)) {
-      soalId2.push(randomNum);
+    var status = true;
+    // if (!soalId2.includes(randomNum)) {
+    //     soalId2.push(randomNum);
+    // }
+
+    while (status == true) {
+      var randomNum = Math.floor(Math.random() * 5);
+      if (!soalId2.includes(randomNum)) {
+        status = false;
+      }
     }
+    soalId2.push(randomNum);
   }
-  // console.log(questions);
+  console.log(soalId2);
 }
 function setSoal() {
-  if (currentSoal < 8) {
-    console.log(currentSoal);
+  if (currentSoal < 9) {
+    console.log(level);
+    console.log(soalId[currentSoal - 1]);
+    console.log(questions[soalId[currentSoal - 1]].id);
     containerSoal1.html(
       `${questions[soalId[currentSoal - 1]].angka1} ${
         questions[soalId[currentSoal - 1]].operator
@@ -90,9 +107,12 @@ function setSoal() {
     containerSoalCerita1.html(``);
     containerSoalCerita2.html(``);
   } else {
-    containerSoalCerita1.html(`${questions2[soalId2[currentSoal - 8]].soal}`);
+    console.log(level);
+    console.log(soalId2[currentSoal - 9]);
+    console.log(questions2[soalId2[currentSoal - 9]].id);
+    containerSoalCerita1.html(`${questions2[soalId2[currentSoal - 9]].soal}`);
     containerSoal1.html(``);
-    containerSoalCerita2.html(``);
+    containerSoalCerita2.html(`${questions2[soalId2[currentSoal - 9]].soal2}`);
   }
 
   containerCounterSoal.html(currentSoal);
@@ -112,13 +132,24 @@ function resetSempoa() {
 }
 
 function submit() {
-  if (counter.data("value") == questions[soalId[currentSoal - 1]].jawaban) {
-    $(".show-correct").show();
-    document.getElementById("audioBenar").play();
-    currentScore += 10;
+  if (currentSoal < 9) {
+    if (counter.data("value") == questions[soalId[currentSoal - 1]].jawaban) {
+      $(".show-correct").show();
+      document.getElementById("audioBenar").play();
+      currentScore += 10;
+    } else {
+      $(".show-wrong").show();
+      document.getElementById("audioSalah").play();
+    }
   } else {
-    $(".show-wrong").show();
-    document.getElementById("audioSalah").play();
+    if (counter.data("value") == questions2[soalId2[currentSoal - 9]].jawaban) {
+      $(".show-correct").show();
+      document.getElementById("audioBenar").play();
+      currentScore += 10;
+    } else {
+      $(".show-wrong").show();
+      document.getElementById("audioSalah").play();
+    }
   }
   $("#modalKonfirmasiSubmit").hide();
 }
@@ -130,7 +161,7 @@ $(".show").click(function () {
     $("#skor").val(currentScore);
     document.getElementById("buttonSubmitTes").click();
   } else {
-    document.getElementById("moveButton").click()
+    document.getElementById("moveButton").click();
   }
   currentSoal++;
   resetSempoa();

@@ -33,7 +33,7 @@
             "angka1":3,
             "angka2":5,
             "operator":"+",
-            "jawaban":7
+            "jawaban":8
         },
         {
             "id": 6,
@@ -211,70 +211,70 @@
             "jawaban":8
         },
         {
-            "id": 41,
+            "id": 31,
             "angka1":4,
             "angka2":2,
             "operator":"/",
             "jawaban":2
         },
         {
-            "id": 42,
+            "id": 32,
             "angka1":6,
             "angka2":3,
             "operator":"/",
             "jawaban":2
         },
         {
-            "id": 43,
+            "id": 33,
             "angka1":8,
             "angka2":4,
             "operator":"/",
             "jawaban":2
         },
         {
-            "id": 44,
+            "id": 34,
             "angka1":3,
             "angka2":3,
             "operator":"/",
             "jawaban":1
         },
         {
-            "id": 45,
+            "id": 35,
             "angka1":2,
             "angka2":2,
             "operator":"/",
             "jawaban":1
         },
         {
-            "id": 46,
+            "id": 36,
             "angka1":5,
             "angka2":1,
             "operator":"/",
             "jawaban":5
         },
         {
-            "id": 47,
+            "id": 37,
             "angka1":3,
             "angka2":3,
             "operator":"/",
             "jawaban":1
         },
         {
-            "id": 48,
+            "id": 38,
             "angka1":6,
             "angka2":2,
             "operator":"/",
             "jawaban":3
         },
         {
-            "id": 49,
+            "id": 39,
             "angka1":8,
             "angka2":2,
             "operator":"/",
             "jawaban":4
         },
         {
-            "id": 50,
+            "id": 40,
             "angka1":9,
             "angka2":3,
             "operator":"/",
@@ -388,7 +388,7 @@
             "jawaban":15
         },
         {
-            "id": 6,
+            "id": 16,
             "angka1":15,
             "angka2":5,
             "operator":"-",
