@@ -59,7 +59,7 @@
         </div>
 
         <a href="main_menu.html"
-            class="bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] absolute bottom-6 right-6">
+            class="clickableButton bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] absolute bottom-6 right-6">
             <img src="../asset/home.png" class="w-8" alt="">
         </a>
     </div>
@@ -84,6 +84,10 @@
     if (getHighest <= skor){
         setCookie(cookieName,skor,999)
     }
+
+    $(".clickableButton").click(function(){
+        window.cpjs.clickSound()
+    })
 </script>
 
 </html>

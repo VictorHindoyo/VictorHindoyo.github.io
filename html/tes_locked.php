@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
     <title>Document</title>
 </head>
@@ -26,7 +28,7 @@
 
     }
 
-    .font-neue{
+    .font-neue {
         font-family: 'Comic Neue', cursive;
     }
 
@@ -38,7 +40,7 @@
 <body>
     <div class="w-screen h-screen py-4 relative">
         <div class="flex justify-between items-center px-6">
-            <a href="pilih_tes.html" class="relative z-[3]">
+            <a href="pilih_tes.html" class="relative z-[3] clickableButton">
                 <img src="../asset/back.png" class="w-12" alt="">
             </a>
         </div>
@@ -54,5 +56,11 @@
         </div>
     </div>
 </body>
+
+<script>
+    $(".clickableButton").click(function() {
+        window.cpjs.clickSound()
+    })
+</script>
 
 </html>

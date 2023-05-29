@@ -39,7 +39,7 @@
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
             <a href="main_menu.html" class="min-w-[150px]">
-                <button class="active:-translate-y-4 transition duration-300">
+                <button class="active:-translate-y-4 transition duration-300 clickableButton">
                     <img src="../asset/home.png" class="w-8" alt="">
                 </button>
             </a>
@@ -332,6 +332,12 @@
 
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
 </body>
+
+<script>
+    $(".clickableButton").click(function(){
+        window.cpjs.clickSound()
+    })
+</script>
 
 <script src="../js/sempoa.js"></script>
 

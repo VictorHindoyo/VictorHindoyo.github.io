@@ -44,7 +44,7 @@
     <div class="w-screen h-screen py-4 relative">
         <div class="flex justify-between items-start px-6 h-full">
             <div class="grow">
-                <button id="buttonMusic" data-status="" class="active:-translate-y-4 transition duration-300">
+                <button id="buttonMusic" data-status="" class="active:-translate-y-4 transition duration-300 ">
                     <div class="flex relative">
                         <img src="../asset/music-on.png" class="music-icon" width="32px" alt="">
 
@@ -56,14 +56,14 @@
                 <div class="bg-[#FFF6BE] h-full p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
                     <div class="bg-[#FFE0A3] flex flex-col p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] gap-[6vh]">
                         <a href="mode_bebas.html"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Mode
+                            class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Mode
                             Bebas</a>
                         <a href="jenis_latihan.php"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Latihan</a>
+                            class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Latihan</a>
                         <a href="pilih_tes.html"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Tes</a>
+                            class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Tes</a>
                         <a href="tutorial.html"
-                            class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Tutorial</a>
+                            class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl">Tutorial</a>
                     </div>
                 </div>
             </div>
@@ -108,10 +108,13 @@
     })
 
     function updateMusic(state) {
-        console.log("test")
         window.cpjs.sendMusicState(state)
     }
 
+
+    $(".clickableButton").click(function(){
+        window.cpjs.clickSound()
+    })
 
 
 </script>

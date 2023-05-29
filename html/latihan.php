@@ -54,7 +54,7 @@ $level = $_GET['level'];
     <div class="w-screen h-screen py-2">
         <div class="flex justify-between items-center px-6">
             <div class="min-w-[150px]">
-                <a href="main_menu.html">
+                <a href="main_menu.html" class="clickableButton">
                     <img src="../asset/home.png" class="w-8" alt="">
                 </a>
             </div>
@@ -513,6 +513,10 @@ $level = $_GET['level'];
     })
     $("#angka1").html(`${angka1}`)
     $("#soal").html(soal);
+
+    $(".clickableButton").click(function(){
+        window.cpjs.clickSound()
+    })
 </script>
 
 <script src="../js/sempoa.js"></script>

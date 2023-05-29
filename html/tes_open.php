@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&display=swap" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.6.4.js"
-        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
 
     <title>Document</title>
 </head>
@@ -41,14 +41,14 @@
     <div class="w-screen h-screen py-4 relative">
         <div class="flex justify-between items-center px-6">
             <div class="min-w-[60px]">
-                <a href="main_menu.html" class="relative z-[3]">
+                <a href="main_menu.html" class="relative z-[3] clickableButton">
                     <img src="../asset/home.png" class="w-8" alt="">
                 </a>
             </div>
 
             <h1 class="font-baloo font-bold text-[4vw] text-center">Tantangan Tes</h1>
             <button
-                class="modal-btn bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] relative z-[3]"
+                class="clickableButton modal-btn bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] relative z-[3]"
                 data-modal="modalPenjelasanTes">
                 <img src="../asset/info.png" alt="">
             </button>
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <a href="tes.php?level=<?php echo $_GET["level"]?>" class="absolute bottom-6 right-12 flex items-center z-[3]">
+        <a href="tes.php?level=<?php echo $_GET['level']; ?>" class="absolute bottom-6 right-12 flex items-center z-[3] clickableButton">
             <span class="font-secular font-bold text-3xl mr-4">Mulai</span>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -101,6 +101,12 @@
     </div>
 </body>
 
+
+<script>
+    $(".clickableButton").click(function() {
+        window.cpjs.clickSound()
+    })
+</script>
 
 <script src="../js/modal.js" defer></script>
 

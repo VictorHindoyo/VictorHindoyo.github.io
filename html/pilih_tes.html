@@ -53,28 +53,26 @@
                         <div
                             class="bg-[#FFE0A3] flex flex-col p-4 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)] gap-[6vh]">
                             <a href="tes_open.php?level=easy"
-                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl easy-open hidden">Mudah</a>
+                                class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl easy-open hidden">Mudah</a>
                             <a href="tes_locked.php?level=Easy"
-                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl easy-locked">
+                                class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl easy-locked">
                                 <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
                             <a href="tes_open.php?level=medium"
-                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl medium-open hidden">Sedang</a>
+                                class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl medium-open hidden">Sedang</a>
                             <a href="tes_locked.php?level=Medium"
-                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl medium-locked">
+                                class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl medium-locked">
                                 <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
                             <a href="tes_open.php?level=hard"
-                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl hard-open hidden">Sulit</a>
-
-
+                                class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl hard-open hidden">Sulit</a>
                             <a href="tes_locked.php?level=Hard"
-                                class="bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl hard-locked">
+                                class="clickableButton bg-white text-black py-3 rounded-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] text-center font-bold text-2xl hard-locked">
                                 <img src="../asset/lock.png" class="mx-auto w-6" alt=""></a>
 
                         </div>
                     </div>
                 </div>
                 <div class="grow flex justify-end">
-                    <button class="active:-translate-y-4 transition duration-300 page-next" data-target="2">
+                    <button class="active:-translate-y-4 transition duration-300 page-next clickableButton" data-target="2">
                         <img src="../asset/trophy.png" class="w-8" alt="">
                     </button>
                 </div>
@@ -94,7 +92,7 @@
         <div class="page hidden font-neue" data-page="2">
             <div class="flex justify-between items-center px-6 h-full ">
                 <div class="min-w-[100px]">
-                    <button class="active:-translate-y-4 transition duration-300 page-next" data-target="1">
+                    <button class="active:-translate-y-4 transition duration-300 page-next clickableButton" data-target="1">
                         <img src="../asset/back.png" class="w-12" alt="">
                     </button>
                 </div>
@@ -185,6 +183,10 @@
     if (highScoreHard != null) {
         $("#skorHard").html(highScoreHard)
     }
+
+    $(".clickableButton").click(function () {
+        window.cpjs.clickSound()
+    })
 </script>
 
 

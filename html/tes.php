@@ -33,7 +33,7 @@
         -webkit-tap-highlight-color: transparent;
     }
 
-    .font-neue{
+    .font-neue {
         font-family: 'Comic Neue', cursive;
     }
 
@@ -95,7 +95,7 @@
 
 
 <script>
-    const level = '<?php echo $_GET["level"]?>'
+    const level = '<?php echo $_GET['level']; ?>'
 </script>
 
 <body>
@@ -103,7 +103,7 @@
         <div class="flex justify-between items-center px-6  mx-auto">
             <div class="min-w-[150px] flex items-center justify-end">
                 <div class="min-w-[150px]">
-                    <button class="text-2xl modal-btn" data-modal="modalAkhiriQuiz">
+                    <button class="clickableButton text-2xl modal-btn" data-modal="modalAkhiriQuiz">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -120,7 +120,7 @@
             </div>
         </div>
         <div class="flex justify-between items-end mt-2 mx-2">
-            <button id="moveButton" class="z-[70] transition duration-300" data-modal="modalLihatSoal">
+            <button id="moveButton" class="clickableButton z-[70] transition duration-300" data-modal="modalLihatSoal">
                 <img src="../asset/wortel-tantangan.png" class="z-[10]" alt="">
             </button>
             <div
@@ -389,7 +389,7 @@
 
                 </div>
             </div>
-            <button class="modal-btn border-4 rounded-full border-black py-2 px-4" data-modal="modalKonfirmasiSubmit">
+            <button class="clickableButton modal-btn border-4 rounded-full border-black py-2 px-4" data-modal="modalKonfirmasiSubmit">
                 <i class="fa fa-arrow-right text-2xl font-bold" aria-hidden="true"></i>
             </button>
 
@@ -415,7 +415,7 @@
             <div class="flex items-center justify-center pb-6 gap-4">
                 <a href="main_menu.html"
                     class="border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold">Ya</a>
-                <button class="modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
+                <button class="clickableButton modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
                     data-modal="modalAkhiriQuiz">Tidak</button>
             </div>
 
@@ -438,9 +438,9 @@
             </div>
             <!-- Footer -->
             <div class="flex items-center justify-center pb-6 gap-4">
-                <button class="border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold"
+                <button class="clickableButton border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold"
                     onclick="submit()">Ya</button>
-                <button class="modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
+                <button class="clickableButton modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
                     data-modal="modalKonfirmasiSubmit">Tidak</button>
             </div>
 
@@ -448,14 +448,15 @@
     </div>
 
     <!-- Modal Lihat Soal -->
-    <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 flex items-center justify-center"
+    <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 flex items-center justify-center clickableButton"
         id="modalLihatSoal" data-active=1>
         <div class="transition duration-300 bg-contain bg-no-repeat w-9/12 bg-center py-12 flex flex-col mb-12"
             style="background-image:url('../asset/popup.png') " id="modalLihatSoalAnimation">
             <!-- Header -->
             <div id="" class="flex items-center justify-center -mt-8">
                 <div class="mx-auto">
-                    <h3 class="font-baloo font-bold font-black text-3xl border-b-[1px] border-white py-4 px-6">SOAL NO <span id="numSoal">1</span></h3>
+                    <h3 class="font-baloo font-bold font-black text-3xl border-b-[1px] border-white py-4 px-6">SOAL NO
+                        <span id="numSoal">1</span></h3>
                 </div>
             </div>
             <!-- Body -->
@@ -497,7 +498,7 @@
 
     <form action="tes_hasil.php" method="POST">
         <input type="hidden" id="skor" name="skor">
-        <input type="hidden" id="" name="level" value="<?php echo $_GET['level'] ?>">
+        <input type="hidden" id="" name="level" value="<?php echo $_GET['level']; ?>">
         <button type="submit" class="hidden" id="buttonSubmitTes"></button>
     </form>
 </body>
@@ -540,6 +541,12 @@
     // });
 </script>
 
+
+<script>
+    $(".clickableButton").click(function() {
+        window.cpjs.clickSound()
+    })
+</script>
 
 <script src="../js/sempoa.js"></script>
 <script src="../js/modal.js"></script>
