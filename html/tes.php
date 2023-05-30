@@ -389,7 +389,8 @@
 
                 </div>
             </div>
-            <button class="clickableButton modal-btn border-4 rounded-full border-black py-2 px-4" data-modal="modalKonfirmasiSubmit">
+            <button class="clickableButton modal-btn border-4 rounded-full border-black py-2 px-4"
+                data-modal="modalKonfirmasiSubmit">
                 <i class="fa fa-arrow-right text-2xl font-bold" aria-hidden="true"></i>
             </button>
 
@@ -415,7 +416,8 @@
             <div class="flex items-center justify-center pb-6 gap-4">
                 <a href="main_menu.html"
                     class="border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold">Ya</a>
-                <button class="clickableButton modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
+                <button
+                    class="clickableButton modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
                     data-modal="modalAkhiriQuiz">Tidak</button>
             </div>
 
@@ -440,7 +442,8 @@
             <div class="flex items-center justify-center pb-6 gap-4">
                 <button class="clickableButton border-2  border-black rounded-lg bg-transparent px-5 py-2 font-bold"
                     onclick="submit()">Ya</button>
-                <button class="clickableButton modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
+                <button
+                    class="clickableButton modal-close border-2  border-red-500 rounded-lg bg-red-500 px-5 py-2 font-bold"
                     data-modal="modalKonfirmasiSubmit">Tidak</button>
             </div>
 
@@ -456,7 +459,8 @@
             <div id="" class="flex items-center justify-center -mt-8">
                 <div class="mx-auto">
                     <h3 class="font-baloo font-bold font-black text-3xl border-b-[1px] border-white py-4 px-6">SOAL NO
-                        <span id="numSoal">1</span></h3>
+                        <span id="numSoal">1</span>
+                    </h3>
                 </div>
             </div>
             <!-- Body -->
@@ -543,8 +547,10 @@
 
 
 <script>
-    $(".clickableButton").click(function() {
-        window.cpjs.clickSound()
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function() {
+            window.cpjs.clickSound()
+        })
     })
 </script>
 

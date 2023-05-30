@@ -39,76 +39,48 @@
 
 <body>
     <div class="w-screen h-screen py-4 relative">
-        <div class="flex justify-between items-center px-6">
-            <div class="min-w-[60px]">
-                <a href="main_menu.html" class="relative z-[3] clickableButton">
-                    <img src="../asset/home.png" class="w-8" alt="">
-                </a>
-            </div>
-
-            <h1 class="font-baloo font-bold text-[4vw] text-center">Tantangan Tes</h1>
-            <button
-                class="clickableButton modal-btn bg-[#FFF6BE] w-[60px] h-[60px] flex items-center justify-center rounded-full border-4 border-[#FFE541] relative z-[3]"
-                data-modal="modalPenjelasanTes">
-                <img src="../asset/info.png" alt="">
-            </button>
-        </div>
-        <div class="w-screen h-screen absolute top-0 left-0 flex items-center justify-center z-[2]">
-            <div class="border-[4px] w-7/12 h-7/12 border-black rounded-lg flex items-center justify-center ">
-                <img src="../asset/buah-tantangan.png" class="w-4/12 scale-[1.2] translate-x-[-5vw]" alt="">
-                <div class="font-secular text-xl">
-                    Dapatkan nilai lebih dari 80 untuk lulus dari tes ini.
+        <div class="flex gap-4 justify-start items-end h-[80vh] px-[10vw]">
+            <img src="../asset/wortel-tantangan.png" class="w-[15vw] translate-y-[10vh]" alt="">
+            <div class="bg-contain bg-no-repeat h-[80vh] w-[70vw]" style="background-image:url('../asset/popup.png')">
+                <div class="w-full flex justify-center items-center">
+                    <div
+                        class="font-baloo font-bold text-4xl text-center mt-[7vh] ml-[2vw] border-b-2 border-white px-6 pb-[4vh]">
+                        PENJELASAN</div>
                 </div>
+                <div class="ml-[2vw]">
+                    <div class="text-center font-bold font-baloo text-xl mt-[5vh] mb-[7vh] mx-[4vw]">
+                        Tekan aku untuk memunculkan soal saat mengerjakan Tes
+                    </div>
+                    <div class="text-center font-bold font-baloo text-xl mt-[5vh] mb-[7vh] mx-[4vw]">
+                        Semoga Berhasil!
+                    </div>
+                </div>
+
             </div>
         </div>
-        <a href="tes.php?level=<?php echo $_GET['level']; ?>" class="absolute bottom-6 right-12 flex items-center z-[3] clickableButton">
+        <a href="tes.php?level=<?php echo $_GET['level']; ?>"
+            class="absolute bottom-6 right-12 flex items-center z-[3] clickableButton">
             <span class="font-secular font-bold text-3xl mr-4">Mulai</span>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </a>
+
     </div>
 
-    <!-- Modal Penjelasan tes -->
-    <div class="modal w-screen h-screen bg-slate-200 bg-opacity-[0.8] fixed z-[50] top-0 left-0 hidden flex items-center justify-center"
-        id="modalPenjelasanTes">
-        <div class="bg-white w-8/12 mx-auto rounded-lg relative">
-            <!-- Header -->
-            <div class="flex items-center justify-between mt-12 py-2 px-4">
-                <div class="min-w-12">
 
-                </div>
-
-                <div class="border-b-[1px] py-4 px-8 border-slate-300">
-                    <h3 class="font-baloo font-bold font-black text-3xl  ">PENJELASAN</h3>
-                </div>
-
-                <button class="min-w-12 modal-close" data-modal="modalPenjelasanTes">
-                    <i class="fa fa-close text-2xl" aria-hidden="true"></i>
-                </button>
-            </div>
-            <!-- Body -->
-            <div class="pb-8 pt-4 px-8 text-center font-bold font-baloo text-xl space-y-4">
-                <div>
-                    Klik tombol mulai untuk memunculkan soal saat mengerjakan Tes
-                </div>
-                <div>
-                    Semoga Berhasil!
-                </div>
-            </div>
-
-            <img src="../asset/wortel-tantangan.png" class="absolute bottom-0 w-[5vw] scale-[3]" alt="">
-        </div>
-    </div>
 </body>
 
 
 <script>
-    $(".clickableButton").click(function() {
-        window.cpjs.clickSound()
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function() {
+            window.cpjs.clickSound()
+        })
     })
 </script>
 
 <script src="../js/modal.js" defer></script>
+<script src="../js/page.js" defer></script>
 
 
 </html>
