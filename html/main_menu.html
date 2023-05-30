@@ -109,13 +109,14 @@
     function updateMusic(state) {
         window.cpjs.sendMusicState(state)
     }
+</script>
 
-
-    $(".clickableButton").click(function(){
-        window.cpjs.clickSound()
+<script>
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function () {
+            window.cpjs.clickSound()
+        })
     })
-
-
 </script>
 
 </html>

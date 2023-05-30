@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.4.js"
-        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
 
     <title>Document</title>
 </head>
@@ -47,9 +47,8 @@
         <div class="w-screen h-screen absolute top-0 left-0 flex items-center justify-center z-[2]">
             <div class="space-y-4">
                 <img src="../asset/warning.png" class="w-[15vw] h-[15vw] mx-auto " alt="">
-                <p class="text-center text-2xl font-neue font-bold">Maaf, fitur ini masih terkunci. <br> Silakan
-                    menyelesaikan 7 soal "Latihan <?php echo $_GET['level']; ?>" terlebih dahulu. <br>
-                    Pastikan sudah mengerjakan semua Mode !
+                <p class="text-center text-2xl font-neue font-bold">Selesaikan dulu 7 soal "Latihan <span id="levelHolder"></span>".<br>
+                    Pastikan telah menyelesaikan semua jenis latihan!
                 </p>
 
             </div>
@@ -58,8 +57,21 @@
 </body>
 
 <script>
-    $(".clickableButton").click(function() {
-        window.cpjs.clickSound()
+    const level = "<?php echo $_GET['level']; ?>"
+    if (level == "Easy") {
+        $("#levelHolder").html("Mudah")
+    } else if (level == "Medium") {
+        $("#levelHolder").html("Sedang")
+    } else if (level == "Hard") {
+        $("#levelHolder").html("Sulit")
+    }
+    console.log(level)
+</script>
+<script>
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function() {
+            window.cpjs.clickSound()
+        })
     })
 </script>
 

@@ -22,8 +22,8 @@
 </head>
 
 <?php
-    $skor = $_POST['skor'];
-    $level = $_POST['level'];
+$skor = $_POST['skor'];
+$level = $_POST['level'];
 ?>
 
 
@@ -47,7 +47,7 @@
 <body>
     <div class="w-screen h-screen flex flex-col items-center justify-center font-bold font-baloo text-2xl space-y-2">
         <div>
-            Selamat kamu mendapat skor
+            Kamu mendapat skor
         </div>
         <div class="flex justify-between items-center pt-10">
             <img src="../asset/buah-hasil-skor.png" class="w-[15vw] self-end" alt="">
@@ -74,19 +74,22 @@
     const cookieName = `${level}Highest`
 
     var getHighest = getCookie(cookieName)
-    
-    if(getHighest == null){
-        setCookie(cookieName,skor,999)
-    } 
-    else{
+
+    if (getHighest == null) {
+        setCookie(cookieName, skor, 999)
+    } else {
         getHighest = parseInt(getHighest)
     }
-    if (getHighest <= skor){
-        setCookie(cookieName,skor,999)
+    if (getHighest <= skor) {
+        setCookie(cookieName, skor, 999)
     }
+</script>
 
-    $(".clickableButton").click(function(){
-        window.cpjs.clickSound()
+<script>
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function() {
+            window.cpjs.clickSound()
+        })
     })
 </script>
 

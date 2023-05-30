@@ -72,7 +72,8 @@
                     </div>
                 </div>
                 <div class="grow flex justify-end">
-                    <button class="active:-translate-y-4 transition duration-300 page-next clickableButton" data-target="2">
+                    <button class="active:-translate-y-4 transition duration-300 page-next clickableButton"
+                        data-target="2">
                         <img src="../asset/trophy.png" class="w-8" alt="">
                     </button>
                 </div>
@@ -92,7 +93,8 @@
         <div class="page hidden font-neue" data-page="2">
             <div class="flex justify-between items-center px-6 h-full ">
                 <div class="min-w-[100px]">
-                    <button class="active:-translate-y-4 transition duration-300 page-next clickableButton" data-target="1">
+                    <button class="active:-translate-y-4 transition duration-300 page-next clickableButton"
+                        data-target="1">
                         <img src="../asset/back.png" class="w-12" alt="">
                     </button>
                 </div>
@@ -183,9 +185,13 @@
     if (highScoreHard != null) {
         $("#skorHard").html(highScoreHard)
     }
+</script>
 
-    $(".clickableButton").click(function () {
-        window.cpjs.clickSound()
+<script>
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function () {
+            window.cpjs.clickSound()
+        })
     })
 </script>
 

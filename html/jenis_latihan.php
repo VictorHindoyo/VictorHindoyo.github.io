@@ -191,14 +191,51 @@
 
     </div>
 
+    <div class="w-screen h-screen absolute top-0 left-0 clickableButton" id="popupInfo">
+        <div class="w-screen h-screen py-4 relative">
+            <div class="flex gap-4 justify-start items-end h-[80vh] px-[5vw]">
+                <img src="../asset/wortel-tantangan.png" class="w-[15vw] translate-y-[10vh]" alt="">
+                <div class="bg-contain bg-no-repeat h-[80vh] w-[70vw]"
+                    style="background-image:url('../asset/popup.png')">
+                    <div class="w-full flex justify-center items-center">
+                        <div
+                            class="font-baloo font-bold text-4xl text-center mt-[7vh] ml-[2vw] border-b-2 border-white px-6 pb-[4vh]">
+                            Halo !</div>
+                    </div>
+                    <div class="ml-[2vw]">
+                        <div class="text-center font-bold font-baloo text-xl mt-[5vh] mb-[7vh] mx-[4vw]">
+                            Silahkan kerjakan minimal 7 soal di tiap jenis latihan
+                            supaya kalian bisa membuka mode “Tes"
+                        </div>
+                        <div class="text-center font-bold font-baloo text-xl mt-[2vh] mb-[7vh] mx-[4vw]">
+                            Semoga Berhasil!
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
 <script>
-    $(".clickableButton").click(function() {
-        window.cpjs.clickSound()
+    setTimeout(() => {
+        $("#popupInfo").click(function() {
+            $(this).hide()
+        })
+    }, 500);
+</script>
+
+<script>
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function() {
+            window.cpjs.clickSound()
+        })
     })
 </script>
+
+
 
 <script src="../js/page.js"></script>
 

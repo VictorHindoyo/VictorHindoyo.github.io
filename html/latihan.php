@@ -353,8 +353,12 @@ $level = $_GET['level'];
                 </div>
                 <p></p>
             </div>
+            <div class="absolute bottom-0 right-0 font-neue text-3xl m-4">
+                Soal <span id="counterKerja"></span>
+            </div>
         </div>
     </div>
+
 
     <audio id="audioSempoa" src="../asset/sempoa-click.wav"></audio>
     <audio id="audioBenar" src="../asset/correct.wav"></audio>
@@ -475,6 +479,10 @@ $level = $_GET['level'];
         }
         if (checkCounter == hasil) {
             if (checkStep) {
+                counterKerja += 1
+
+                $("#counterKerja").html(counterKerja)
+
                 $(".show-correct").show();
                 audioBenar.load();
                 audioBenar.play();
@@ -505,7 +513,8 @@ $level = $_GET['level'];
         $("#angka1").removeClass()
         $("#angka1").html(`${angka1}`)
 
-        counterKerja += 1
+
+
         if (counterKerja == 7) {
             setCookie(`${level}-${jenis}`, true)
             console.log("done")
@@ -513,9 +522,13 @@ $level = $_GET['level'];
     })
     $("#angka1").html(`${angka1}`)
     $("#soal").html(soal);
+</script>
 
-    $(".clickableButton").click(function(){
-        window.cpjs.clickSound()
+<script>
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function() {
+            window.cpjs.clickSound()
+        })
     })
 </script>
 

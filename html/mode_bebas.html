@@ -334,9 +334,12 @@
 </body>
 
 <script>
-    $(".clickableButton").click(function(){
-        window.cpjs.clickSound()
+    document.querySelectorAll(".clickableButton").forEach((components) => {
+        components.addEventListener("click", function () {
+            window.cpjs.clickSound()
+        })
     })
+
 </script>
 
 <script src="../js/sempoa.js"></script>
